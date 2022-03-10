@@ -1,0 +1,25 @@
+.paginationNavigation li a,
+.paginationNavigation li a:hover,
+.paginationNavigation li.active a,
+.paginationNavigation li.disabled {
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--primary);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 8px;
+
+  @include respond(desktop) {
+    padding: 12px;
+    padding: 0.75rem;
+  }
+}
+
+.paginationNavigation li {
+  display: inline;
+}
+
+.paginationNavigation li a:hover,
+.paginationNavigation li.active a {
+  background-color: var(--secondary);
+}

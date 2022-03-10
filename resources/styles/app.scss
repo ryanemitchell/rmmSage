@@ -1,0 +1,32 @@
+@import "utilities/recolor-mixin";
+@import "utilities/responsive-mixins";
+@import "utilities/overlays-mixins";
+@import "theme/theme";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ===========================  Packages and Libraries  ========================== */
+@import "swiper/css/bundle";
+
+/* ===========================  Core Styling  ========================== */
+@import "utilities/wordpress-core-styles";
+
+/* ===========================  Layout  ========================== */
+@import "layout/layout-utilities";
+@import "layout/main-layout.css";
+
+/* ===========================  Sections  ========================== */
+@import "sections/header";
+@import "sections/sidebar";
+@import "sections/footer";
+@import "sections/bottom-bar";
+
+/* ===========================  Page Templates  ========================== */
+
+/* ===========================  Blog Styling  ========================== */
+@import "blog/comments";
+@import "blog/single-post";
+@import "blog/blog-sidebar";
+@import "blog/blog-styling";
+@import "blog/category-switcher";

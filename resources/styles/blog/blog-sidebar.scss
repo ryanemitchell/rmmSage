@@ -1,0 +1,68 @@
+aside.sidebar {
+  h2 {
+    color: var(--white);
+    text-align: center;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 1em;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 22px;
+    max-width: 317px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond(desktop) {
+    margin-left: 72px;
+  }
+
+  .wp-block-cover, {
+    height: 245px;
+    min-height: 245px;
+    border-radius: 48px;
+    margin-top: 24px;
+
+    > span {
+      border-radius: 48px;
+
+      &::before {
+        display: none;
+      }
+
+      @include respond(desktop) {
+        padding: 49px 38px 49px 34px;
+        border-radius: 48px;
+      }
+    }
+  }
+
+  > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    border-radius: 48px;
+    color: var(--white);
+    margin-top: 1rem;
+    padding: 49px 38px 49px 34px;
+
+    @include respond(mobile) {
+      margin-left: 16px;
+      margin-right: 16px;
+      margin-bottom: 16px;
+    }
+
+    p:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+
+    @include respond(desktop) {
+      padding: 49px 38px 49px 34px;
+    }
+  }
+}

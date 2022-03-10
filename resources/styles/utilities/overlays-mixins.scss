@@ -1,0 +1,60 @@
+@use "sass:math";
+
+/* ==========================================================================
+   Overlay
+   ========================================================================== */
+
+@mixin overlay($bgColor: #000, $bgOpacity: 0.6) {
+  position: absolute;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $bgColor;
+    opacity: $bgOpacity;
+    z-index: 0;
+  }
+}
+
+/* ==========================================================================
+   Create Overlays
+   ClassBaseName - Color - Parent Position (relative)
+   Creates overlay classes with opacity .1 through .9 and solid
+   .overlay-primary-100
+   ========================================================================== */
+@mixin createOverlays($baseName: "colorname" , $color: #000, $parentPosition: relative) {
+  .overlay-#{$baseName} {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: $color;
+      background-color: $color;
+      opacity: 1;
+      //z-index: 0;
+    }
+  }
+  @for $i from 1 through 9 {
+    .overlay-#{$baseName}-#{$i}00 {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: $color;
+        background-color: $color;
+        //opacity: math.div($i, 10);
+        z-index: 0;
+      }
+    }
+  }
+}
