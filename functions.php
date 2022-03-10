@@ -77,3 +77,7 @@ collect(['setup', 'filters'])
 */
 
 add_theme_support('sage');
+
+
+include_once('app/blog/blog-pagination.php');
+include_once('app/blog/blog-functions.php');
