@@ -1,4 +1,9 @@
-WEbPAck 
+#CLI
+
+wp acorn
+
+
+
 
 
 #Bud
@@ -30,6 +35,8 @@ https://swiperjs.com/swiper-api
 AOS - (use current stable release) - https://github.com/michalsnik/aos/tree/v2
 
 
+
+
 ## ACF Techniques
 
 https://anthonyskelton.com/2018/default-acf-flexible-content-fields/
@@ -46,3 +53,13 @@ https://github.com/Log1x/acf-composer
 
 
 https://github.com/Log1x/navi
+
+
+## Dev Envrionment notes 
+
+WP CLI required and I recommend a global install on your development machine - https://make.wordpress.org/cli/handbook/guides/installing/
+
+WP CLI in Local - https://salferrarello.com/wp-cli-local-by-flywheel-without-ssh/#quick-setup
+
+In local root (where app, conf and logs directory are.)
+curl -O https://raw.githubusercontent.com/salcode/wpcli-localwp-setup/main/wpcli-localwp-setup  && bash wpcli-localwp-setup && rm -rf ./wpcli-localwp-setup
