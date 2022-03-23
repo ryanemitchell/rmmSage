@@ -5,5 +5,14 @@ module.exports = {
       colors: {},
     },
   },
+  variants: {
+    extend: {
+      // ...
+      filter: ['hover'],
+    }
+  },
   plugins: [],
+  safelist: [
+    'alignFull',
+  ]
 };

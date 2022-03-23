@@ -5,13 +5,19 @@
  */
 module.exports = async (app) => {
   app
+
+    .when(app.isDevelopment, app => app.devtool('eval'))
+
     /**
      * Application entrypoints
      *
      * Paths are relative to your resources directory
      */
     .entry({
-      app: ['@scripts/app', '@styles/app'],
+      app: [
+          ['@scripts/app',
+              '@scripts/menus/mobile-dropdown-menu'],
+          '@styles/app'],
       editor: ['@scripts/editor', '@styles/editor'],
     })
 
@@ -42,4 +48,5 @@ module.exports = async (app) => {
      * Development URL
      */
     .serve('http://newsage.local:3000');
+
 };

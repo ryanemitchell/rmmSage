@@ -36,7 +36,7 @@ try {
         __('You need to install Acorn to use this theme.', 'sage'),
         '',
         [
-            'link_url' => 'https://docs.roots.io/acorn/2.x/installation/',
+            'link_url'  => 'https://docs.roots.io/acorn/2.x/installation/',
             'link_text' => __('Acorn Docs: Installation', 'sage'),
         ]
     );
@@ -54,11 +54,40 @@ try {
 |
 */
 
-collect(['setup', 'filters'])
+
+//add_filter(
+//    'acf/load_value/name=flexible_content_test',
+//    'acf_auto_intro_block',
+//    20,
+//    3
+//);
+//function acf_auto_intro_block($value, $post_id, $field)
+//{
+//    if ($value === "") {
+//        $value = array(
+//            [
+//                'acf_fc_layout' => 'wysiwyg'
+//            ],
+//            [
+//                'acf_fc_layout' => 'wysiwyg'
+//            ],
+//        );
+//    }
+//
+//    return $value;
+//}
+
+
+
+
+
+
+
+collect([ 'setup', 'filters' ])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
-                /* translators: %s is replaced with the relative file path */
+            /* translators: %s is replaced with the relative file path */
                 sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file)
             );
         }
@@ -78,6 +107,22 @@ collect(['setup', 'filters'])
 
 add_theme_support('sage');
 
+/* ===========================  Support for acf-local-json-manager   ========================== */
 
+add_filter('aljm_save_json', function ($folders) {
+    $folders['rmmSage'] = dirname(__FILE__) . '/acf-json';
+
+    return $folders;
+});
+
+
+include_once('app/lib/acf-options-pages.php');
 include_once('app/blog/blog-pagination.php');
 include_once('app/blog/blog-functions.php');
+include_once('app/NavWalkers/mobile_slide_menu.php');
+include_once('app/NavWalkers/mobile_dropdown_menu.php');
+include_once('app/lib/site-optimizations.php');
+include_once('app/lib/rmmFunctions.php');
+include_once('app/lib/disable-editor.php');
+include_once('app/lib/witSection.php');
+include_once('app/lib/default-flexible-content-layouts.php');

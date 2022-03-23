@@ -55,7 +55,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_desktop_navigation' => __('Primary Desktop Navigation', 'sage'),
+        'primary_mobile_navigation' => __('Primary Mobile Navigation', 'sage'),
+        'not_found_navigation' => __('Not Found Navigation', 'sage')
     ]);
 
     /**
@@ -126,9 +128,5 @@ add_action('widgets_init', function () {
         'name' => __('Primary', 'sage'),
         'id' => 'sidebar-primary'
     ] + $config);
-
-    register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer'
-    ] + $config);
+	
 });

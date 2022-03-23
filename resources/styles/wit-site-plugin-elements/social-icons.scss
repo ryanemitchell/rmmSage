@@ -1,0 +1,15 @@
+.social-icons {
+  .social-icons-inner {
+    @apply flex gap-4;
+
+    .social-icon-link {
+      .social-icon {
+        @apply bg-no-repeat bg-cover h-8 w-8;
+
+        @screen lg {
+          @apply h-16 w-16;
+        }
+      } /* End of .social-icon */
+    }/* End of .social-icon-link */
+  } /* End of .social-icons-inner */
+} /* End of .social-links */

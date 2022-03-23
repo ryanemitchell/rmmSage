@@ -1,0 +1,45 @@
+@mixin bkg-img-transition( $bkg1, $bkg2, $transTime:0.5s ) {
+  position: relative;
+  z-index: 100;
+
+  &::before,
+  &::after {
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity $transTime;
+  }
+
+  &::before {
+    z-index: -101;
+    background-image: url("#{$bkg1}");
+  }
+
+  &::after {
+    z-index: -100;
+    opacity: 0;
+    background-image: url("#{$bkg2}");
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+
+From : https://stackoverflow.com/questions/9483364/css3-background-image-transition
+
+Usage:
+
+@include bkg-img-transition("https://picsum.photos/300/300/?random","https://picsum.photos/g/300/300");
+
+/*
+ */

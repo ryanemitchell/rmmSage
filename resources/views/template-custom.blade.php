@@ -10,3 +10,7 @@
     @include('partials.content-page')
   @endwhile
 @endsection
+
+@section('sidebar')
+	@include('sections.sidebar')
+@endsection

@@ -1,0 +1,161 @@
+$primary-hex: #ac1a19;
+$secondary-hex: #1a4975;
+$accent-hex: #254294;
+$site-white-hex: #fffcf9;
+$site-black-hex: #373737;
+
+:root {
+  --buttonDefaultBackground: #{$primary-hex};
+  --buttonDefaultTextColor: #{$site-white-hex};
+  --buttonDefaultFontSize: 1rem;
+  --buttonhoverBackgroundColor: #{$secondary-hex};
+  --buttonhoverTextColor: #254294;
+  --buttonDesktopMinWidth: 155px;
+  --buttonDesktopHpadding: 10px;
+  --buttonDesktopVpadding: 16px;
+  --buttonDesktopFontSize: 1rem;
+}
+
+$accent-hex: #254294;
+
+@mixin button(
+  $font-family: var(--body-font-family), //default font family
+  $BackgroundColor: var(--buttonDefaultBackground), //default background color
+  $textColor: $site-white-hex, //default text color -  HEX or SCSS Var that is a HEX
+  $hoverBackgroundColor: var(--buttonhoverBackgroundColor), //default background color
+  $hoverTextColor: $site-white-hex, //default hover text color -  HEX or SCSS Var that is a HEX
+  $isOutline: false, // button is outline style true/false
+  $borderColor: none, // default border color
+  $hoverBorderColor: none, //// hover border color
+  $borderWidth: 1px, // default border width
+  $defaultIconFilter: brightness(0) saturate(100%) invert(77%) brightness(0) invert(1),
+  $hoverIconFilter: brightness(0) saturate(100%) invert(77%) brightness(0) invert(1),
+) {
+  // 	Layout
+  display: inline-flex;
+  align-items: center;
+
+  // min-width: var(--buttonDesktopMinWidth);
+  // padding: var(--buttonDesktopVpadding) var(--buttonDesktopHpadding);
+  height: 40px;
+  font-family: $font-family;
+  font-size: var(--buttonDefaultFontSize);
+  font-weight: 700;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: unset;
+  line-height: 1rem;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  border-radius: 20px;
+  border: 0;
+  transition: all 0.2s linear;
+  white-space: nowrap;
+
+  //Colors
+  background: $BackgroundColor;
+  color: $textColor;
+
+  @if $isOutline {
+    border-color: $borderColor;
+    border-style: solid;
+    border-width: $borderWidth;
+  }
+  @else {
+    border-color: $BackgroundColor;
+    border-style: solid;
+    border-width: $borderWidth;
+  }
+
+  &::before {
+    @include recolor($textColor, 1);
+
+    filter: $defaultIconFilter;
+  }
+
+  a,
+  span,
+  .wp-block-button__link {
+    &::before {
+      @include recolor($textColor, 1);
+
+      filter: $defaultIconFilter;
+    }
+  }
+
+  &:hover {
+    background-color: $hoverBackgroundColor;
+    color: $hoverTextColor;
+
+    &::before {
+      @include recolor($hoverTextColor, 1);
+
+      filter: $hoverIconFilter;
+    }
+
+    a,
+    span,
+    .wp-block-button__link {
+      &::before {
+        @include recolor($hoverTextColor, 1);
+
+        filter: $hoverIconFilter;
+      }
+    }
+
+    @if $isOutline {
+      border-color: $hoverBorderColor;
+    }
+    @else {
+      border-color: $hoverBackgroundColor;
+    }
+  }
+}
+//end buttonMixin
+
+@mixin btnIcon() {
+  //padding-left: 2rem;
+  display: inline-block;
+  margin: 0;
+
+  a,
+  span,
+  .wp-block-button__link {
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    padding: 8px 1rem;
+    word-break: break-word;
+    box-sizing: border-box;
+    text-align: center;
+    height: 40px;
+
+    &::before {
+      background-repeat: no-repeat;
+      background-size: contain;
+      align-items: center;
+      content: "";
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-right: 4px;
+    }
+  }
+}
+
+.btn,
+.wp-block-button .wp-block-button__link, {
+  @include button;
+}
+
+.frm_button_submit {
+  @include button;
+
+  padding: 1em 2em;
+}
+
+.btnIcon,
+.is-style-btnIcon {
+  @include btnIcon;
+}

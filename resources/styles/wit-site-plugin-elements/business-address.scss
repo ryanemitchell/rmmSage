@@ -1,0 +1,32 @@
+address.business-address {
+  font-style: normal;
+
+  a.witsage_business_address_link {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span.witsage_business_address {
+    display: block;
+  }
+
+  span.witsage_business_address_line_2 {
+    display: block;
+  }
+
+  span.witsage_business_city {
+    display: inline-block;
+  }
+
+  span.witsage_business_state {
+    display: inline-block;
+  }
+
+  span.witsage_business_zip_code {
+    display: inline-block;
+  }
+} /* End of .address.business-address */

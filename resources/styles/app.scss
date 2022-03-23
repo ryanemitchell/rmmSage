@@ -1,20 +1,35 @@
+/* ===========================  Utilities  ========================== */
 @import "utilities/recolor-mixin";
 @import "utilities/responsive-mixins";
 @import "utilities/overlays-mixins";
+
+/* ===========================  Theme  ========================== */
 @import "theme/theme";
+
+/* ===========================  Utilities that require theme  ========================== */
+@import "utilities/button-mixins";
+
+/* ===========================  Tailwind  ========================== */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "shared/globals";
 
 /* ===========================  Packages and Libraries  ========================== */
 @import "swiper/css/bundle";
+@import "aos/dist/aos.css";
+//@import "accordion-js/dist/accordion.min.css";
 
 /* ===========================  Core Styling  ========================== */
 @import "utilities/wordpress-core-styles";
 
+/* ===========================  Components  ========================== */
+@import "components/buttons";
+@import "components/accordion-js"; // based on styles from accordion-js package - original is imported above if you need new defaults.
+
 /* ===========================  Layout  ========================== */
 @import "layout/layout-utilities";
-@import "layout/main-layout.css";
+@import "layout/main-layout";
 
 /* ===========================  Sections  ========================== */
 @import "sections/header";
@@ -22,7 +37,18 @@
 @import "sections/footer";
 @import "sections/bottom-bar";
 
+/* ===========================  Menus  ========================== */
+@import "menus/desktop_primary_navigation";
+
+//@import "menus/mobile_slide_menu";
+@import "menus/mobile_menu_dropdown";
+
+/* ===========================  Forms  ========================== */
+@import "forms/formidable_styles";
+
 /* ===========================  Page Templates  ========================== */
+@import "page-templates/front-page";
+@import "page-templates/404";
 
 /* ===========================  Blog Styling  ========================== */
 @import "blog/comments";
@@ -30,3 +56,60 @@
 @import "blog/blog-sidebar";
 @import "blog/blog-styling";
 @import "blog/category-switcher";
+@import "blog/blog_pagination";
+
+/* ===========================  Wit Site Plugin Elements  ========================== */
+@import "wit-site-plugin-elements/business-address";
+@import "wit-site-plugin-elements/social-icons";
+
+/* ==========================================================================
+   TESTING OUT TAILWIND UTILITIES AND COMPONENTS
+   ========================================================================== */
+
+:root {
+  --mobile-h1: 14px; // dark red;
+  --desktop-h1: 43px; // medium red
+}
+
+@layer base {
+  h1 {
+    font-size: var(--mobile-h1);
+    @apply filter-aqua;
+
+    @screen lg {
+      font-size: var(--desktop-h1);
+    }
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer utilities {
+  .filter-aqua {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(89%) saturate(542%) hue-rotate(112deg) brightness(102%) contrast(106%);
+  }
+
+  .filter-red {
+    filter: brightness(0) saturate(100%) invert(9%) sepia(43%) saturate(5880%) hue-rotate(348deg) brightness(121%) contrast(109%);
+  }
+
+  .witSectionYMargins {
+    @apply my-8;
+    @screen lg {
+      @apply my-12;
+    }
+  }
+}
+
+@layer components {
+  .bttn {
+    background-color: theme("colors.white");
+    border-radius: theme("borderRadius.lg");
+    padding: theme("spacing.6");
+    box-shadow: theme("boxShadow.xl");
+  }
+
+  /* ... */
+}

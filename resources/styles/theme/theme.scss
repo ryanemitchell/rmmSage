@@ -9,6 +9,7 @@
 $desktopBreakpoint: 1024px;
 
 $white-rgb: 255, 255, 255;
+$black-rgb: 0,0,0,;
 
 :root {
   /* ==========================================================================
@@ -19,6 +20,8 @@ $white-rgb: 255, 255, 255;
 
   --white-rgb: #{$white-rgb};
   --site-white-rgb: 255, 252, 249;
+  --white: rgb(#{$white-rgb});
+  --black: rgb(#{$black-rgb});
   $site-white-hex: #fffcf9;
 
   --black-rgb: 0, 0, 0;

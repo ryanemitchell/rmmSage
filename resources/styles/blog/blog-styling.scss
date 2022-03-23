@@ -30,22 +30,22 @@
 
   main {
     @include respond(desktop) {
-      width: 70%;
+      width: 52.5rem;
     }
   }
 
   aside.sidebar {
     @include respond(desktop) {
-      width: 20%;
+      width: 22.5rem;
     }
   }
 
   article {
-    background-color: #fffcf9;
-    border: 1px solid #1a4975;
-    border-radius: 48px;
+    background-color: var(--white);
+    border: 1px solid var(--black);
     margin-bottom: 1.5rem;
     display: flex;
+    padding: 1rem 2rem;
 
     .innerWrapper {
       background-position: left center;
