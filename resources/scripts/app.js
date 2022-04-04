@@ -2,6 +2,7 @@ import {domReady} from '@roots/sage/client';
 import Accordion from 'accordion-js';
 import Swiper from 'swiper/bundle';
 import AOS from 'aos';
+import 'tw-elements';
 
 import { hello } from './modules/mydevtools';
 
@@ -59,7 +60,7 @@ domReady(() => {
     if (document.getElementsByClassName('accordion-container').length > 0) {
 
 
-      // Check if desktop and initialize - of mobile destroy
+      // Check if desktop and initialize - if mobile destroy
       if (window.matchMedia("(min-width: 1200px)").matches) {
 
         const accordion = new Accordion(('.accordion-container'), {

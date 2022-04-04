@@ -11,7 +11,9 @@ module.exports = {
       filter: ['hover'],
     }
   },
-  plugins: [],
+  plugins: [
+      require('tw-elements/dist/plugin')
+  ],
   safelist: [
     'alignFull',
   ]

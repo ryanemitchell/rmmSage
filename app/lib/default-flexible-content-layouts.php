@@ -15,15 +15,11 @@ function default_page_blocks_room($value, $post_id, $field)
     if (null === $value) {
         $new_value = [
             [
-                'acf_fc_layout' => 'wysiwyg',
-                'field_623a6973ea8cf' => // WYSIWYG
-                    '<h2>' . __("Description", 'bonestheme') . '</h2>'
-                    . '<p>' . __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo.", 'bonestheme') . '</p>'
-                    . '<ul class="half-width-blocks">'
-                    . '<li>'
-                    . '<strong class="large-text">' . __("Donec libero turpis, lacinia nec leo sit amet, dignissim dignissim lacus.", 'bonestheme') . '</strong>'
-                    . '</li>'
-                    . '</ul>',
+                'acf_fc_layout' => 'layout',
+                'field_example_flexible_content_field_layout_wysiwyg_field' => // WYSIWYG
+	                '<h2>I had a hot dog.</h2>
+It was delicious
+<img class="alignnone size-full wp-image-1838" src="http://newsage.local/wp-content/uploads/image-alignment-300x200-1.jpg" alt="" width="300" height="200" />',
 	            'field_623a790dfca28' => // ClassName
                     'TempClassName',
                 'field_623a795644291' => // Desktop Margin Top
@@ -48,4 +44,4 @@ function default_page_blocks_room($value, $post_id, $field)
     return $new_value;
 }
 
-add_filter('acf/load_value/name=flexible_content_test', 'default_page_blocks_room', 10, 3);
+add_filter('acf/load_value/name=flexible_content_field', 'default_page_blocks_room', 10, 3);
