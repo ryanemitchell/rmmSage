@@ -5,19 +5,13 @@
  */
 module.exports = async (app) => {
   app
-
-    .when(app.isDevelopment, app => app.devtool('eval'))
-
     /**
      * Application entrypoints
      *
      * Paths are relative to your resources directory
      */
     .entry({
-      app: [
-          ['@scripts/app',
-              '@scripts/menus/mobile-dropdown-menu'],
-          '@styles/app'],
+      app: ['@scripts/app', '@styles/app'],
       editor: ['@scripts/editor', '@styles/editor'],
     })
 
