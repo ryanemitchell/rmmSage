@@ -1,6 +1,7 @@
 /node_modules
 /vendor
 /public
+/dist
 .env
 .budfiles
 npm-debug.log
@@ -35,3 +36,4 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .DS_Store
+/.DS_Store
