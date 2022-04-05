@@ -18,8 +18,7 @@
     "test": "npm run lint",
     "translate": "npm run translate:pot && npm run translate:js",
     "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
-    "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
-    "rustywind-fix": "rustywind --write ."
+    "translate:js": "wp i18n make-json ./resources/lang --pretty-print"
   },
   "devDependencies": {
     "@roots/bud": "5.7.7",
