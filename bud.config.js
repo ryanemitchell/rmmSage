@@ -10,10 +10,13 @@ module.exports = async (app) => {
      *
      * Paths are relative to your resources directory
      */
-    .entry({
-      app: ['@scripts/app', '@styles/app'],
-      editor: ['@scripts/editor', '@styles/editor'],
-    })
+      .entry({
+          app: [
+              ['@scripts/app',
+                  '@scripts/menus/mobile-dropdown-menu'],
+              '@styles/app'],
+          editor: ['@scripts/editor', '@styles/editor'],
+      })
 
     /**
      * These files should be processed as part of the build
