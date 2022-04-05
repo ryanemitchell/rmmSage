@@ -21,14 +21,14 @@
     "rustywind-fix": "rustywind --write ."
   },
   "devDependencies": {
-    "@roots/bud": "5.5.0",
+    "@roots/bud": "5.7.6",
+    "@roots/bud-tailwindcss": "5.7.6",
+    "@roots/sage": "5.7.6",
     "@roots/bud-eslint": "5.4.0",
     "@roots/bud-prettier": "5.4.0",
     "@roots/bud-sass": "^5.4.0",
     "@roots/bud-stylelint": "5.4.0",
-    "@roots/bud-tailwindcss": "5.5.0",
     "@roots/eslint-config": "5.4.0",
-    "@roots/sage": "5.5.0",
     "postcss-scss": "^4.0.3",
     "stylelint-config-standard-scss": "^3.0.0",
     "rustywind": "^0.12.2",
