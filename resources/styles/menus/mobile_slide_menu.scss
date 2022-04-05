@@ -1,0 +1,216 @@
+.zeynep-opened body {
+  overflow: hidden;
+}
+
+//Hamburger Toggle
+
+.btn-open {
+
+  @at-root {
+    .zeynep-opened {
+      .btn-open {
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fal' data-icon='times' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' class='svg-inline--fa fa-times fa-w-10 fa-3x'%3E%3Cpath fill='%23fff' d='M193.94 256 296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z'/%3E%3C/svg%3E");        //background-color: white;
+      }
+    } /* End of .zeynep-opened */
+  }
+}
+
+.zeynep.right {
+  top: 63px;
+  right: 0;
+  left: auto;
+}
+
+.zeynep.right:not(.opened) {
+  transform: translateX(100%);
+}
+
+/* zeynepjs menu styles */
+.zeynep {
+  background-color: var(--secondary);
+  width: 100vw;
+  color: #404143;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.zeynep ul {
+  padding: 0;
+  //padding-left: 20px;
+  list-style-type: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.zeynep > ul > li {
+  display: block;
+
+  &:first-child {
+    padding: 18px 0 0;
+  }
+}
+
+.zeynep ul > li {
+  display: block;
+}
+
+.zeynep ul > li > a {
+  display: block;
+  padding: 5px 20px;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 800;
+  transition: all 150ms;
+  //height: 40px;
+}
+
+.zeynep > ul > li > a {
+  display: block;
+  padding: 10px 20px 10px 0;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 800;
+  transition: all 150ms;
+  //height: 40px;
+}
+
+.zeynep .submenu > ul {
+  display: list-item;
+  list-style-type: disc;
+
+  li::before {
+    list-style-type: disc;
+  }
+}
+
+.zeynep .submenu > ul li {
+  ::marker {
+    color: white;
+    font-size: 1.2em;
+  }
+
+  a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    transition: all 150ms;
+    margin-left: 0.5em;
+
+    &::before {
+      background-color: #fff;
+      border-radius: 1em;
+      content: " ";
+      display: inline-block;
+      height: 0.35em;
+      margin-right: 6px;
+      width: 0.35em;
+    }
+  }
+
+  &:first-child {
+    a {
+      color: var(--white);
+      text-decoration: none;
+      text-transform: capitalize;
+      font-weight: 800;
+      margin-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.zeynep ul > li > a:hover {
+  //background-color: #ecedee;
+  border-radius: 3px;
+}
+
+.zeynep ul > li:not(:last-child) > a {
+  //border-bottom: 1px solid #efefef;
+}
+
+.zeynep ul > li.has-submenu > a {
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='angle-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512' class='svg-inline--fa fa-angle-right fa-w-6 fa-3x'%3E%3Cpath fill='blue' d='M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z' class=''%3E%3C/path%3E%3C/svg%3E");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 18px 24px;
+  filter: brightness(0) invert(1);
+  //@include recolor(#fff,1);
+}
+
+.zeynep ul > li.has-submenu > a:hover {
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='angle-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512' class='svg-inline--fa fa-angle-right fa-w-6 fa-3x'%3E%3Cpath fill='currentColor' d='M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z' class=''%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* zeynepjs submenu styles */
+.zeynep .submenu {
+  //left: 295px;
+  left: 100vw;
+  color: var(--white);
+  background-color: var(--secondary);
+  z-index: 10;
+  margin-bottom: 82px; // room for CTA button to show on bottom layer
+  //width: 10px;
+  min-height: unset;
+}
+
+.zeynep .submenu-header {
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='angle-left' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512' class='svg-inline--fa fa-angle-left fa-w-6 fa-3x'%3E%3Cpath fill='currentColor' d='M25.1 247.5l117.8-116c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L64.7 256l102.2 100.4c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L25 264.5c-4.6-4.7-4.6-12.3.1-17z' class=''%3E%3C/path%3E%3C/svg%3E");
+  background-position: left 20px center;
+  background-repeat: no-repeat;
+  background-size: 8px 14px;
+  //border-bottom: solid 1px #efefef;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+.zeynep .submenu-header > a {
+  display: block;
+  padding: 18px 20px;
+  padding-left: 40px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.zeynep .submenu-header > a::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 512' style='enable-background:new 0 0 192 512' xml:space='preserve'%3E%3Cpath d='M187.8 264.5 41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z' style='fill:%23fff'/%3E%3C/svg%3E");
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+  background-size: 8px 14px;
+  transform: rotate(-180deg);
+  content: "";
+  filter: brightness(0) invert(1);
+}
+
+.zeynep .submenu > label {
+  display: block;
+  width: 100%;
+  padding-left: 40px;
+  margin-top: 19px;
+  margin-bottom: 8px;
+  opacity: 0.5;
+  color: #e77691;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.zeynep ul > li.current_page_item > a {
+  color: red;
+}

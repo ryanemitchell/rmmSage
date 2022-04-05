@@ -12,6 +12,7 @@
     "build": "bud build",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint resources/scripts",
+    "lint:js:fix": "eslint --fix resources/scripts",
     "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
     "lint:css:fix": "stylelint --fix \"resources/**/*.{css,scss,vue}\"",
     "test": "npm run lint",
@@ -24,18 +25,23 @@
     "@roots/bud": "5.7.6",
     "@roots/bud-tailwindcss": "5.7.6",
     "@roots/sage": "5.7.6",
-    "@roots/bud-eslint": "5.4.0",
-    "@roots/bud-prettier": "5.4.0",
-    "@roots/bud-sass": "^5.4.0",
-    "@roots/bud-stylelint": "5.4.0",
-    "@roots/eslint-config": "5.4.0",
+    "@roots/bud-eslint": "5.7.6",
+    "@roots/bud-prettier": "5.7.6",
+    "@roots/bud-sass": "^5.7.6",
+    "@roots/bud-stylelint": "5.7.6",
+    "@roots/eslint-config": "5.7.6",
     "postcss-scss": "^4.0.3",
-    "stylelint-config-standard-scss": "^3.0.0",
+    "prettier": "^2.6.0",
+    "prettier-plugin-tailwindcss": "^0.1.8",
     "rustywind": "^0.12.2",
     "stylelint": "^14.5.3",
+    "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-scss": "^4.1.0"
   },
   "dependencies": {
-    "swiper": "^8.0.7"
+    "accordion-js": "^3.2.0",
+    "aos": "^2.3.4",
+    "swiper": "^8.0.7",
+    "tw-elements": "^1.0.0-alpha12"
   }
 }

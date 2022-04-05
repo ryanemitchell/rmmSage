@@ -7,9 +7,14 @@ body {
 #app {
   header.main-header {
     background-color: purple;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
   } /* End of header.main-header */
 
   #main-container {
+    margin-top: 200px; //height of header + page header
+
     main.main {
       background-color: yellow;
     } /* End of main.main */

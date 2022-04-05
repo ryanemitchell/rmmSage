@@ -5,5 +5,16 @@ module.exports = {
       colors: {},
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      // ...
+      filter: ['hover'],
+    }
+  },
+  plugins: [
+      require('tw-elements/dist/plugin')
+  ],
+  safelist: [
+    'alignFull',
+  ]
 };

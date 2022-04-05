@@ -1,0 +1,24 @@
+.breadcrumbsWrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond(mobile) {
+    padding-right: 1rem;
+  }
+
+  #breadcrumbs {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  @at-root {
+    .home .breadcrumbsWrapper {
+      display: none;
+    }
+  }
+} /* End of .breadcrumbsWrapper */

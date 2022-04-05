@@ -1,0 +1,23 @@
+.error404 {
+  .main {
+    @apply grid grid-cols-1 place-items-center w-full;
+
+    background: #ac1a19;
+  }
+
+  /* ===========================  404 Page Menu  ========================== */
+  ul#not-found-navigation {
+    display: grid;
+    @apply grid grid-cols-1 gap-4 place-items-center witSectionYMargins;
+
+    @screen lg {
+      @apply grid-cols-3;
+    }
+
+    li.menu-item {
+      a {
+        @apply rounded text-center text-white bg-amber-700 hover:bg-amber-50 hover:text-black w-[90vw] lg:w-[148px] py-2.5 block transition duration-[0.8s] ;
+      }
+    }
+  }
+} /* End of .error404 */

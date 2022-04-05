@@ -1,0 +1,97 @@
+#mobile-menu-toggle {
+  width: 40px;
+  margin: 1em;
+
+  &::after,
+  &::before,
+  div {
+    display: block;
+    height: 5px;
+    margin: 7px 0;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+    content: "";
+  }
+
+  &.menu-open {
+    &::before {
+      transform: translateY(12px) rotate(135deg);
+    }
+
+    &::after {
+      transform: translateY(-12px) rotate(-135deg);
+    }
+
+    div {
+      transform: scale(0);
+    }
+  }
+}
+
+#mobile-menu-wrapper {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  display: none;
+  z-index: 50;
+  width: 100vw;
+  max-height: calc(100vh - 82px);
+  background: var(--color-site-grey);
+  text-align: left;
+  overflow-y: scroll;
+}
+
+ul#primary-mobile-menu {
+  padding: 0.25rem 0.5rem;
+  background: yellow;
+
+  > li {
+    background: purple;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  > li.menu-item-has-children {
+    background: blue;
+
+    div.hasToggle {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 2rem;
+      align-items: center;
+      background: white !important;
+
+      span.controlToggle {
+        width: 18px;
+        height: 18px;
+        background: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        border-radius: 50%;
+      }
+    }
+
+    a {
+      position: relative;
+
+      &::after {
+        content: "X";
+      }
+    }
+  }
+
+  ul.sub-menu {
+    display: none;
+  }
+}
+
+.active {
+  span.controlToggle {
+    background: transparent !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.--%3E%3Cpath d='M512 256c0 17.67-14.33 32-32 32H32c-17.67 0-32-14.3-32-32s14.33-32 32-32h448c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E") !important;
+  }
+}

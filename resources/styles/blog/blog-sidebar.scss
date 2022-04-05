@@ -16,10 +16,6 @@ aside.sidebar {
     margin-right: auto;
   }
 
-  @include respond(desktop) {
-    margin-left: 72px;
-  }
-
   .wp-block-cover, {
     height: 245px;
     min-height: 245px;

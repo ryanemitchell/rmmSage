@@ -15,7 +15,14 @@
     @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
   @endwhile
 
-  {!! get_the_posts_navigation() !!}
+
+
+  <div class="flex justify-center my-8">
+    <?php witsage_numeric_posts_nav(); ?>
+  </div>
+
+
+
 @endsection
 
 @section('sidebar')

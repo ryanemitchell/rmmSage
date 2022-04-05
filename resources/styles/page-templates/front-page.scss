@@ -1,0 +1,19 @@
+@layer base {
+  /* ===  Home Specific Heaer Sizes  ==== */
+  .home {
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+
+      @screen lg {
+        font-size: 34px;
+        color: green;
+      }
+    }
+
+    h2 {
+      @apply text-xl;
+    }
+  }
+}
