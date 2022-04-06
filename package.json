@@ -15,6 +15,8 @@
     "lint:js:fix": "eslint --fix resources/scripts",
     "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
     "lint:css:fix": "stylelint --fix \"resources/**/*.{css,scss,vue}\"",
+    "cleanup:npmPackages": "sudo rm -rf node_modules && npm install",
+    "cleanup:comploserPackages": "sudo rm -rf vendor && composer install",
     "test": "npm run lint",
     "translate": "npm run translate:pot && npm run translate:js",
     "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
