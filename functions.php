@@ -54,35 +54,6 @@ try {
 |
 */
 
-
-//add_filter(
-//    'acf/load_value/name=flexible_content_test',
-//    'acf_auto_intro_block',
-//    20,
-//    3
-//);
-//function acf_auto_intro_block($value, $post_id, $field)
-//{
-//    if ($value === "") {
-//        $value = array(
-//            [
-//                'acf_fc_layout' => 'wysiwyg'
-//            ],
-//            [
-//                'acf_fc_layout' => 'wysiwyg'
-//            ],
-//        );
-//    }
-//
-//    return $value;
-//}
-
-
-
-
-
-
-
 collect([ 'setup', 'filters' ])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
