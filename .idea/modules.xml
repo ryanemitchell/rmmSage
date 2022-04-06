@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sage.iml" filepath="$PROJECT_DIR$/.idea/sage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Sage Based Plugin Starter.iml" filepath="$PROJECT_DIR$/.idea/Sage Based Plugin Starter.iml" />
     </modules>
   </component>
 </project>

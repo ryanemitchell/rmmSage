@@ -2,6 +2,13 @@
 
 wp acorn
 
+## getting started
+
+composer install && npm install && yarn build && yarn dev
+
+
+
+
 # TOOLS
 
 
@@ -16,6 +23,8 @@ Use "One echo ir print statement for all HTML Code
 # Bud
 
 [Bud CLI](https://bud.js.org/guides/bud-cli/build)
+
+PLugins: https://github.com/roots/bud
 
 Source Maps - Devtool options
 
