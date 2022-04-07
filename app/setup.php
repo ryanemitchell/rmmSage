@@ -122,5 +122,14 @@ add_action('widgets_init', function () {
         'name' => __('Primary', 'sage'),
         'id' => 'sidebar-primary'
     ] + $config);
-	
+
 });
+
+
+
+
+// Include Shortcodes
+foreach (glob(get_template_directory() . "/app/shortcodes/*.php") as $file) {
+	include_once $file;
+}
+
