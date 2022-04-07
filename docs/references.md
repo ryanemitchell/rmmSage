@@ -74,7 +74,7 @@ https://github.com/michelegera/create-tailwindcss-boilerplate
 https://github.com/Log1x/poet
 
 https://github.com/Log1x/acf-composer
-
+https://github.com/shufo/prettier-plugin-blade
 
 https://github.com/Log1x/navi
 

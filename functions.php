@@ -11,6 +11,7 @@
 |
 */
 
+
 if (! file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
     wp_die(__('Error locating autoloader. Please run <code>composer install</code>.', 'sage'));
 }
@@ -87,13 +88,14 @@ add_filter('aljm_save_json', function ($folders) {
 });
 
 
-include_once('app/lib/acf-options-pages.php');
-include_once('app/blog/blog-pagination.php');
-include_once('app/blog/blog-functions.php');
-include_once('app/NavWalkers/mobile_slide_menu.php');
-include_once('app/NavWalkers/mobile_dropdown_menu.php');
-include_once('app/lib/site-optimizations.php');
-include_once('app/lib/rmmFunctions.php');
-include_once('app/lib/disable-editor.php');
-include_once('app/lib/witSection.php');
-include_once('app/lib/default-flexible-content-layouts.php');
+
+// The “login_headerurl” filter is used to filter the URL of the logo on the WordPress login page.
+// By default, this logo links to the WordPress site.
+add_filter('login_headerurl','crunchify_login_link');
+function crunchify_login_link() {
+
+	// Change Logo link if you want user to redirect to other link.
+	return home_url();
+}
+
+
