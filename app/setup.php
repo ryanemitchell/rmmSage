@@ -27,6 +27,16 @@ add_action('enqueue_block_editor_assets', function () {
 }, 100);
 
 /**
+ * Register the login screen assets
+ *
+ * @return void
+ */
+
+add_action('login_enqueue_scripts', function () {
+    bundle('login')->enqueue();
+}, 100);
+
+/**
  * Register the initial theme setup.
  *
  * @return void
@@ -122,7 +132,6 @@ add_action('widgets_init', function () {
         'name' => __('Primary', 'sage'),
         'id' => 'sidebar-primary'
     ] + $config);
-
 });
 
 
@@ -130,6 +139,51 @@ add_action('widgets_init', function () {
 
 // Include Shortcodes
 foreach (glob(get_template_directory() . "/app/shortcodes/*.php") as $file) {
-	include_once $file;
+    include_once $file;
 }
+
+
+if (file_exists(get_template_directory() . '/app/blog/blog-pagination.php')) {
+    require_once(get_template_directory() . '/app/blog/blog-pagination.php');
+}
+
+if (file_exists(get_template_directory() . '/app/blog/blog-functions.php')) {
+    require_once(get_template_directory() . '/app/blog/blog-functions.php');
+}
+
+if (file_exists(get_template_directory() . '/app/NavWalkers/mobile_slide_menu.php')) {
+    require_once(get_template_directory() . '/app/NavWalkers/mobile_slide_menu.php');
+}
+
+if (file_exists(get_template_directory() . '/app/NavWalkers/mobile_dropdown_menu.php')) {
+    require_once(get_template_directory() . '/app/NavWalkers/mobile_dropdown_menu.php');
+}
+
+if (file_exists(get_template_directory() . '/app/lib/site-optimizations.php')) {
+    require_once(get_template_directory() . '/app/lib/site-optimizations.php');
+}
+
+if (file_exists(get_template_directory() . '/app/lib/rmmFunctions.php')) {
+    require_once(get_template_directory() . '/app/lib/rmmFunctions.php');
+}
+
+if (file_exists(get_template_directory() . '/app/lib/disable-editor.php')) {
+    require_once(get_template_directory() . '/app/lib/disable-editor.php');
+}
+
+if (file_exists(get_template_directory() . '/app/lib/witSection.php')) {
+    require_once(get_template_directory() . '/app/lib/witSection.php');
+}
+
+if (file_exists(get_template_directory() . '/app/lib/default-flexible-content-layouts.php')) {
+    require_once(get_template_directory() . '/app/lib/default-flexible-content-layouts.php');
+}
+
+if (file_exists(get_template_directory() . '/app/lib/insert-header-body-footer-scripts.php')) {
+    require_once(get_template_directory() . '/app/lib/insert-header-body-footer-scripts.php');
+}
+
+
+
+
 
