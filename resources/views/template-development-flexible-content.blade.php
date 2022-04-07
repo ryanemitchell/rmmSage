@@ -1,6 +1,4 @@
-{{--
-  Template Name: Development Template - Flexible Content
---}}
+{{-- Template Name: Development Template - Flexible Content --}}
 
 @php $desktopBreakpoint = '1024px'; @endphp
 
@@ -11,75 +9,51 @@
 
 
 @section('content')
-  @while(have_posts()) @php(the_post())
-    @include('partials.content-page')
+    @while (have_posts())
+        @php(the_post())
+        @include('partials.content-page')
 
-<?php if( have_rows('flexible_content_field') ): ?>
+        <?php if( have_rows('flexible_content_field') ): ?>
 
-	<div class="wit-sections-wrapper">
+        <div class="wit-sections-wrapper">
 
-	<?php while( have_rows('flexible_content_field') ): the_row(); ?>
-
-
-
-			<?php if (get_row_layout() == 'layout'): ?>
+            <?php while( have_rows('flexible_content_field') ): the_row(); ?>
 
 
 
-<?php
-				$witSection = new App\lib\witSection();
-				$sectionInfo = $witSection->makeSectionStyling();
-
-		//		Pull in the vars
-				$sectionClassNames = $sectionInfo->sectionClassNames;
-				$sectionStyles = $sectionInfo->sectionStyles;
-
-		//		Render section tyles
-				echo $sectionStyles;
-				?>
+            <?php if (get_row_layout() == 'layout'): ?>
 
 
 
-				<div class="witSection {{ $sectionClassNames }}">
-
-					@include('witSections.witSection-wysiwyg')
-
-				</div>
-
-
-
-			<? endif; ?>
-
-{{--		Image Section--}}
-
-
-
-		<?php if (get_row_layout() == 'image_section'):
-
-		$witSection = new App\lib\witSection();
-		$sectionInfo = $witSection->makeSectionStyling();
-
-		//		Pull in the vars
-		$sectionClassNames = $sectionInfo->sectionClassNames;
-		$sectionStyles = $sectionInfo->sectionStyles;
-
-		//		Render section tyles
-		echo $sectionStyles;
-		?>
+            <?php
+            $witSection = new App\lib\witSection();
+            $sectionInfo = $witSection->makeSectionStyling();
+            
+            //		Pull in the vars
+            $sectionClassNames = $sectionInfo->sectionClassNames;
+            $sectionStyles = $sectionInfo->sectionStyles;
+            
+            //		Render section tyles
+            echo $sectionStyles;
+            ?>
 
 
 
-		<div class="witSection {{ $sectionClassNames }}">
+            <div class="witSection {{ $sectionClassNames }}">
 
-			@include('witSections.witSection-image-section')
+                @include('witSections.witSection-wysiwyg')
 
-		</div>
-
-		<? endif; ?>
+            </div>
 
 
 
-		<?php if (get_row_layout() == 'bigtest'):
+            <? endif; ?>
+
+            {{-- Image Section --}}
+
+
+
+            <?php if (get_row_layout() == 'image_section'):
 
 		$witSection = new App\lib\witSection();
 		$sectionInfo = $witSection->makeSectionStyling();
@@ -94,26 +68,46 @@
 
 
 
-		<div class="witSection {{ $sectionClassNames }}">
+            <div class="witSection {{ $sectionClassNames }}">
 
-			@include('witSections.witSection-reusable-block-section')
+                @include('witSections.witSection-image-section')
 
-		</div>
+            </div>
 
-		<? endif; ?>
-
-
-	<?php endwhile; ?>
-
-	</div>
-
-<?php endif; ?><div class="wysiwyg_623a974442a52 superclass block lg:block">
+            <? endif; ?>
 
 
 
+            <?php if (get_row_layout() == 'bigtest'):
+
+		$witSection = new App\lib\witSection();
+		$sectionInfo = $witSection->makeSectionStyling();
+
+		//		Pull in the vars
+		$sectionClassNames = $sectionInfo->sectionClassNames;
+		$sectionStyles = $sectionInfo->sectionStyles;
+
+		//		Render section tyles
+		echo $sectionStyles;
+		?>
 
 
-  @endwhile
+
+            <div class="witSection {{ $sectionClassNames }}">
+
+                @include(
+                    'witSections.witSection-reusable-block-section'
+                )
+
+            </div>
+
+            <? endif; ?>
+
+
+            <?php endwhile; ?>
+
+        </div>
+
+        <?php endif; ?><div class="wysiwyg_623a974442a52 superclass block lg:block">
+    @endwhile
 @endsection
-
-

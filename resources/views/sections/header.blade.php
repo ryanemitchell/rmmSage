@@ -2,15 +2,18 @@
 
   <div class="flex justify-between">
 
-    <div class="col1"> <!-- Start of .col1 -->
-        <img src="https://source.unsplash.com/category/buildings/200x150/" >
+    <div class="col1">
+      <!-- Start of .col1 -->
+      <img src="https://source.unsplash.com/category/buildings/200x150/">
     </div> <!-- End of .col1 -->
 
 
-    <div class="col2"> <!-- Start of .col1 -->
+    <div class="col2">
+      <!-- Start of .col1 -->
       <a href="/contact/schedule-service" class="btn iconCalendar false"><span>Schedule Now</span></a>
 
-      <div id="mobile-menu-toggle" class="p-0 bg-none border-none menu-toggle lg:hidden" aria-controls="primary-menu" aria-expanded="false">
+      <div id="mobile-menu-toggle" class="p-0 bg-none border-none menu-toggle lg:hidden" aria-controls="primary-menu"
+        aria-expanded="false">
         <div></div>
       </div>
 
@@ -26,80 +29,78 @@
 
 
 
-  {{--Desktop Navigation--}}
-  <div class="hidden relative z-20 justify-end lg:flex"> <!-- Start of .relative z-20 -->
+  {{-- Desktop Navigation --}}
+  <div class="hidden relative z-20 justify-end lg:flex">
+    <!-- Start of .relative z-20 -->
 
 
     @if (has_nav_menu('primary_desktop_navigation'))
       {!! wp_nav_menu([
-          'theme_location' => 'primary_desktop_navigation',
-                'menu_id'        => 'primary-desktop-menu',
-                'menu_class'     => 'menu p-0 m-0',
-                'container' => 'none'
-       ]) !!}
+    'theme_location' => 'primary_desktop_navigation',
+    'menu_id' => 'primary-desktop-menu',
+    'menu_class' => 'menu p-0 m-0',
+    'container' => 'none',
+]) !!}
     @endif
 
 
 
   </div> <!-- End of .relative z-20 -->
 
-  {{--	end desktop navigation--}}
+  {{-- end desktop navigation --}}
 
 
 
 
-  {{--Mobile Navigation--}}
+  {{-- Mobile Navigation --}}
 
-  {{--Menu button--}}
+  {{-- Menu button --}}
   <div class="flex z-10 items-center lg:hidden bg-prima btn-open mobileMenuButton"></div>
 
   <div class="flex relative flex-col items-stretch lg:hidden zeynep right">
-{{--  @if (has_nav_menu('primary_mobile_navigation'))--}}
-{{--    {!! wp_nav_menu([--}}
-{{--        'theme_location' => 'primary_mobile_navigation',--}}
-{{--              'container' => false,--}}
-{{--              'menu_id'        => 'mobile-menu',--}}
-{{--              'menu_class'     => 'menu p-0 m-0',--}}
-{{--              'after'			 => '',--}}
-{{--              'walker' => new AWP_Menu_Walker(),--}}
-{{--              'root_text' => 'All'--}}
-{{--     ]) !!}--}}
-{{--  @endif--}}
+    {{-- @if (has_nav_menu('primary_mobile_navigation')) --}}
+    {{-- {!! wp_nav_menu([ --}}
+    {{-- 'theme_location' => 'primary_mobile_navigation', --}}
+    {{-- 'container' => false, --}}
+    {{-- 'menu_id'        => 'mobile-menu', --}}
+    {{-- 'menu_class'     => 'menu p-0 m-0', --}}
+    {{-- 'after'			 => '', --}}
+    {{-- 'walker' => new AWP_Menu_Walker(), --}}
+    {{-- 'root_text' => 'All' --}}
+    {{-- ]) !!} --}}
+    {{-- @endif --}}
 
 
 
     <div id="mobile-menu-wrapper">
-    <?php
-
-    $args = [
-
-            'theme_location'  => 'primary_mobile_navigation',
-            'menu_id'        => 'primary-mobile-menu',
-            'menu_class'      => 'navbar-nav',
-            'container_id'    => 'primary_mobile_navigation',
-            'walker'          => new RMM_Mobile_Menu_Walker()
-    ];
-    wp_nav_menu( $args );
-
-
-
-    ?>
+      <?php
+      
+      $args = [
+          'theme_location' => 'primary_mobile_navigation',
+          'menu_id' => 'primary-mobile-menu',
+          'menu_class' => 'navbar-nav',
+          'container_id' => 'primary_mobile_navigation',
+          'walker' => new RMM_Mobile_Menu_Walker(),
+      ];
+      wp_nav_menu($args);
+      
+      ?>
       <div class="bg-blue-500">
 
-        <div id="mobile-menu-close" class="p-0 bg-none border-none menu-toggle lg:hidden" aria-controls="primary-menu" aria-expanded="false">
-        close
+        <div id="mobile-menu-close" class="p-0 bg-none border-none menu-toggle lg:hidden" aria-controls="primary-menu"
+          aria-expanded="false">
+          close
         </div>
 
-        </div>
+      </div>
 
     </div>
 
   </div>
 
-  {{--	end mobile navigation--}}
+  {{-- end mobile navigation --}}
 
 </header>
 
 
 <div id="check" class="bacon">Check</div>
-

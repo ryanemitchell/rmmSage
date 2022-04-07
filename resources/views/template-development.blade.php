@@ -1,42 +1,24 @@
-{{--
-  Template Name: Development Template
---}}
+{{-- Template Name: Development Template --}}
 
 @extends('layouts.app')
 
 
 @section('content')
-  @while(have_posts()) @php(the_post())
-    @include('partials.content-page')
+    @while (have_posts())
+        @php(the_post())
+        {{ $pageTitle }}
+        @include('partials.content-page')
 
+        @include('fieldPartials.socialIcons')
+        @include('fieldPartials.businessName')
+        @include('fieldPartials.businessAddress')
+        @include('fieldPartials.businessLicense')
+        @include('fieldPartials.businessPhoneNumber')
 
-
-<?php
-
-	$socialSites = rmmGetField('social_media','',1)
-
-
-
-
-
- ?>
-
-	  {{ $pageTitle }}
-
-<?php //echo $socialSites; ?>
-
-
-
-
-  @foreach($socialSites as $site)
-	  <bacon><?php </bacon>
-  @endforeach
-
-
-
-  @endwhile
+        <h2>ShortCodes</h2>
+    @endwhile
 @endsection
 
 @section('sidebar')
-	@include('sections.sidebar')
+    @include('sections.sidebar')
 @endsection

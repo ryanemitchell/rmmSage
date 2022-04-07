@@ -1,1 +1,1 @@
-<?php (dynamic_sidebar('blog-prefooter')); ?>
+<?php dynamic_sidebar('blog-prefooter'); ?>

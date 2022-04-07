@@ -5,7 +5,9 @@
 @include('sections.header')
 @include('sections.page-header')
 
-<div id="main-container" class="content-container mx-auto max-w-[1200px] px-0 lg:px-0 flex flex-col lg:flex-row flex-nowrap bg-blue-500 justify-between"> <!-- Start of #main-container -->
+<div id="main-container"
+  class="content-container mx-auto max-w-[1200px] px-0 lg:px-0 flex flex-col lg:flex-row flex-nowrap bg-blue-500 justify-between">
+  <!-- Start of #main-container -->
 
   <main id="main" class="main grow">
     @yield('content')
