@@ -10,6 +10,8 @@
   "scripts": {
     "dev": "bud dev",
     "build": "bud build",
+    "bud:clean": "bud clean",
+    "acorn:optimize:clear": "wp acorn optimize:clear",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint resources/scripts",
     "lint:js:fix": "eslint --fix resources/scripts",
@@ -22,9 +24,12 @@
     "translate": "npm run translate:pot && npm run translate:js",
     "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
     "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
-    "acfComposer:CreateFieldPartial": "echo 'What do you want to name your field partial' && read x && wp acorn acf:partial ${x}",
-    "acfComposer:CreateOptionsMenu": "echo 'What do you want to name your Options Name' && read x && wp acorn acf:options ${x}",
-    "acfComposer:CreateOptionsMenu:full": "echo 'What do you want to name your Options Name' && read x && wp acorn acf:options ${x} --full;"
+    "acorn:make:composer": "echo 'What do you want to name your composer?' && read x && wp acorn make:composer ${x} echo 'https://docs.roots.io/sage/10.x/composers/'",
+    "acorn:make:component": "echo 'What do you want to name your component?' && read x && wp acorn make:component ${x} echo 'https://docs.roots.io/sage/10.x/components/'",
+    "acfComposer:CreateFieldGroup": "echo 'What do you want to name your field group' && read x && wp acorn acf:field ${x} && echo 'https://github.com/Log1x/acf-composer' && echo 'https://github.com/Log1x/acf-builder-cheatsheet'",
+    "acfComposer:CreateFieldPartial": "echo 'What do you want to name your field partial' && read x && wp acorn acf:partial ${x} && echo 'https://github.com/Log1x/acf-builder-cheatsheet'",
+    "acfComposer:CreateOptionsMenu": "echo 'What do you want to name your Options Name' && read x && wp acorn acf:options ${x} && echo 'https://github.com/Log1x/acf-builder-cheatsheet'",
+    "acfComposer:CreateOptionsMenu:full": "echo 'What do you want to name your Options Name' && read x && wp acorn acf:options ${x} --full && echo 'https://github.com/Log1x/acf-builder-cheatsheet'"
   },
   "devDependencies": {
     "@roots/bud": "5.7.7",
@@ -46,6 +51,7 @@
   },
   "dependencies": {
     "accordion-js": "^3.2.0",
+    "alpinejs": "^3.9.6",
     "aos": "^2.3.4",
     "swiper": "^8.0.7",
     "tw-elements": "^1.0.0-alpha12"
