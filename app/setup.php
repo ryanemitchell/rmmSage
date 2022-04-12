@@ -36,6 +36,20 @@ add_action('login_enqueue_scripts', function () {
     bundle('login')->enqueue();
 }, 100);
 
+
+
+/**
+ * Register the admin screen assets
+ *
+ * @return void
+ */
+
+add_action('admin_enqueue_scripts', function () {
+    bundle('admin')->enqueue();
+}, 101);
+
+
+
 /**
  * Register the initial theme setup.
  *
@@ -159,12 +173,20 @@ if (file_exists(get_template_directory() . '/app/NavWalkers/mobile_dropdown_menu
     require_once(get_template_directory() . '/app/NavWalkers/mobile_dropdown_menu.php');
 }
 
+if (file_exists(get_template_directory() . '/app/NavWalkers/rmm_basic_nav_walker.php')) {
+    require_once(get_template_directory() . '/app/NavWalkers/rmm_basic_nav_walker.php');
+}
+
 if (file_exists(get_template_directory() . '/app/lib/site-optimizations.php')) {
     require_once(get_template_directory() . '/app/lib/site-optimizations.php');
 }
 
 if (file_exists(get_template_directory() . '/app/lib/rmmFunctions.php')) {
     require_once(get_template_directory() . '/app/lib/rmmFunctions.php');
+}
+
+if (file_exists(get_template_directory() . '/app/lib/menu-functions.php')) {
+	require_once(get_template_directory() . '/app/lib/menu-functions.php');
 }
 
 if (file_exists(get_template_directory() . '/app/lib/disable-editor.php')) {
@@ -183,7 +205,6 @@ if (file_exists(get_template_directory() . '/app/lib/insert-header-body-footer-s
     require_once(get_template_directory() . '/app/lib/insert-header-body-footer-scripts.php');
 }
 
-
-
-
-
+if (file_exists(get_template_directory() . '/app/lib/globalsIntoHead.php')) {
+	require_once(get_template_directory() . '/app/lib/globalsIntoHead.php');
+}
