@@ -3,8 +3,7 @@ import Accordion from 'accordion-js';
 import Swiper from 'swiper/bundle';
 import AOS from 'aos';
 import 'tw-elements';
-
-import { hello } from './modules/mydevtools';
+import {rmmExternalLinks} from "@scripts/modules/rmmExternalinks";
 
 window.Swiper = Swiper;
 window.Accordion = Accordion;
@@ -33,8 +32,10 @@ import.meta.webpackHot?.accept(main);
 
 
 domReady(() => {
+// eslint-disable-next-line
+//   window.alert(businessName);
 
-
+  rmmExternalLinks();
 
     /* ===========================  Sticky Header  ========================== */
 
@@ -53,38 +54,7 @@ domReady(() => {
 
 
 
-  window.addEventListener("load", onLoadFunction);
-  window.addEventListener("resize", onLoadFunction);
 
-  function onLoadFunction(e){
-    if (document.getElementsByClassName('accordion-container').length > 0) {
-
-
-      // Check if desktop and initialize - if mobile destroy
-      if (window.matchMedia("(min-width: 1200px)").matches) {
-
-        const accordion = new Accordion(('.accordion-container'), {
-          duration: 400,
-          showMultiple: true,
-        });
-        accordion.closeAll();
-        accordion.update();
-      } else {
-        const accordion = new Accordion('.accordion-container');
-        accordion.destroy();
-        accordion.detachEvents();
-
-      }
-
-
-
-    }
-
-
-
-
-
-  }
 
   /* ===========================  InItialize multiple Accordions  ========================== */
 // Reference: https://github.com/michu2k/Accordion/issues/7
@@ -173,6 +143,9 @@ domReady(() => {
       },
     });
   }
+
+
+
 
 
   /* ==========================================================================
