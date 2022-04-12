@@ -1,10 +1,83 @@
+To IMpliment
+
+- [ ] [https://github.com/Log1x/sage-svg](https://github.com/Log1x/sage-svg)
+- [ ] [https://github.com/Log1x/crumb](https://github.com/Log1x/crumb)
+- [ ] [https://github.com/Log1x/pagi](https://github.com/Log1x/pagi)
+- [ ] [https://github.com/Log1x/acf-phone-number](https://github.com/Log1x/acf-phone-number)
+
+
+
 # CLI
 
 wp acorn
 
+## Using Tailwind UI Components
+
+```sh
+1. open command line run -> npm install -g live-server
+2. open cmd in preview folder after extracting this zip and run -> live-server
+```
+
+
+
+
 ## getting started
 
 composer install && npm install && yarn build && yarn dev
+
+## Theme structure
+
+```sh
+themes/your-theme-name/               # → Root of your Sage based theme
+├── app/                              # → Theme PHP
+│   ├── Providers/                    # → Service providers
+│   ├── View/                         # → View models
+│   ├── filters.php                   # → Theme filters
+│   └── setup.php                     # → Theme setup
+├── composer.json                     # → Autoloading for `app/` files
+├── public/                           # → Built theme assets (never edit)
+├── functions.php                     # → Theme bootloader
+├── index.php                         # → Theme template wrapper
+├── node_modules/                     # → Node.js packages (never edit)
+├── package.json                      # → Node.js dependencies and scripts
+├── resources/                        # → Theme assets and templates
+│   ├── fonts/                        # → Theme fonts
+│   ├── images/                       # → Theme images
+│   ├── scripts/                      # → Theme javascript
+│   ├── styles/                # → Theme stylesheets
+│       ├── admin.css                 # → wp-admin styling
+│   └── views/                 # → Theme templates
+│       ├── components/               # → Component templates
+│       ├── fieldModules/             # → Component templates
+│       ├── forms/                    # → Form templates    
+│       ├── layouts/                  # → Base templates
+│       ├── partials/                 # → Partial templates
+        └── sections/                 # → Section templates
+├── screenshot.png        # → Theme screenshot for WP admin
+├── style.css             # → Theme meta information
+├── vendor/               # → Composer packages (never edit)
+└── bud.config.js         # → Bud configuration
+```
+
+
+
+## Libraries references
+
+
+#### Accordion JS - Lightweight Accordion Library
+&nbsp;&nbsp;&nbsp;&nbsp;[Docs](https://michu2k.github.io/Accordion/)
+&nbsp;&nbsp;&nbsp;&nbsp;[Github](https://github.com/michu2k/Accordion)
+____________
+
+
+## Creating and Using CUsomt MOdules
+
+
+## Custom Functions
+
+
+
+
 
 
 
@@ -112,3 +185,6 @@ curl -O https://raw.githubusercontent.com/salcode/wpcli-localwp-setup/main/wpcli
 https://stackoverflow.com/questions/42966641/how-to-transform-black-into-any-given-color-using-only-css-filters/62880368#62880368
 https://browserstrangeness.bitbucket.io/css_hacks.html#safari
 https://www.npmjs.com/package/hex-to-css-filter
+
+
+
