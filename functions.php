@@ -99,3 +99,162 @@ function crunchify_login_link() {
 }
 
 
+/**
+ * Remove the WordPress version
+ */
+add_filter('the_generator', '__return_false');
+
+/**
+ * Disable HTML in WordPress comments
+ */
+
+add_filter( 'pre_comment_content', 'esc_html' );
+
+
+/**
+ * Disable WordPress Login Hints
+ */
+function no_wordpress_errors(){
+	return 'Please try the right user/pass combination';
+}
+add_filter( 'login_errors', 'no_wordpress_errors' );
+
+/**
+ * Remove Query Strings from resources
+ */
+function remove_cssjs_ver( $src ) {
+	if( strpos( $src, '?ver=' ) )
+		$src = remove_query_arg( 'ver', $src );
+	return $src;
+}
+add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
+add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
+
+
+/**
+ * Remove RSD Links
+ */
+
+remove_action( 'wp_head', 'rsd_link' ) ;
+
+/**
+ * Remove Shortlink
+ */
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
+/**
+ * Disable Embeds
+ */
+function disable_embed(){
+	wp_dequeue_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'disable_embed' );
+
+/**
+ * Disable XML-RPC
+ */
+add_filter('xmlrpc_enabled', '__return_false');
+
+/**
+ * Remove WLManifest Link
+ */
+remove_action( 'wp_head', 'wlwmanifest_link' ) ;
+
+/**
+ * Remove JQuery Migrate
+ */
+
+//function deregister_qjuery() {
+//	if ( !is_admin() ) {
+//		wp_deregister_script('jquery');
+//	}
+//}
+//add_action('wp_enqueue_scripts', 'deregister_qjuery');
+
+
+/**
+ * Remove WLManifest Link
+ */
+function disable_pingback( &$links ) {
+	foreach ( $links as $l => $link )
+		if ( 0 === strpos( $link, get_option( 'home' ) ) )
+			unset($links[$l]);
+}
+add_action( 'pre_ping', 'disable_pingback' );
+
+/**
+ * Disable Heartbeat
+ */
+add_action( 'init', 'stop_heartbeat', 1 );
+function stop_heartbeat() {
+	wp_deregister_script('heartbeat');
+}
+/**
+ * Disable Dashicons on Front-end
+ */
+
+function wpdocs_dequeue_dashicon() {
+	if (current_user_can( 'update_core' )) {
+		return;
+	}
+	wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
+
+
+
+function hide_block_editor(){
+
+	// globals
+	global $typenow;
+
+	// Restrict
+	$restricted = array('acf-field-group', 'attachment');
+
+	if(in_array($typenow, $restricted))
+		return;
+
+	$post_type = $typenow;
+	$post_id = 0;
+
+	if(isset( $_GET['post'])){
+
+		$post_id = (int) $_GET['post'];
+
+	}elseif(isset($_POST['post_ID'])){
+
+		$post_id = (int) $_POST['post_ID'];
+
+	}
+
+	$field_groups = acf_get_field_groups(array(
+		'post_id'   => $post_id,
+		'post_type' => $post_type
+	));
+
+	$hide_block_editor = false;
+
+	foreach($field_groups as $field_group){
+
+		$hide_on_screen = acf_get_array($field_group['hide_on_screen']);
+
+		if(!in_array('block_editor', $hide_on_screen))
+			continue;
+
+		$hide_block_editor = true;
+		break;
+
+	}
+
+	if($hide_block_editor){
+
+		add_filter('use_block_editor_for_post_type', '__return_false');
+
+	}
+
+}
+
+
+add_action('load-post.php',  'hide_block_editor');
+add_action('load-post-new.php', 'hide_block_editor');
+
