@@ -24,38 +24,37 @@ class RMM_Mobile_Menu_Walker extends Walker_Nav_Menu
 
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
-//	    if ( $depth === 0 ) {
-//			    array_push( $item->classes, "level-0");
-//	    }
+//      if ( $depth === 0 ) {
+//              array_push( $item->classes, "level-0");
+//      }
 
-	    switch ($depth) {
-		    case 0:
-			    array_push( $item->classes, "level-0");
-				break;
-		    case 1:
-			    array_push( $item->classes, "level-1");
-			    break;
-		    case 2:
-			    array_push( $item->classes, "level-2");
-			    break;
-		    case 3:
-			    array_push( $item->classes, "level-3");
-			    break;
-	    }
+        switch ($depth) {
+            case 0:
+                array_push($item->classes, "level-0");
+                break;
+            case 1:
+                array_push($item->classes, "level-1");
+                break;
+            case 2:
+                array_push($item->classes, "level-2");
+                break;
+            case 3:
+                array_push($item->classes, "level-3");
+                break;
+        }
 
-		$output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+        $output .= "<li class='" .  implode(" ", $item->classes) . "'>";
 
-	    $children = get_posts(array('post_type' => 'nav_menu_item', 'nopaging' => true, 'numberposts' => 1, 'meta_key' => '_menu_item_menu_item_parent', 'meta_value' => $item->ID));
+        $children = get_posts(array('post_type' => 'nav_menu_item', 'nopaging' => true, 'numberposts' => 1, 'meta_key' => '_menu_item_menu_item_parent', 'meta_value' => $item->ID));
 
-//		@todo make parent a div with link and toggle
+//      @todo make parent a div with link and toggle
 
         if ($item->url && $item->url != '#') {
-	        if (!empty($children)) {
-		        $output .= "<div class=\"hasToggle\">";
-	        }
+            if (!empty($children)) {
+                $output .= "<div class=\"hasToggle\">";
+            }
 
             $output .= '<a href="' . $item->url . '">';
-
         } else {
             $output .= '<span>';
         }
@@ -65,19 +64,12 @@ class RMM_Mobile_Menu_Walker extends Walker_Nav_Menu
         if ($item->url && $item->url != '#') {
             $output .= '</a>';
 
-	        if (!empty($children)) {
-		        $output .= "<span class=\"controlToggle\"></span></div>";
-	        }
-
+            if (!empty($children)) {
+                $output .= "<span class=\"controlToggle\"></span></div>";
+            }
         } else {
             $output .= '</span>';
         }
-
-
-
-
-
-
     }
 
 //end_el
