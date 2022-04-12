@@ -8,6 +8,15 @@
  * @since        1.0.0
  * @license      GPL-2.0+
  **/
+function get_page_id_by_title($title)
+{
+	$page = get_page_by_title($title);
+	return $page->ID;
+}
+
+
+get_page_id_by_title('how are you');
+//https://www.billerickson.net/disabling-gutenberg-certain-templates/
 
 /**
  * Templates and Page IDs without editor
@@ -18,11 +27,17 @@ function ea_disable_editor($id = false)
 
     $excluded_templates = array(
         'template-development-flexible-content.blade.php',
-        'templates/contact.php'
+        'page.blade.php'
     );
 
     $excluded_ids = array(
-        // get_option( 'page_on_front' )
+		'36', //contact
+	    '40', //scheduleService
+	    '74', //careers
+//	    '55', //DEV
+         get_option( 'page_on_front' ),
+	    get_page_id_by_title('careers'),
+	    is_404(),
     );
 
     if (empty($id)) {
