@@ -6,7 +6,7 @@ use App\Fields\Partials\locationInformation;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class BusinessInformation extends Field
+class SiteSettingsBusinessInformation extends Field
 {
     /**
      * The option page menu name.
@@ -127,7 +127,7 @@ class BusinessInformation extends Field
                 'conditional_logic' => [],
                 'wrapper' => [
                     'width' => '',
-                    'class' => '',
+                    'class' => 'acfGroup acfGroup_dark acfGroup_primary_location',
                     'id' => '',
                 ],
                 'layout' => 'block',
@@ -136,21 +136,21 @@ class BusinessInformation extends Field
             ->addFields($this->get(locationInformation::class))
             ->endGroup()
 
-//            ->addGroup('witsage_secondary_location', [
-//                'label' => 'Secondary Location',
-//                'instructions' => '',
-//                'required' => 0,
-//                'conditional_logic' => [],
-//                'wrapper' => [
-//                    'width' => '',
-//                    'class' => '',
-//                    'id' => '',
-//                ],
-//                'layout' => 'block',
-//                'sub_fields' => ['witsage_business_zip_code'],
-//            ])
-//            ->addFields($this->get(locationInformation::class))
-//            ->endGroup()
+            ->addGroup('witsage_secondary_location', [
+                'label' => 'Secondary Location',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => [],
+                'wrapper' => [
+                    'width' => '',
+                    'class' => 'acfGroup acfGroup_light acfGroup_secondary_location',
+                    'id' => '',
+                ],
+                'layout' => 'block',
+                'sub_fields' => ['witsage_business_zip_code'],
+            ])
+            ->addFields($this->get(locationInformation::class))
+            ->endGroup()
         ;
 
         return $businessInformation->build();

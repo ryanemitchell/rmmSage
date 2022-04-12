@@ -7,7 +7,7 @@ use App\Fields\Partials\socialLinks;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class SocialMedia extends Field
+class SiteSettingsSocialMedia extends Field
 {
     /**
      * The option page menu name.
@@ -42,7 +42,7 @@ class SocialMedia extends Field
      *
      * @var int
      */
-    public $position = '20';
+    public $position = '0';
 
     /**
      * The slug of another admin page to be used as a parent.

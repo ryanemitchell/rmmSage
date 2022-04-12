@@ -3,10 +3,11 @@
 namespace App\Options;
 
 use App\Fields\Partials\scripts;
+use App\Fields\Partials\settingsScripts;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class InsertScripts extends Field
+class SiteSettingsInsertScripts extends Field
 {
     /**
      * The option page menu name.
@@ -41,7 +42,7 @@ class InsertScripts extends Field
      *
      * @var int
      */
-    public $position = '10';
+    public $position = '0';
 
     /**
      * The slug of another admin page to be used as a parent.
@@ -108,7 +109,7 @@ class InsertScripts extends Field
         $insertScripts = new FieldsBuilder('insert_scripts');
 
         $insertScripts
-	        ->addFields($this->get(scripts::class))
+	        ->addFields($this->get(settingsScripts::class))
 
 
 	     ;
