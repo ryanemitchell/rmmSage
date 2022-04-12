@@ -1,5 +1,6 @@
-{{-- Template Name: Development Template - Show All ACF Fields --}}
-
+@php
+//	Template Name: 🧙‍ Development Template - Show All ACF Fields
+@endphp
 @php $desktopBreakpoint = '1024px'; @endphp
 
 

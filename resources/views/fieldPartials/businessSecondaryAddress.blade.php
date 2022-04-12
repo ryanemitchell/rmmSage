@@ -1,5 +1,5 @@
-@hasoptions('field_business_information_witsage_primary_location')
-@options('field_business_information_witsage_primary_location')
+@hasoptions('field_business_information_witsage_secondary_location')
+@options('field_business_information_witsage_secondary_location')
 <address class="business-address primary">
   @hassub('business_link')
   <a href="@sub('business_link')" class="business_address_link" target="_blank">

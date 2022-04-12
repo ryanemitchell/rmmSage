@@ -58,33 +58,19 @@
   <div class="flex z-10 items-center lg:hidden bg-prima btn-open mobileMenuButton"></div>
 
   <div class="flex relative flex-col items-stretch lg:hidden zeynep right">
-    {{-- @if (has_nav_menu('primary_mobile_navigation')) --}}
-    {{-- {!! wp_nav_menu([ --}}
-    {{-- 'theme_location' => 'primary_mobile_navigation', --}}
-    {{-- 'container' => false, --}}
-    {{-- 'menu_id'        => 'mobile-menu', --}}
-    {{-- 'menu_class'     => 'menu p-0 m-0', --}}
-    {{-- 'after'			 => '', --}}
-    {{-- 'walker' => new AWP_Menu_Walker(), --}}
-    {{-- 'root_text' => 'All' --}}
-    {{-- ]) !!} --}}
-    {{-- @endif --}}
 
+
+    @if (has_nav_menu('primary_mobile_navigation'))
 
 
     <div id="mobile-menu-wrapper">
-      <?php
-      
-      $args = [
-          'theme_location' => 'primary_mobile_navigation',
-          'menu_id' => 'primary-mobile-menu',
-          'menu_class' => 'navbar-nav',
-          'container_id' => 'primary_mobile_navigation',
-          'walker' => new RMM_Mobile_Menu_Walker(),
-      ];
-      wp_nav_menu($args);
-      
-      ?>
+      {!! wp_nav_menu([
+        'theme_location' => 'primary_mobile_navigation',
+		 'menu_id' => 'primary-mobile-menu',
+		 'menu_class' => 'navbar-nav',
+		 'container_id' => 'primary_mobile_navigation',
+		 'walker' => new RMM_Mobile_Menu_Walker(),
+        ]) !!}
       <div class="bg-blue-500">
 
         <div id="mobile-menu-close" class="p-0 bg-none border-none menu-toggle lg:hidden" aria-controls="primary-menu"
@@ -97,10 +83,11 @@
     </div>
 
   </div>
+  @endif  {{-- end mobile navigation --}}
 
-  {{-- end mobile navigation --}}
+
 
 </header>
 
 
-<div id="check" class="bacon">Check</div>
+

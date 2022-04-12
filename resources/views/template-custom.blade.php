@@ -1,4 +1,6 @@
-{{-- Template Name: Custom Template --}}
+@php
+//	Template Name: 🧙‍ Custom Template STARTER
+@endphp
 
 @extends('layouts.app')
 

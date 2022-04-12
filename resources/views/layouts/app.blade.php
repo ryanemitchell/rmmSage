@@ -1,15 +1,14 @@
 <a class="sr-only focus:not-sr-only" href="#main">
   {{ __('Skip to content') }}
 </a>
-@php $pageTitle = rmmGetField('witsage_business_name','chili', 1); @endphp
 @include('sections.header')
 @include('sections.page-header')
-
+@include('sections.yoastBreadcrumbs')
 <div id="main-container"
-  class="content-container mx-auto max-w-[1200px] px-0 lg:px-0 flex flex-col lg:flex-row flex-nowrap bg-blue-500 justify-between">
+  class="content-container mx-auto max-w-[1200px] px-0 lg:px-0 flex flex-col lg:flex-row flex-nowrap bg-blue-500 justify-between bg-orange">
   <!-- Start of #main-container -->
 
-  <main id="main" class="main grow">
+  <main id="main" class="main mx-auto grow w-full flex flex-col">
     @yield('content')
   </main>
 

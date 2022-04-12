@@ -1,4 +1,6 @@
-{{-- Template Name: Development Template - Flexible Content --}}
+@php
+//	Template Name: 🧙‍ Development Template - Flexible Content
+@endphp
 
 @php $desktopBreakpoint = '1024px'; @endphp
 

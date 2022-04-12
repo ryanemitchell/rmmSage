@@ -1,4 +1,7 @@
-{{-- Template Name: Development Template - Accordion --}}
+@php
+//	Template Name: 🧙‍ Development Template - Accordion
+@endphp
+
 
 @extends('layouts.app')
 
@@ -159,7 +162,7 @@
 
 
             <?  }
-                ?>
+                                            ?>
 
         </div>
     @endsection

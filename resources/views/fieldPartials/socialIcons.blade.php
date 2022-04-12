@@ -1,11 +1,11 @@
 @hasoptions('field_social_media_social_links')
 
 <div class="social-icons">
+  <div class="social-icons-inner">
   @options('field_social_media_social_links')
 
-  <a href="@sub('site_URL')" target="_blank" class="social-icon-link" title="@sub('site_name')">
+  <a href="@sub('site_URL')" target="_blank" class="social-icon-link" title="@sub('site_name')" >
     <div class="social-icon social-icon-@sub('site_name')">
-      @sub('site_name')
     </div>
 
   </a>
@@ -25,19 +25,10 @@
   @endstyle
 
   @endoptions
-
-
+  </div>
 </div>
 
 
 @endhasoptions
 
 
-<pre>
-
-<?php $field = get_field('field_social_media_social_links', 'option');
-
-print_r($field);
-
-?>
-</pre>

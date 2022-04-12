@@ -1,4 +1,8 @@
-{{-- Template Name: Development Template - Swiper --}}
+@php
+//	Template Name: 🧙‍ Development Template - Swiper
+@endphp
+
+
 
 @extends('layouts.app')
 
@@ -117,7 +121,7 @@
 
 
             <?  }
-                ?>
+                                            ?>
 
         </div>
     @endsection
