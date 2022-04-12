@@ -2,6 +2,7 @@
 <project version="4">
   <component name="BladeInjectionConfiguration" default="false">
     <directives>
+      <data directive="@@hasfields" injection="true" prefix="(" suffix=")" />
       <data directive="@append" />
       <data directive="@auth" injection="true" prefix="&lt;?php if(auth()-&gt;guard(" suffix=")-&gt;check()): ?&gt;" />
       <data directive="@break" injection="true" prefix="&lt;?php if(" suffix=") break; ?&gt;" />
@@ -37,10 +38,13 @@
       <data directive="@endempty" />
       <data directive="@endenv" />
       <data directive="@enderror" />
+      <data directive="@endfield" />
+      <data directive="@endfields" />
       <data directive="@endfor" />
       <data directive="@endforeach" />
       <data directive="@endforelse" />
       <data directive="@endguest" />
+      <data directive="@endhasfields" />
       <data directive="@endhasoptions" />
       <data directive="@endif" />
       <data directive="@endisset" />
@@ -64,11 +68,14 @@
       <data directive="@error" injection="true" prefix="&lt;?php $__errorArgs = [" suffix="];&#10;$__bag = $errors-&gt;getBag($__errorArgs[1] ?? 'default');&#10;if ($__bag-&gt;has($__errorArgs[0])) :&#10;if (isset($message)) { $__messageOriginal = $message; }&#10;$message = $__bag-&gt;first($__errorArgs[0]); ?&gt;" />
       <data directive="@extends" injection="true" prefix="&lt;?php echo $__env-&gt;make(" suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;" />
       <data directive="@extendsfirst" injection="true" prefix="&lt;?php echo $__env-&gt;first(" suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;" />
+      <data directive="@fields" injection="true" prefix="(" suffix=")" />
       <data directive="@for" injection="true" prefix="&lt;?php for(" suffix="): ?&gt;" />
       <data directive="@foreach" injection="true" prefix="&lt;?php foreach(" suffix="): ?&gt;" />
       <data directive="@forelse" injection="true" prefix="&lt;?php foreach(" suffix="): ?&gt;" />
       <data directive="@guest" injection="true" prefix="&lt;?php if(auth()-&gt;guard(" suffix=")-&gt;guest()): ?&gt;" />
       <data directive="@hasSection" injection="true" prefix="&lt;?php if (! empty(trim($__env-&gt;yieldContent(" suffix=")))): ?&gt;" />
+      <data directive="@hasfield" injection="true" prefix="(" suffix=")" />
+      <data directive="@hasfields" />
       <data directive="@hasoption" injection="true" prefix="(" suffix=")" />
       <data directive="@hasoptions" injection="true" prefix="(&quot;'&quot;" suffix="&quot;'&quot;)" />
       <data directive="@hassub" injection="true" prefix="(" suffix=")" />
@@ -97,6 +104,7 @@
       <data directive="@stop" />
       <data directive="@style" />
       <data directive="@sub" injection="true" prefix="(" suffix=")" />
+      <data directive="@svg" />
       <data directive="@switch" injection="true" prefix="&lt;?php switch(" suffix="): ?&gt;" />
       <data directive="@unless" injection="true" prefix="&lt;?php if (! (" suffix=")): ?&gt;" />
       <data directive="@unset" injection="true" prefix="&lt;?php unset(" suffix="); ?&gt;" />
