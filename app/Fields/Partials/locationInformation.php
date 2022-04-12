@@ -34,6 +34,7 @@ class locationInformation extends Partial
             ],
             ])
 
+
             ->addText('primary_phone_display', [
                 'label' => 'Primary Number to Display',
                 'instructions' => 'Formatted phone number',
@@ -90,19 +91,19 @@ class locationInformation extends Partial
                 ],
             ])
 
-	        ->addUrl('business_link', [
-		        'label' => 'Address Link',
-		        'instructions' => 'URL that the address will link to',
-		        'required' => 0,
-		        'conditional_logic' => [],
-		        'wrapper' => [
-			        'width' => '',
-			        'class' => '',
-			        'id' => '',
-		        ],
-		        'default_value' => 'https://google.com',
-		        'placeholder' => '',
-	        ]);
+            ->addUrl('business_link', [
+                'label' => 'Address Link',
+                'instructions' => 'URL that the address will link to',
+                'required' => 0,
+                'conditional_logic' => [],
+                'wrapper' => [
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ],
+                'default_value' => 'https://google.com',
+                'placeholder' => '',
+            ]);
 
 
 
