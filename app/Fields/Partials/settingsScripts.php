@@ -5,7 +5,7 @@ namespace App\Fields\Partials;
 use Log1x\AcfComposer\Partial;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class scripts extends Partial
+class settingsScripts extends Partial
 {
     /**
      * The partial field group.
@@ -14,18 +14,17 @@ class scripts extends Partial
      */
     public function fields()
     {
-        $scripts = new FieldsBuilder('scripts');
+        $settingsScripts = new FieldsBuilder('settings_scripts');
 
-        $scripts
-
-        /* ===  Additional Header Code  ==== */
+        $settingsScripts
+            /* ===  Additional Header Code  ==== */
             ->addTextarea('additional_header_code', [
                 'label' => 'Additional Header Code',
                 'instructions' => "This code will appear LAST inside the sites HEAD section. Before the BODY tag. <br> Uses do_action( 'wp_head' )'",
-                'rows' => '20',
+                'rows' => '10',
                 'new_lines' => '', // Possible values are 'wpautop', 'br', or ''.
                 'wrapper' => [
-	                'width' => '75%',
+                    'width' => '75%',
                 ],
             ])
 
@@ -38,7 +37,7 @@ class scripts extends Partial
                 'ui_on_text' => 'Active',
                 'ui_off_text' => 'Off',
                 'wrapper' => [
-	                'width' => '25%',
+                    'width' => '25%',
                 ],
             ])
 
@@ -46,10 +45,10 @@ class scripts extends Partial
             ->addTextarea('after_opening_body_code', [
                 'label' => 'After Opening Body Code',
                 'instructions' => "This code will appear just after the opening BODY tag.<br> Uses do_action( 'wp_body_open' )",
-                'rows' => '20',
+                'rows' => '10',
                 'new_lines' => '', // Possible values are 'wpautop', 'br', or ''.
                 'wrapper' => [
-	                'width' => '75%',
+                    'width' => '75%',
                 ],
             ])
 
@@ -62,18 +61,18 @@ class scripts extends Partial
                 'ui_on_text' => 'Active',
                 'ui_off_text' => 'Off',
                 'wrapper' => [
-	                'width' => '25%',
+                    'width' => '25%',
                 ],
             ])
 
-	        /* ===  Footer Body Code  ==== */
+            /* ===  Footer Body Code  ==== */
             ->addTextarea('additional_footer_code', [
                 'label' => 'Additional Footer Code',
                 'instructions' => "This code will appear LAST, just before the closing BODY tag.<br> Uses do_action( 'wp_footer' )",
-                'rows' => '20',
+                'rows' => '10',
                 'new_lines' => '', // Possible values are 'wpautop', 'br', or ''.
                 'wrapper' => [
-	                'width' => '75%',
+                    'width' => '75%',
                 ],
             ])
 
@@ -86,7 +85,7 @@ class scripts extends Partial
                 'ui_on_text' => 'Active',
                 'ui_off_text' => 'Off',
                 'wrapper' => [
-	                'width' => '25%',
+                    'width' => '25%',
                 ],
             ])
 
@@ -94,6 +93,6 @@ class scripts extends Partial
 
         ;
 
-        return $scripts;
+        return $settingsScripts;
     }
 }
