@@ -5,15 +5,18 @@ body {
 }
 
 #app {
+  position: relative;
+
   header.main-header {
     background-color: purple;
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 99;
   } /* End of header.main-header */
 
   #main-container {
-    margin-top: 200px; //height of header + page header
+    position: relative;
+    //margin-top: 200px; //height of header + page header
 
     main.main {
       background-color: yellow;

@@ -1,12 +1,26 @@
 body.login {
-  background: rgb(0 71 82); /* Old browsers */
-  background: linear-gradient(to bottom, rgb(0 71 82 / 100%) 0%, rgb(0 211 216 / 100%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background-attachment: fixed;
-  background-color: #004752;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#004752", endColorstr="#00d3d8", GradientType=0); /* IE6-9 */
+  //background: rgb(0 71 82); /* Old browsers */
+  //background: linear-gradient(to bottom, rgb(0 71 82 / 100%) 0%, rgb(0 211 216 / 100%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //background-color: #004752;
+  //background-size: cover;
+  //filter: progid:dximagetransform.microsoft.gradient(startColorstr="#004752", endColorstr="#00d3d8", GradientType=0); /* IE6-9 */
+  animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg, rgb(0 71 82 / 100%), rgb(1 188 192)) no-repeat fixed center;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .login h1 a {
