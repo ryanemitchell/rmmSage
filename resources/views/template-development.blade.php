@@ -10,7 +10,7 @@
 
 
 {{--   @include('offers.alloffers')--}}
-   @include('offers.selectedOffers')
+   @include('offers.offers')
 
 
 {{--   Offers: {{ $offers }}--}}
