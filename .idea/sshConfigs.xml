@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="OPEN_SSH" host="35.239.71.225" id="9357f571-235f-410b-9ba8-de2ee65626f9" port="33133" customName="KInsta - Expert Air" nameFormat="CUSTOM" username="expertair" useOpenSSHConfig="true">
+        <option name="customName" value="KInsta - Expert Air" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

@@ -1,116 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BladeInjectionConfiguration" default="false">
-    <directives>
-      <data directive="@@hasfields" injection="true" prefix="(" suffix=")" />
-      <data directive="@append" />
-      <data directive="@auth" injection="true" prefix="&lt;?php if(auth()-&gt;guard(" suffix=")-&gt;check()): ?&gt;" />
-      <data directive="@break" injection="true" prefix="&lt;?php if(" suffix=") break; ?&gt;" />
-      <data directive="@can" injection="true" prefix="&lt;?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;check(" suffix=")): ?&gt;" />
-      <data directive="@canany" injection="true" prefix="&lt;?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;any(" suffix=")): ?&gt;" />
-      <data directive="@cannot" injection="true" prefix="&lt;?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;denies(" suffix=")): ?&gt;" />
-      <data directive="@case" injection="true" prefix="&lt;?php case (" suffix="): ?&gt;" />
-      <data directive="@choice" injection="true" prefix="&lt;?php echo app('translator')-&gt;choice(" suffix="); ?&gt;" />
-      <data directive="@class" injection="true" prefix="class=&quot;&lt;?php echo \Illuminate\Support\Arr::toCssClasses(" suffix=") ?&gt;&quot;" />
-      <data directive="@component" injection="true" prefix="&lt;?php $__env-&gt;startComponent(" suffix="); ?&gt;" />
-      <data directive="@componentfirst" injection="true" prefix="&lt;?php $__env-&gt;startComponentFirst(" suffix="); ?&gt;" />
-      <data directive="@continue" injection="true" prefix="&lt;?php if(" suffix=") continue; ?&gt;" />
-      <data directive="@csrf" />
-      <data directive="@dd" injection="true" prefix="&lt;?php dd(" suffix="); ?&gt;" />
-      <data directive="@default" />
-      <data directive="@dump" injection="true" prefix="&lt;?php dump(" suffix="); ?&gt;" />
-      <data directive="@each" injection="true" prefix="&lt;?php echo $__env-&gt;renderEach(" suffix="); ?&gt;" />
-      <data directive="@else" />
-      <data directive="@elseauth" injection="true" prefix="&lt;?php elseif(auth()-&gt;guard(" suffix=")-&gt;check()): ?&gt;" />
-      <data directive="@elsecan" injection="true" prefix="&lt;?php elseif (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;check(" suffix=")): ?&gt;" />
-      <data directive="@elsecanany" injection="true" prefix="&lt;?php elseif (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;any(" suffix=")): ?&gt;" />
-      <data directive="@elsecannot" injection="true" prefix="&lt;?php elseif (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;denies(" suffix=")): ?&gt;" />
-      <data directive="@elseguest" injection="true" prefix="&lt;?php elseif(auth()-&gt;guard(" suffix=")-&gt;guest()): ?&gt;" />
-      <data directive="@elseif" injection="true" prefix="&lt;?php elseif(" suffix="): ?&gt;" />
-      <data directive="@empty" injection="true" prefix="&lt;?php if(empty(" suffix=")): ?&gt;" />
-      <data directive="@endauth" />
-      <data directive="@endcan" />
-      <data directive="@endcanany" />
-      <data directive="@endcannot" />
-      <data directive="@endcomponent" />
-      <data directive="@endcomponentClass" />
-      <data directive="@endcomponentfirst" />
-      <data directive="@endempty" />
-      <data directive="@endenv" />
-      <data directive="@enderror" />
-      <data directive="@endfield" />
-      <data directive="@endfields" />
-      <data directive="@endfor" />
-      <data directive="@endforeach" />
-      <data directive="@endforelse" />
-      <data directive="@endguest" />
-      <data directive="@endhasfields" />
-      <data directive="@endhasoptions" />
-      <data directive="@endif" />
-      <data directive="@endisset" />
-      <data directive="@endlang" />
-      <data directive="@endonce" />
-      <data directive="@endoption" />
-      <data directive="@endoptions" />
-      <data directive="@endphp" />
-      <data directive="@endprepend" />
-      <data directive="@endproduction" />
-      <data directive="@endpush" />
-      <data directive="@endsection" />
-      <data directive="@endslot" />
-      <data directive="@endstyle" />
-      <data directive="@endsub" />
-      <data directive="@endswitch" />
-      <data directive="@endunless" />
-      <data directive="@endverbatim" />
-      <data directive="@endwhile" />
-      <data directive="@env" injection="true" prefix="&lt;?php if(app()-&gt;environment(" suffix=")): ?&gt;" />
-      <data directive="@error" injection="true" prefix="&lt;?php $__errorArgs = [" suffix="];&#10;$__bag = $errors-&gt;getBag($__errorArgs[1] ?? 'default');&#10;if ($__bag-&gt;has($__errorArgs[0])) :&#10;if (isset($message)) { $__messageOriginal = $message; }&#10;$message = $__bag-&gt;first($__errorArgs[0]); ?&gt;" />
-      <data directive="@extends" injection="true" prefix="&lt;?php echo $__env-&gt;make(" suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;" />
-      <data directive="@extendsfirst" injection="true" prefix="&lt;?php echo $__env-&gt;first(" suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;" />
-      <data directive="@fields" injection="true" prefix="(" suffix=")" />
-      <data directive="@for" injection="true" prefix="&lt;?php for(" suffix="): ?&gt;" />
-      <data directive="@foreach" injection="true" prefix="&lt;?php foreach(" suffix="): ?&gt;" />
-      <data directive="@forelse" injection="true" prefix="&lt;?php foreach(" suffix="): ?&gt;" />
-      <data directive="@guest" injection="true" prefix="&lt;?php if(auth()-&gt;guard(" suffix=")-&gt;guest()): ?&gt;" />
-      <data directive="@hasSection" injection="true" prefix="&lt;?php if (! empty(trim($__env-&gt;yieldContent(" suffix=")))): ?&gt;" />
-      <data directive="@hasfield" injection="true" prefix="(" suffix=")" />
-      <data directive="@hasfields" />
-      <data directive="@hasoption" injection="true" prefix="(" suffix=")" />
-      <data directive="@hasoptions" injection="true" prefix="(&quot;'&quot;" suffix="&quot;'&quot;)" />
-      <data directive="@hassub" injection="true" prefix="(" suffix=")" />
-      <data directive="@if" injection="true" prefix="&lt;?php if(" suffix="): ?&gt;" />
-      <data directive="@include" injection="true" prefix="&lt;?php echo $__env-&gt;make(" suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;" />
-      <data directive="@includeFirst" injection="true" prefix="&lt;?php echo $__env-&gt;first(" suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;" />
-      <data directive="@includeUnless" injection="true" prefix="&lt;?php echo $__env-&gt;renderWhen(! " suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path'])); ?&gt;" />
-      <data directive="@includeWhen" injection="true" prefix="&lt;?php echo $__env-&gt;renderWhen(" suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path'])); ?&gt;" />
-      <data directive="@isset" injection="true" prefix="&lt;?php if(isset(" suffix=")): ?&gt;" />
-      <data directive="@json" injection="true" prefix="&lt;?php echo json_encode(" suffix=") ?&gt;" />
-      <data directive="@lang" injection="true" prefix="&lt;?php echo app('translator')-&gt;get(" suffix="); ?&gt;" />
-      <data directive="@method" injection="true" prefix="&lt;?php echo method_field(" suffix="); ?&gt;" />
-      <data directive="@once" />
-      <data directive="@options" injection="true" prefix="(" suffix=")" />
-      <data directive="@overwrite" />
-      <data directive="@parent" />
-      <data directive="@php" injection="true" prefix="&lt;?php (" suffix="); ?&gt;" />
-      <data directive="@prepend" injection="true" prefix="&lt;?php $__env-&gt;startPrepend(" suffix="); ?&gt;" />
-      <data directive="@production" />
-      <data directive="@push" injection="true" prefix="&lt;?php $__env-&gt;startPush(" suffix="); ?&gt;" />
-      <data directive="@section" injection="true" prefix="&lt;?php $__env-&gt;startSection(" suffix="); ?&gt;" />
-      <data directive="@sectionMissing" injection="true" prefix="&lt;?php if (empty(trim($__env-&gt;yieldContent(" suffix=")))): ?&gt;" />
-      <data directive="@show" />
-      <data directive="@slot" injection="true" prefix="&lt;?php $__env-&gt;slot(" suffix="); ?&gt;" />
-      <data directive="@stack" injection="true" prefix="&lt;?php echo $__env-&gt;yieldPushContent(" suffix="); ?&gt;" />
-      <data directive="@stop" />
-      <data directive="@style" />
-      <data directive="@sub" injection="true" prefix="(" suffix=")" />
-      <data directive="@svg" />
-      <data directive="@switch" injection="true" prefix="&lt;?php switch(" suffix="): ?&gt;" />
-      <data directive="@unless" injection="true" prefix="&lt;?php if (! (" suffix=")): ?&gt;" />
-      <data directive="@unset" injection="true" prefix="&lt;?php unset(" suffix="); ?&gt;" />
-      <data directive="@verbatim" />
-      <data directive="@while" injection="true" prefix="&lt;?php while(" suffix="): ?&gt;" />
-      <data directive="@yield" injection="true" prefix="&lt;?php echo $__env-&gt;yieldContent(" suffix="); ?&gt;" />
-    </directives>
-  </component>
+    <component name="BladeInjectionConfiguration" default="false">
+        <directives>
+            <!-- Sage Directives - WordPress - https://log1x.github.io/sage-directives-docs/usage/wordpress.html-->
+            <data directive="@query" injection="true" prefix="(" suffix=")"/>
+            <data directive="@posts" injection="true" prefix="(" suffix=")"/>
+            <data directive="@hasposts" injection="true" prefix="(" suffix=")"/>
+            <data directive="@noposts" injection="true" prefix="(" suffix=")"/>
+            <data directive="@titl"/>
+            <data directive="@content"/>
+            <data directive="@excerpt"/>
+            <data directive="@permalink"/>
+            <data directive="@thumbnail" injection="true" prefix="(" suffix=")"/>
+            <data directive="@author"/>
+            <data directive="@authorurl" injection="true" prefix="(" suffix=")"/>
+            <data directive="@published" injection="true" prefix="(" suffix=")"/>
+            <data directive="@modified" injection="true" prefix="(" suffix=")"/>
+            <data directive="@category" injection="true" prefix="(" suffix=")"/>
+            <data directive="@categories" injection="true" prefix="(" suffix=")"/>
+            <data directive="@term" injection="true" prefix="(" suffix=")"/>
+            <data directive="@terms" injection="true" prefix="(" suffix=")"/>
+            <data directive="@image" injection="true" prefix="(" suffix=")"/>
+            <data directive="@shortcode" injection="true" prefix="(" suffix=")"/>
+            <data directive="@role" injection="true" prefix="(" suffix=")"/>
+            <data directive="@user" injection="true" prefix="(" suffix=")"/>
+            <data directive="@guest" injection="true" prefix="(" suffix=")"/>
+            <data directive="@wpautop" injection="true" prefix="(" suffix=")"/>
+            <data directive="@wpautokp" injection="true" prefix="(" suffix=")"/>
+            <data directive="@action" injection="true" prefix="(" suffix=")"/>
+            <data directive="@filter" injection="true" prefix="(" suffix=")"/>
+            <data directive="@wphead" injection="true" prefix="(" suffix=")"/>
+            <data directive="@wpfoot" injection="true" prefix="(" suffix=")"/>
+            <data directive="@bodyclass" injection="true" prefix="(" suffix=")"/>
+            <data directive="@wpbodyopen" injection="true" prefix="(" suffix=")"/>
+            <data directive="@endposts"/>
+            <data directive="@endhasposts"/>
+            <data directive="@endnoposts"/>
+            <data directive="@endrole"/>
+            <data directive="@enduser"/>
+            <data directive="@endguest"/>
+            <!--Sage Directives - ACF - https://log1x.github.io/sage-directives-docs/usage/acf.html-->
+            <data directive="@field" injection="true" prefix="(" suffix=")"/>
+            <data directive="@hasfield" injection="true" prefix="(" suffix=")"/>
+            <data directive="@isfield" injection="true" prefix="(" suffix=")"/>
+            <data directive="@fields" injection="true" prefix="(" suffix=")"/>
+            <data directive="@hasfields" injection="true" prefix="(" suffix=")"/>
+            <data directive="@sub" injection="true" prefix="(" suffix=")"/>
+            <data directive="@hassub" injection="true" prefix="(" suffix=")"/>
+            <data directive="@issub" injection="true" prefix="(" suffix=")"/>
+            <data directive="@layouts" injection="true" prefix="(" suffix=")"/>
+            <data directive="@layout" injection="true" prefix="(" suffix=")"/>
+            <data directive="@group" injection="true" prefix="(" suffix=")"/>
+            <data directive="@option" injection="true" prefix="(" suffix=")"/>
+            <data directive="@hasoption" injection="true" prefix="(" suffix=")"/>
+            <data directive="@isoption" injection="true" prefix="(" suffix=")"/>
+            <data directive="@options" injection="true" prefix="(" suffix=")"/>
+            <data directive="@hasoptions" injection="true" prefix="(" suffix=")"/>
+            <data directive="@endfield"/>
+            <data directive="@endfields"/>
+            <data directive="@endhasfields"/>
+            <data directive="@endsub"/>
+            <data directive="@endlayouts"/>
+            <data directive="@endlayout"/>
+            <data directive="@endgroup"/>
+            <data directive="@endoption"/>
+            <data directive="@endoptions"/>
+            <data directive="@endhasoptions"/>
+            <!--Sage Directives - Helpers  - https://log1x.github.io/sage-directives-docs/usage/helpers.html-->
+            <data directive="@istrue" injection="true" prefix="(" suffix=")"/>
+            <data directive="@isfalse" injection="true" prefix="(" suffix=")"/>
+            <data directive="@isnull" injection="true" prefix="(" suffix=")"/>
+            <data directive="@isnotnull" injection="true" prefix="(" suffix=")"/>
+            <data directive="@notempty" injection="true" prefix="(" suffix=")"/>
+            <data directive="@instanceof" injection="true" prefix="(" suffix=")"/>
+            <data directive="@typeof" injection="true" prefix="(" suffix=")"/>
+            <data directive="@global" injection="true" prefix="(" suffix=")"/>
+            <data directive="@set" injection="true" prefix="(" suffix=")"/>
+            <data directive="@unset" injection="true" prefix="(" suffix=")"/>
+            <data directive="@extract" injection="true" prefix="(" suffix=")"/>
+            <data directive="@implode" injection="true" prefix="(" suffix=")"/>
+            <data directive="@repeat" injection="true" prefix="(" suffix=")"/>
+            <data directive="@style" injection="true" prefix="(" suffix=")"/>
+            <data directive="@script" injection="true" prefix="(" suffix=")"/>
+            <data directive="@js" injection="true" prefix="(" suffix=")"/>
+            <data directive="@inline" injection="true" prefix="(" suffix=")"/>
+            <data directive="@fa" injection="true" prefix="(" suffix=")"/>
+            <data directive="@endistrue"/>
+            <data directive="@endisfalse"/>
+            <data directive="@endisnull"/>
+            <data directive="@endisnotnull"/>
+            <data directive="@endnotempty"/>
+            <data directive="@endinstanceof"/>
+            <data directive="@endtypeof"/>
+            <data directive="@endextract"/>
+            <data directive="@endimplode"/>
+            <data directive="@endrepeat"/>
+            <data directive="@endstyle"/>
+            <data directive="@endscript"/>
+            <data directive="@endinline"/>
+            <!--Sage SVG  - https://github.com/Log1x/sage-svg -->
+            <data directive="@svg" injection="true" prefix="(" suffix=")"/>
+            <!--PHPSTORM Defaults-->
+            <data directive="@auth" injection="true" prefix="&lt;?php if(auth()-&gt;guard("
+                  suffix=")-&gt;check()): ?&gt;"/>
+            <data directive="@bacon" injection="true" prefix="(" suffix=")"/>
+            <data directive="@break" injection="true" prefix="&lt;?php if(" suffix=") break; ?&gt;"/>
+            <data directive="@can" injection="true"
+                  prefix="&lt;?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;check("
+                  suffix=")): ?&gt;"/>
+            <data directive="@canany" injection="true"
+                  prefix="&lt;?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;any(" suffix=")): ?&gt;"/>
+            <data directive="@cannot" injection="true"
+                  prefix="&lt;?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;denies("
+                  suffix=")): ?&gt;"/>
+            <data directive="@case" injection="true" prefix="&lt;?php case (" suffix="): ?&gt;"/>
+            <data directive="@choice" injection="true" prefix="&lt;?php echo app('translator')-&gt;choice("
+                  suffix="); ?&gt;"/>
+            <data directive="@class" injection="true"
+                  prefix="class=&quot;&lt;?php echo \Illuminate\Support\Arr::toCssClasses(" suffix=") ?&gt;&quot;"/>
+            <data directive="@component" injection="true" prefix="&lt;?php $__env-&gt;startComponent("
+                  suffix="); ?&gt;"/>
+            <data directive="@componentfirst" injection="true" prefix="&lt;?php $__env-&gt;startComponentFirst("
+                  suffix="); ?&gt;"/>
+            <data directive="@continue" injection="true" prefix="&lt;?php if(" suffix=") continue; ?&gt;"/>
+            <data directive="@csrf"/>
+            <data directive="@dd" injection="true" prefix="&lt;?php dd(" suffix="); ?&gt;"/>
+            <data directive="@default"/>
+            <data directive="@dump" injection="true" prefix="&lt;?php dump(" suffix="); ?&gt;"/>
+            <data directive="@each" injection="true" prefix="&lt;?php echo $__env-&gt;renderEach(" suffix="); ?&gt;"/>
+            <data directive="@else"/>
+            <data directive="@elseauth" injection="true" prefix="&lt;?php elseif(auth()-&gt;guard("
+                  suffix=")-&gt;check()): ?&gt;"/>
+            <data directive="@elsecan" injection="true"
+                  prefix="&lt;?php elseif (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;check("
+                  suffix=")): ?&gt;"/>
+            <data directive="@elsecanany" injection="true"
+                  prefix="&lt;?php elseif (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;any("
+                  suffix=")): ?&gt;"/>
+            <data directive="@elsecannot" injection="true"
+                  prefix="&lt;?php elseif (app(\Illuminate\Contracts\Auth\Access\Gate::class)-&gt;denies("
+                  suffix=")): ?&gt;"/>
+            <data directive="@elseguest" injection="true" prefix="&lt;?php elseif(auth()-&gt;guard("
+                  suffix=")-&gt;guest()): ?&gt;"/>
+            <data directive="@elseif" injection="true" prefix="&lt;?php elseif(" suffix="): ?&gt;"/>
+            <data directive="@empty" injection="true" prefix="&lt;?php if(empty(" suffix=")): ?&gt;"/>
+            <data directive="@endauth"/>
+            <data directive="@endcan"/>
+            <data directive="@endcanany"/>
+            <data directive="@endcannot"/>
+            <data directive="@endcomponent"/>
+            <data directive="@endcomponentClass"/>
+            <data directive="@endcomponentfirst"/>
+            <data directive="@endempty"/>
+            <data directive="@endenv"/>
+            <data directive="@enderror"/>
+            <data directive="@endfor"/>
+            <data directive="@endforeach"/>
+            <data directive="@endforelse"/>
+            <data directive="@endguest"/>
+            <data directive="@endif"/>
+            <data directive="@endisset"/>
+            <data directive="@endlang"/>
+            <data directive="@endonce"/>
+            <data directive="@endphp"/>
+            <data directive="@endprepend"/>
+            <data directive="@endproduction"/>
+            <data directive="@endpush"/>
+            <data directive="@endsection"/>
+            <data directive="@endslot"/>
+            <data directive="@endswitch"/>
+            <data directive="@endunless"/>
+            <data directive="@endverbatim"/>
+            <data directive="@endwhile"/>
+            <data directive="@env" injection="true" prefix="&lt;?php if(app()-&gt;environment(" suffix=")): ?&gt;"/>
+            <data directive="@error" injection="true" prefix="&lt;?php $__errorArgs = ["
+                  suffix="];&#10;$__bag = $errors-&gt;getBag($__errorArgs[1] ?? 'default');&#10;if ($__bag-&gt;has($__errorArgs[0])) :&#10;if (isset($message)) { $__messageOriginal = $message; }&#10;$message = $__bag-&gt;first($__errorArgs[0]); ?&gt;"/>
+            <data directive="@extends" injection="true" prefix="&lt;?php echo $__env-&gt;make("
+                  suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;"/>
+            <data directive="@extendsfirst" injection="true" prefix="&lt;?php echo $__env-&gt;first("
+                  suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;"/>
+            <data directive="@for" injection="true" prefix="&lt;?php for(" suffix="): ?&gt;"/>
+            <data directive="@foreach" injection="true" prefix="&lt;?php foreach(" suffix="): ?&gt;"/>
+            <data directive="@forelse" injection="true" prefix="&lt;?php foreach(" suffix="): ?&gt;"/>
+            <data directive="@guest" injection="true" prefix="&lt;?php if(auth()-&gt;guard("
+                  suffix=")-&gt;guest()): ?&gt;"/>
+            <data directive="@hasSection" injection="true" prefix="&lt;?php if (! empty(trim($__env-&gt;yieldContent("
+                  suffix=")))): ?&gt;"/>
+            <data directive="@if" injection="true" prefix="&lt;?php if(" suffix="): ?&gt;"/>
+            <data directive="@include" injection="true" prefix="&lt;?php echo $__env-&gt;make("
+                  suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;"/>
+            <data directive="@includeFirst" injection="true" prefix="&lt;?php echo $__env-&gt;first("
+                  suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))-&gt;render(); ?&gt;"/>
+            <data directive="@includeUnless" injection="true" prefix="&lt;?php echo $__env-&gt;renderWhen(! "
+                  suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path'])); ?&gt;"/>
+            <data directive="@includeWhen" injection="true" prefix="&lt;?php echo $__env-&gt;renderWhen("
+                  suffix=", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path'])); ?&gt;"/>
+            <data directive="@isset" injection="true" prefix="&lt;?php if(isset(" suffix=")): ?&gt;"/>
+            <data directive="@json" injection="true" prefix="&lt;?php echo json_encode(" suffix=") ?&gt;"/>
+            <data directive="@lang" injection="true" prefix="&lt;?php echo app('translator')-&gt;get("
+                  suffix="); ?&gt;"/>
+            <data directive="@method" injection="true" prefix="&lt;?php echo method_field(" suffix="); ?&gt;"/>
+            <data directive="@once"/>
+            <data directive="@overwrite"/>
+            <data directive="@parent"/>
+            <data directive="@php" injection="true" prefix="&lt;?php (" suffix="); ?&gt;"/>
+            <data directive="@prepend" injection="true" prefix="&lt;?php $__env-&gt;startPrepend(" suffix="); ?&gt;"/>
+            <data directive="@production"/>
+            <data directive="@push" injection="true" prefix="&lt;?php $__env-&gt;startPush(" suffix="); ?&gt;"/>
+            <data directive="@section" injection="true" prefix="&lt;?php $__env-&gt;startSection(" suffix="); ?&gt;"/>
+            <data directive="@sectionMissing" injection="true" prefix="&lt;?php if (empty(trim($__env-&gt;yieldContent("
+                  suffix=")))): ?&gt;"/>
+            <data directive="@show"/>
+            <data directive="@slot" injection="true" prefix="&lt;?php $__env-&gt;slot(" suffix="); ?&gt;"/>
+            <data directive="@stack" injection="true" prefix="&lt;?php echo $__env-&gt;yieldPushContent("
+                  suffix="); ?&gt;"/>
+            <data directive="@stop"/>
+            <data directive="@switch" injection="true" prefix="&lt;?php switch(" suffix="): ?&gt;"/>
+            <data directive="@unless" injection="true" prefix="&lt;?php if (! (" suffix=")): ?&gt;"/>
+            <data directive="@unset" injection="true" prefix="&lt;?php unset(" suffix="); ?&gt;"/>
+            <data directive="@verbatim"/>
+            <data directive="@while" injection="true" prefix="&lt;?php while(" suffix="): ?&gt;"/>
+            <data directive="@yield" injection="true" prefix="&lt;?php echo $__env-&gt;yieldContent("
+                  suffix="); ?&gt;"/>
+        </directives>
+    </component>
 </project>
