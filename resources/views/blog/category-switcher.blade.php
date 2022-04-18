@@ -1,7 +1,6 @@
-<div class="categorySwitcher">
+<div class="flex flex-col justify-center items-center categorySwitcher py-desktopVGap px-desktopVGap">
   <!-- Start of .categorySwitcher -->
   <h2>Categories</h2>
-
 
   <?php $args = [
       'show_option_all' => 'View All',
@@ -19,18 +18,15 @@
       'hierarchical' => 0,
       'name' => 'cat',
       'id' => '',
-      'class' => 'postform',
+      'class' => 'postform min-w-[80%] m-0 bg-white inline px-2 py-2 box-border leading-6 border-none appearance-none border rounded-none',
       'depth' => 0,
       'tab_index' => 0,
       'taxonomy' => 'category',
       'hide_if_empty' => false,
       'value_field' => 'term_id',
-  ]; ?>
+  ];
 
-
-
-
-  <?php wp_dropdown_categories($args); ?>
+wp_dropdown_categories($args); ?>
 
 
   <script>

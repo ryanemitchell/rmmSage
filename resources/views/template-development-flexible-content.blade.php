@@ -110,6 +110,6 @@
 
         </div>
 
-        <?php endif; ?><div class="wysiwyg_623a974442a52 superclass block lg:block">
+        <?php endif; ?><div class="block lg:block wysiwyg_623a974442a52 superclass">
     @endwhile
 @endsection

@@ -20,7 +20,7 @@ class rmm_basic_nav_walker extends Walker_Nav_Menu
     // @see Walker::start_el()
 	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
-        $output .= '<li class="w-full bg-blue-100 hover:bg-blue-500 cursor-pointer py-5 px-10 transition-all duration-1000"><a href="' . esc_attr($item->url).'">'. esc_attr($item->title).'</a>';
+        $output .= '<li class="py-5 px-10 w-full bg-blue-100 transition-all duration-1000 cursor-pointer hover:bg-blue-500"><a href="' . esc_attr($item->url).'">'. esc_attr($item->title).'</a>';
     }
     // Displays end of an element. E.g '</li>'
     // @see Walker::end_el()

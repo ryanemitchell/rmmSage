@@ -1,6 +1,5 @@
 #mobile-menu-toggle {
   width: 40px;
-  margin: 1em;
 
   &::after,
   &::before,
@@ -31,7 +30,7 @@
 
 #mobile-menu-wrapper {
   position: fixed;
-  top: 200px;
+  top: 40px;
   left: 0;
   display: none;
   z-index: 50;

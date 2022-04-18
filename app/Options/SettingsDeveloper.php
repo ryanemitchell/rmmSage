@@ -107,9 +107,22 @@ class SettingsDeveloper extends Field
         $developer = new FieldsBuilder('developer');
 
         $developer
-            ->addRepeater('items')
-                ->addText('item')
-            ->endRepeater();
+	        ->addTrueFalse('rmm_visual_debug', [
+		        'label' => 'Visual Debugging',
+		        'instructions' => '',
+		        'required' => 0,
+		        'conditional_logic' => [],
+		        'wrapper' => [
+			        'width' => '',
+			        'class' => '',
+			        'id' => '',
+		        ],
+		        'message' => '',
+		        'default_value' => 0,
+		        'ui' => 0,
+		        'ui_on_text' => '',
+		        'ui_off_text' => '',
+	        ]);
 
         return $developer->build();
     }

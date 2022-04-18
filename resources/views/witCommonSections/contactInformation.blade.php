@@ -1,4 +1,4 @@
-<div class="contactInformation flex flex-col justify-between h-full"> <!-- Start of .contactInformation -->
+<div class="flex flex-col justify-between h-full contactInformation"> <!-- Start of .contactInformation -->
 	@hasoption('field_business_information_business_name')
 	<div class="businessName"> <!-- Start of .businessName -->
 		<h2>@option('field_business_information_business_name')</h2>

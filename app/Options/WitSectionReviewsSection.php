@@ -13,7 +13,7 @@ class WitSectionReviewsSection extends Field
      *
      * @var string
      */
-    public $name = 'Wit Section Reviews Section';
+    public $name = 'Reviews Section';
 
     /**
      * The option page document title.

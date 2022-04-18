@@ -90,6 +90,33 @@ class settingsScripts extends Partial
             ])
 
 
+	        /* ===  Lazy Loaded Code  ==== */
+//	        ->addTextarea('lazy_loaded_code', [
+//		        'label' => 'Lazy Loaded Code',
+//		        'instructions' => "This code will activate ONLY on scroll. ** EXPERIMENTAL **",
+//		        'rows' => '10',
+//		        'new_lines' => '', // Possible values are 'wpautop', 'br', or ''.
+//		        'wrapper' => [
+//			        'width' => '75%',
+//		        ],
+//	        ])
+//
+//	        ->addTrueFalse('lazy_loaded_code_active', [
+//		        'label' => 'Lazy Loaded Code Active',
+//		        'instructions' => '',
+//		        'required' => 0,
+//		        'default_value' => 0,
+//		        'ui' => 1,
+//		        'ui_on_text' => 'Active',
+//		        'ui_off_text' => 'Off',
+//		        'wrapper' => [
+//			        'width' => '25%',
+//		        ],
+//	        ])
+
+
+
+
 
         ;
 

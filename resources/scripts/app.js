@@ -1,11 +1,10 @@
 import {domReady} from '@roots/sage/client';
 import Accordion from 'accordion-js';
-import Swiper from 'swiper/bundle';
+import Flickity from "flickity/js"
 import AOS from 'aos';
-import 'tw-elements';
 import {rmmExternalLinks} from "@scripts/modules/rmmExternalinks";
 
-window.Swiper = Swiper;
+window.Flickity = Flickity;
 window.Accordion = Accordion;
 /**
  * app.main
@@ -41,7 +40,7 @@ domReady(() => {
 
     window.addEventListener('scroll', function () {
         const header = document.querySelector('.main-header');
-        header.classList.toggle("sticky", window.scrollY > 50);
+        header.classList.toggle("is-stuck", window.scrollY > 50);
         document.body.classList.toggle("stuck-header", window.scrollY > 50);
     })
 
@@ -121,38 +120,12 @@ domReady(() => {
 
   const classNames = ['home', 'blog', 'page-template-template-development-swiper']
   if (classNames.some(className => document.body.classList.contains(className))) {
-    developmentSwiper();
+  //Page SSpecific Functions Here
   }
-
-
-  /* ===========================  Misc Functions   ========================== */
-
-  function developmentSwiper() {
-    const swiper = new Swiper('.newSwiper', {
-      loop: true,
-      navigation: {
-        nextEl: '.newSwiper .swiper-button-next',
-        prevEl: '.newSwiper .swiper-button-prev',
-      },
-      pagination: {
-        el: ".newSwiper .swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' +  "</span>";
-        },
-      },
-    });
-  }
-
-
-
-
 
   /* ==========================================================================
      ACCORDION from: https://michu2k.github.io/Accordion/
      ========================================================================== */
-
-
 
 })
 

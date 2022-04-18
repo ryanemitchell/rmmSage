@@ -23,9 +23,21 @@ class PageSettings extends Field
             ->setLocation('post_type', '==', 'page');
 
         $pageSettings
-            ->addRepeater('items')
-                ->addText('item')
-            ->endRepeater();
+	        ->addText('pageTitle', [
+		        'label' => 'Page Title',
+		        'instructions' => 'Text that will appear in the page header. If empty the page title from wordpress will be used. ',
+		        'required' => 0,
+		        'wrapper' => [
+			        'width' => '',
+			        'class' => '',
+			        'id' => '',
+		        ],
+		        'default_value' => '',
+		        'placeholder' => '',
+		        'prepend' => '',
+		        'append' => '',
+		        'maxlength' => '',
+	        ]);
 
         return $pageSettings->build();
     }

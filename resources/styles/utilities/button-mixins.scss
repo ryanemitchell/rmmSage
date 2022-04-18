@@ -69,8 +69,6 @@ $accent-hex: #254294;
   }
 
   &::before {
-    @include recolor($textColor, 1);
-
     filter: $defaultIconFilter;
   }
 
@@ -78,8 +76,6 @@ $accent-hex: #254294;
   span,
   .wp-block-button__link {
     &::before {
-      @include recolor($textColor, 1);
-
       filter: $defaultIconFilter;
     }
   }
@@ -89,8 +85,6 @@ $accent-hex: #254294;
     color: $hoverTextColor;
 
     &::before {
-      @include recolor($hoverTextColor, 1);
-
       filter: $hoverIconFilter;
     }
 
@@ -98,8 +92,6 @@ $accent-hex: #254294;
     span,
     .wp-block-button__link {
       &::before {
-        @include recolor($hoverTextColor, 1);
-
         filter: $hoverIconFilter;
       }
     }

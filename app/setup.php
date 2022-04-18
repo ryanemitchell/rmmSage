@@ -8,6 +8,7 @@ namespace App;
 
 use function Roots\bundle;
 
+
 /**
  * Register the theme assets.
  *
@@ -148,6 +149,16 @@ add_action('widgets_init', function () {
     ] + $config);
 });
 
+/**
+ * Add Classes to Body
+ *
+ * @return void
+ */
+
+add_filter( 'body_class', function( $classes ) {
+	return array_merge( $classes, array( 'scroll-smooth' ) );
+} );
+
 
 
 
@@ -208,3 +219,5 @@ if (file_exists(get_template_directory() . '/app/lib/insert-header-body-footer-s
 if (file_exists(get_template_directory() . '/app/lib/globalsIntoHead.php')) {
 	require_once(get_template_directory() . '/app/lib/globalsIntoHead.php');
 }
+
+

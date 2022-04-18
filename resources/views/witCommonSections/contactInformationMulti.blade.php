@@ -1,4 +1,4 @@
-<div class="contactInformation flex flex-col justify-between h-full"> <!-- Start of .contactInformation -->
+<div class="flex flex-col justify-between h-full contactInformation"> <!-- Start of .contactInformation -->
 	@hasoption('field_business_information_business_name')
 	<div class="businessName"> <!-- Start of .businessName -->
 		<h2>@option('field_business_information_business_name')</h2>
@@ -28,18 +28,18 @@
 	</div> <!-- End of .contactCTA -->
 
 
-	<div class="multipleLocationsWrapper grid gap-8 lg:grid-cols-2">
+	<div class="grid gap-8 lg:grid-cols-2 multipleLocationsWrapper">
 
 
 {{--		PRIMARY LOCATION--}}
-		<div class="col1 ">
+		<div class="col1">
 
 			{{--Location Name--}}
 			@hasoptions('field_business_information_witsage_primary_location')
 			@options('field_business_information_witsage_primary_location')
 
 				@hassub('location_name')
-			<div class="locationName font-bold">
+			<div class="font-bold locationName">
 				@sub('location_name')
 		</div>
 					@endsub
@@ -74,7 +74,7 @@
 			@options('field_business_information_witsage_secondary_location')
 
 			@hassub('location_name')
-			<div class="locationName font-bold">
+			<div class="font-bold locationName">
 			@sub('location_name')
 			</div>
 			@endsub

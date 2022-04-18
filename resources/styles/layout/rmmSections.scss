@@ -1,0 +1,104 @@
+.rmmsection {
+  .inner__wrapper {
+    @apply relative;
+  }
+
+  &:not([class*="to-the-edge"]) {
+    padding-left: var(--edgexPadding);
+    padding-right: var(--edgexPadding);
+  }
+
+  &:not([class*="full-width-bound"]) {
+    .inner__wrapper {
+      @apply w-full;
+    }
+  }
+}
+
+@layer utilities {
+  .full-width {
+    @include fullwidth;
+
+    .inner__wrapper {
+      padding: var(--edgexPadding);
+      padding-block: 0;
+    }
+  }
+
+  .full-width-bound {
+    @include fullwidth;
+
+    .inner__wrapper {
+      width: var(--contentWidth);
+      min-width: unset;
+      margin-left: auto;
+      margin-right: auto;
+      padding-block: 0;
+    }
+  }
+
+  .full-width-bound-wide {
+    @include fullwidth;
+
+    .inner__wrapper {
+      width: var(--wideWidthContentWidth);
+      min-width: unset;
+      margin-left: auto;
+      margin-right: auto;
+      padding-block: 0;
+    }
+  }
+
+  .to-the-edge {
+    padding-left: 0;
+    padding-right: 0;
+
+    .inner__wrapper {
+      padding: 0;
+
+      .content-edge__wrapper {
+        background: #45ff17;
+      }
+
+      .content__wrapper {
+        background: #0012ff;
+        margin-left: 0;
+        flex-grow: 1;
+
+        .content {
+          background: green;
+        }
+      }
+    }
+  }
+
+  .wide-width {
+    max-width: 100vw;
+    width: 1400px;
+    align-self: center;
+
+    .inner__wrapper {
+      padding: var(--edgexPadding)
+        max(2rem, 50vw - var(--wideWidthContentWidth) / 2);
+      padding-block: 0;
+    }
+  }
+
+  .narrow-width {
+    max-width: 100vw;
+    width: 100vw;
+    align-self: center;
+
+    @include respond(desktop) {
+      max-width: 1000px;
+      width: 1400px;
+      align-self: center;
+    }
+
+    .inner__wrapper {
+      //padding: var(--edgexPadding)
+      //  max(2rem, 50vw - var(--narrowWidthContentWidth) / 2);
+      //padding-block: 0;
+    }
+  }
+}

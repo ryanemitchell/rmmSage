@@ -8,6 +8,15 @@
  * @since        1.0.0
  * @license      GPL-2.0+
  **/
+
+/* ==========================================================================
+   Disable by title, template, id or post type.  Look through the different functions.
+
+@todo: combine functions and clean up arrays to make this file more readable.
+   ========================================================================== */
+
+
+
 function get_page_id_by_title($title)
 {
 	$page = get_page_by_title($title);
@@ -83,7 +92,27 @@ function ea_disable_classic_editor()
     }
 
     if (ea_disable_editor($_GET['post'])) {
-        remove_post_type_support('page', 'editor');
+        remove_post_type_support('page', 'editor','coupons');
     }
 }
 add_action('admin_head', 'ea_disable_classic_editor');
+
+
+
+/* ==========================================================================
+   Disable for specific post types
+   ========================================================================== */
+
+function rmm_disable_gutenberg( $current_status, $post_type ) {
+
+	// Disabled post types
+	$disabled_post_types = array( 'offers', 'movie' );
+
+	// Change $can_edit to false for any post types in the disabled post types array
+	if ( in_array( $post_type, $disabled_post_types, true ) ) {
+		$current_status = false;
+	}
+
+	return $current_status;
+}
+add_filter( 'use_block_editor_for_post_type', 'rmm_disable_gutenberg', 10, 2 );

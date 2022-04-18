@@ -1,0 +1,67 @@
+:root {
+  --old-lavender: #77696bff;
+  --purple-navy: #434371ff;
+  --english-violet: #564256ff;
+  --green-sheen: #79aea3ff;
+  --light-green: #70ee9cff;
+  --green-lizard: #b5f44aff;
+  --manatee: #96939bff;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+
+.debugging {
+
+}
+
+.rmmVisualDebug {
+  @at-root {
+    body.rmmVisualDebug {
+      background-color: var(--old-lavender);
+      scroll-behavior: smooth;
+    }
+  }
+
+  header.main-header {
+    //background-color: purple;
+  }
+
+  #main-container {
+    main.main {
+      background-color: var(--purple-navy);
+    } /* End of main.main */
+
+    aside.sidebar {
+      background-color: var(--english-violet);
+    } /* End of aside.sidebar */
+  } /* End of #main-container */
+
+  .main-footer {
+    background: #273e47;
+  }
+
+  .bottom-bar {
+    background: #273e47;
+  }
+
+  .rmmsection {
+    background: #273e47;
+    border: 1px dotted #a4243b;
+
+    .inner__wrapper {
+      background: #d8973c;
+      border: 2px dotted #d8973c;
+    }
+
+    &:not([class*="full-width-bound"]) {
+      .inner__wrapper {
+        border: 2px dotted var(--green-sheen);
+      }
+    }
+  }
+}

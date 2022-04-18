@@ -1,38 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- @include('partials.page-header') --}}
 
-    <div class='lg:hidden'>
-        @include('blog.category-switcher-mobile')
-    </div>
+	@if (!have_posts())
+		<x-alert type="warning">
+			{!! __('Sorry, no results were found.', 'sage') !!}
+		</x-alert>
+
+		{!! get_search_form(false) !!}
+	@else
+		<div class='lg:hidden'>
+			@include('blog.category-switcher-mobile')
+		</div>
 
 
-    @if (!have_posts())
-        <x-alert type="warning">
-            {!! __('Sorry, no results were found.', 'sage') !!}
-        </x-alert>
+		@while (have_posts())
+			@php(the_post())
+			@includeFirst(['blog.content-single',])
+		@endwhile
 
-        {!! get_search_form(false) !!}
-    @endif
-
-    @while (have_posts())
-        @php(the_post())
-        @include('blog.content-single')
-    @endwhile
-
-    <div class="mt-8 flex w-full items-center justify-center">
-        <?php witsage_numeric_posts_nav(); ?>
-    </div>
-
-    {{-- {!! get_the_posts_navigation() !!} --}}
+	@endif
 @endsection
 
 @section('sidebar')
-    @include('blog.sidebar-blog')
+	@include('blog.sidebar-blog')
 @endsection
 
-
 @section('prefooter')
-    @include('partials.blog.prefooter-blog')
+	@include('blog.prefooter-blog')
 @endsection

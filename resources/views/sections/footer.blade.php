@@ -1,5 +1,5 @@
-<footer class="relative bg-blue-900 main-footer">
-  <div class="footer-inner  max-w-[1300px] flex flex-wrap lg:flex-nowrap justify-between mx-auto m-2 p-2">
+<footer class="relative main-footer">
+  <div class="flex flex-wrap justify-between p-2 m-2 mx-auto lg:flex-nowrap footer-inner max-w-contentWidth">
 
     <div class="flex justify-center mb-5 w-full text-center lg:mb-0 lg:w-1/4 col1">
       <!-- Start of .col1 -->
