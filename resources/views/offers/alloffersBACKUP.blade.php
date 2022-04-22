@@ -113,7 +113,7 @@
 
 
 
-	<div class="offer bg-green-400 w-1/2 grid">
+	<div class="grid w-1/2 bg-green-400 offer">
 
 		<img src="{{ $itemImage }}" alt="offerImage" class="image" loading="lazy" height="400px" width="400px">
 

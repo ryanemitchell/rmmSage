@@ -17,25 +17,24 @@ class sectionStylingTab extends Partial
         $sectionStylingTab = new FieldsBuilder('section_styling_tab');
 
         $sectionStylingTab
-	        ->addGroup('sectionStyling', [
-		        'label' => '',
-		        'instructions' => '',
-		        'required' => 0,
-		        'conditional_logic' => [],
-		        'wrapper' => [
-			        'width' => '100',
-			        'class' => '',
-			        'id' => '',
-		        ],
-		        'layout' => 'block',
-		        'sub_fields' => [],
-	        ])
+            ->addGroup('sectionDisplay', [
+                'label' => '',
+                'layout' => 'block',
+            ])
 
+            ->addFields($this->get(sectionDisplayFields::class))
 
-	        ->addFields($this->get(sectionCommonFields::class))
+            ->endGroup()
 
-
-	    ->endGroup();
+//          Styling Row - DISABLED FOR NOW
+//          ->addGroup( 'sectionStyling', [
+//              'label' => 'Styling',
+//              'layout' => 'block',
+//
+//          ] )
+//          ->addFields( $this->get( sectionStylingFields::class ) )
+//          ->endGroup()
+        ;
 
         return $sectionStylingTab;
     }

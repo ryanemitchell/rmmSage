@@ -24,7 +24,7 @@ class comboImageWithAltTitle extends Partial
 		        'instructions' => '',
 		        'required' => 0,
 		        'wrapper' => [
-			        'width' => '',
+			        'width' => '50',
 			        'class' => '',
 			        'id' => '',
 		        ],
@@ -40,7 +40,7 @@ class comboImageWithAltTitle extends Partial
 		        'instructions' => '',
 		        'required' => 0,
 		        'wrapper' => [
-			        'width' => '',
+			        'width' => '50',
 			        'class' => '',
 			        'id' => '',
 		        ],

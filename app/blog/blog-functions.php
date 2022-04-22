@@ -9,7 +9,7 @@ add_filter('excerpt_length', 'wit_custom_excerpt_length', 999);
 
 // Set Excerpt More Text
 add_filter('excerpt_more', function () {
-    return sprintf(' &hellip; <a href="%s" class="excerpt-more whitespace-no-wrap bold no-underline text-red hover:text-blue-200">%s</a>', get_permalink(), __('Read Now >', 'sage'));
+    return sprintf(' &hellip; <a href="%s" class="no-underline hover:text-blue-200 excerpt-more whitespace-no-wrap bold text-red">%s</a>', get_permalink(), __('Read Now >', 'sage'));
 });
 
 // Register Blog Specific Widget Areas

@@ -6,7 +6,7 @@ use App\Fields\Partials\comboHeaderSubHeaderContent;
 
 use App\Fields\Partials\comboImageWithAltTitle;
 use App\Fields\Partials\fieldImage;
-use App\Fields\Partials\sectionCommonFields;
+use App\Fields\Partials\sectionStylingFields;
 use App\Fields\Partials\sectionStylingTab;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;

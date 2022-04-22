@@ -5,7 +5,7 @@ namespace App\Fields\Partials;
 use Log1x\AcfComposer\Partial;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class sectionCommonFields extends Partial
+class sectionStylingFields extends Partial
 {
     /**
      * The partial field group.
@@ -14,58 +14,9 @@ class sectionCommonFields extends Partial
      */
     public function fields()
     {
-        $sectionCommonFields = new FieldsBuilder('section_common_fields');
+        $sectionStylingFields = new FieldsBuilder('section_common_fields');
 
-        $sectionCommonFields
-            ->addText('class_name', [
-                'label' => 'Class Name',
-                'instructions' => '',
-                'required' => 0,
-                'wrapper' => [
-                    'width' => '33%',
-                    'class' => '',
-                    'id' => '',
-                ],
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ])
-
-            ->addTrueFalse('show_on_desktop', [
-                'label' => 'Show on Desktop',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => [],
-                'wrapper' => [
-                    'width' => '33',
-                    'class' => '',
-                    'id' => '',
-                ],
-                'message' => '',
-                'default_value' => 1,
-                'ui' => 0,
-                'ui_on_text' => '',
-                'ui_off_text' => '',
-            ])
-                    ->addTrueFalse('show_on_mobile', [
-                'label' => 'Show on Mobile',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => [],
-                'wrapper' => [
-                    'width' => '33',
-                    'class' => '',
-                    'id' => '',
-                ],
-                'message' => '',
-                'default_value' => 1,
-                'ui' => 0,
-                'ui_on_text' => '',
-                'ui_off_text' => '',
-            ])
-
+        $sectionStylingFields
             ->addRange('desktop_margin_top', [
                 'label' => 'Desktop Margin Top',
                 'instructions' => '',
@@ -142,6 +93,6 @@ class sectionCommonFields extends Partial
 
 
 
-        return $sectionCommonFields;
+        return $sectionStylingFields;
     }
 }

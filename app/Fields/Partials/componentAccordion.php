@@ -17,8 +17,8 @@ class componentAccordion extends Partial
         $componentAccordion = new FieldsBuilder('component_accordion');
 
         $componentAccordion
-            ->addRepeater('job_listings', [
-                'label' => 'Job Listings',
+            ->addRepeater('accordion', [
+                'label' => 'Accordion',
                 'instructions' => '',
                 'required' => 0,
                 'wrapper' => [

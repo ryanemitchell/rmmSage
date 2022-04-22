@@ -17,20 +17,19 @@
  * @php $pageTitle = rmmGetField('page_title', get_the_title(), 0); @endphp
  */
 
-function rmmGetField( $fieldName, $default = null, $options = false ) {
-	if ( $options == true ) {
-		$options = 'option';
-	} else {
-		$options = '';
-	}
+function rmmGetField($fieldName, $default = null, $options = false)
+{
+    if ($options == true) {
+        $options = 'option';
+    } else {
+        $options = '';
+    }
 
-	if ( get_field( $fieldName, $options ) ) {
-		$rmmField = get_field( $fieldName, $options );
-	} else {
-		$rmmField = $default;
-	}
+    if (get_field($fieldName, $options)) {
+        $rmmField = get_field($fieldName, $options);
+    } else {
+        $rmmField = $default;
+    }
 
-	return $rmmField;
+    return $rmmField;
 }
-
-

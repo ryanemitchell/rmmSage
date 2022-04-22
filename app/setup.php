@@ -221,3 +221,11 @@ if (file_exists(get_template_directory() . '/app/lib/globalsIntoHead.php')) {
 }
 
 
+
+
+if (file_exists(get_template_directory() . '/app/lib/RmmSageFunctions.php')) {
+	require_once(get_template_directory() . '/app/lib/RmmSageFunctions.php');
+}
+
+
+

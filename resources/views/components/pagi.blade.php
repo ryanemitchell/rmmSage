@@ -28,7 +28,7 @@
               @else
                 <a
                   href="{{ $url }}"
-                  class="py-1 px-4 mr-3 rounded-sm  bg-black text-white border hover:text-white hover:bg-blue-600"
+                  class="py-1 px-4 mr-3 text-white bg-black rounded-sm border hover:text-white hover:bg-blue-600"
                 >{{ $page }}</a>
               @endif
             </li>
@@ -42,7 +42,7 @@
         href="{{ $pagi->nextPageUrl() }}"
         rel="next"
         aria-label="Next Page"
-        class="py-1 px-4 mr-3 rounded-sm bg-black text-white border hover:text-white hover:bg-blue-600"
+        class="py-1 px-4 mr-3 text-white bg-black rounded-sm border hover:text-white hover:bg-blue-600"
       >Next &rarr;</a>
     @endif
   </nav>

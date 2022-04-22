@@ -8,7 +8,7 @@ const wpwrap = (err) => {
     console.error(err);
   }
 
-  window.Alert('admin');
+  // window.alert('admin');
 
 };
 

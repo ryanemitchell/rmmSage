@@ -5,7 +5,7 @@ namespace App\View\Composers\Offers;
 use DateTime;
 use Roots\Acorn\View\Composer;
 
-class offers extends Composer
+class Offers extends Composer
 {
     /**
      * List of views served by this composer.
@@ -13,7 +13,7 @@ class offers extends Composer
      * @var array
      */
     protected static $views = [
-        'offers.*',//
+        'offers.*',
     ];
 
     /**
@@ -25,12 +25,12 @@ class offers extends Composer
     {
 
         $includedOffersFromView = $this->data->includeOffers;
+//
+//		var_dump($this);
+//		echo $includedOffersFromView;
 
-		var_dump($this);
-		echo $includedOffersFromView;
-
-        if (get_field('selected_offers')) :
-            $selectedOffers = get_field('selected_offers');
+        if (get_field('field_select_offers_selected_offers')) :
+            $selectedOffers = get_field('field_select_offers_selected_offers');
         else :
             $selectedOffers = '1';
         endif;

@@ -9,13 +9,13 @@
     @while (have_posts())
         @php(the_post())
 
-        <div class="grid gap-8 lg:grid-cols-2 contactSection">
-            <div class="p-8 rounded-lg border-2 border-black col1">
+        <div class="contactSection grid gap-8 lg:grid-cols-2">
+            <div class="col1 rounded-lg border-2 border-black p-8">
                 <!-- Start of .col1 -->
                 @include('witCommonSections.contactInformationMulti')
             </div> <!-- End of .col1 -->
 
-            <div class="p-8 rounded-lg border-2 border-black col2">
+            <div class="col2 rounded-lg border-2 border-black p-8">
                 <!-- Start of .col2 -->
 
 

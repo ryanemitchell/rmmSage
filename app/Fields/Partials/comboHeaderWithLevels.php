@@ -20,45 +20,45 @@ class comboHeaderWithLevels extends Partial
 
 
 
-	        ->addFields($this->get(fieldHeaderText::class))
-	        ->modifyField('header_text', [
-		        'label' => 'Header',
-		        'wrapper' => [
-			        'width' => '',
-			        'class' => 'acfHeaderText',
-			        'id' => '',
-		        ],
-	        ])
+            ->addFields($this->get(fieldHeaderText::class))
+            ->modifyField('header_text', [
+                'label' => 'Header',
+                'wrapper' => [
+                    'width' => '',
+                    'class' => 'acfHeaderText',
+                    'id' => '',
+                ],
+            ])
 
 
 
-	        ->addSelect('html_element', [
-		        'label' => 'Element',
-		        'instructions' => '',
-		        'required' => 1,
-		        'conditional_logic' => [],
-		        'wrapper' => [
-			        'width' => '',
-			        'class' => 'acfHTMLElements',
-			        'id' => '',
-		        ],
-		        'choices' => [
-			        'h1' => 'H1',
-			        'h2' => 'H2',
-			        'h3' => 'H3',
-			        'h4' => 'H4',
-			        'div' => 'div',
-			        'span' => 'span',
-			        'p' => 'P',
-		        ],
-		        'default_value' => ['h2'],
-		        'allow_null' => 0,
-		        'multiple' => 0,
-		        'ui' => 0,
-		        'ajax' => 0,
-		        'return_format' => 'value',
-		        'placeholder' => '',
-	        ]);
+            ->addSelect('header_element', [
+                'label' => 'Element',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => [],
+                'wrapper' => [
+                    'width' => '',
+                    'class' => 'acfHTMLElements',
+                    'id' => '',
+                ],
+                'choices' => [
+                    'h1' => 'H1',
+                    'h2' => 'H2',
+                    'h3' => 'H3',
+                    'h4' => 'H4',
+                    'div' => 'div',
+                    'span' => 'span',
+                    'p' => 'P',
+                ],
+                'default_value' => ['h2'],
+                'allow_null' => 0,
+                'multiple' => 0,
+                'ui' => 0,
+                'ajax' => 0,
+                'return_format' => 'value',
+                'placeholder' => '',
+            ]);
 
         ;
 

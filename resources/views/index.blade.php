@@ -2,35 +2,35 @@
 
 @section('content')
 
-	@if (!have_posts())
-		<x-alert type="warning">
-			{!! __('Sorry, no results were found.', 'sage') !!}
-		</x-alert>
+    @if (!have_posts())
+        <x-alert type="warning">
+            {!! __('Sorry, no results were found.', 'sage') !!}
+        </x-alert>
 
-		{!! get_search_form(false) !!}
-	@else
-		<div class='lg:hidden'>
-			@include('blog.category-switcher-mobile')
-		</div>
-
-
-		@while (have_posts())
-			@php(the_post())
-			@includeFirst(['blog.content-blog-home'])
-		@endwhile
+        {!! get_search_form(false) !!}
+    @else
+        <div class='lg:hidden'>
+            @include('blog.category-switcher-mobile')
+        </div>
 
 
+        @while (have_posts())
+            @php(the_post())
+            @includeFirst(['blog.content-blog-home'])
+        @endwhile
 
-		<div class="flex justify-center my-8">
-			{!! $pagi!!}
-		</div>
-	@endif
+
+
+        <div class="my-8 flex justify-center">
+            {!! $pagi !!}
+        </div>
+    @endif
 @endsection
 
 @section('sidebar')
-	@include('blog.sidebar-blog')
+    @include('blog.sidebar-blog')
 @endsection
 
 @section('prefooter')
-	@include('blog.prefooter-blog')
+    @include('blog.prefooter-blog')
 @endsection

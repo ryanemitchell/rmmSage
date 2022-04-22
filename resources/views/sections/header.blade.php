@@ -1,4 +1,4 @@
-<header class=" main-header sticky-top z-100 bg-red-800 px-4 lg:px-6">
+<header class="px-4 bg-red-800 lg:px-6 main-header sticky-top z-100">
   <div class="flex justify-between items-center text-white inner__wrapper bg-primary">
     <div class="lg:hidden">
       P
@@ -8,15 +8,15 @@
     <div class="col1">
 
 
-      <div class="mobileLogo lg:hidden">
+      <div class="lg:hidden mobileLogo">
         <a href="{!! Site_url() !!}"><img src="https://source.unsplash.com/category/buildings/202x42/" loading="eager" alt="{{$siteName}}" height="" width=""></a>
       </div>
-      <div class="desktopLogo hidden lg:block">
+      <div class="hidden lg:block desktopLogo">
       <a href="{!! Site_url() !!}"><img src="https://source.unsplash.com/category/buildings/202x42/" loading="eager" alt="{{$siteName}}" height="" width=""></a>
       </div>
     </div>
 
-    <div class="col2 flex flex-col items-end">
+    <div class="flex flex-col items-end col2">
 
             <div id="mobile-menu-toggle" class="p-0 bg-none border-none lg:hidden menu-toggle" aria-controls="primary-menu"
               aria-expanded="false">
@@ -24,11 +24,11 @@
             </div>
 
 
-      <div class="topCtaWrapper justify-end flex hidden lg:block"> <!-- Start of .topCta -->
+      <div class="flex hidden justify-end lg:block topCtaWrapper"> <!-- Start of .topCta -->
         CTA Section
       </div> <!-- End of .topCta -->
 
-      <div class="topMenuWrapper hidden relative z-20 justify-end lg:flex">
+      <div class="hidden relative z-20 justify-end lg:flex topMenuWrapper">
         <!-- Start of .relative z-20 -->
 
 
@@ -64,7 +64,7 @@
             close
           </div>
 
-          <div class="mobileMenuCTA w-full bg-green-400 flex place-items-center">
+          <div class="flex place-items-center w-full bg-green-400 mobileMenuCTA">
             <button>Book Now</button>
           </div>
 
@@ -85,7 +85,7 @@
 
 
 
-{{--<header class="main-header w-full z-100 sticky-top">--}}
+{{--<header class="w-full main-header z-100 sticky-top">--}}
 
 {{--  <div class="flex justify-between">--}}
 

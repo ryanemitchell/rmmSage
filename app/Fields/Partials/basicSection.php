@@ -3,7 +3,7 @@
 namespace App\Fields\Partials;
 use Log1x\AcfComposer\Partial;
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Partials\sectionCommonFields;
+use App\Fields\Partials\sectionStylingFields;
 
 class basicSection extends Partial
 {
@@ -72,7 +72,7 @@ class basicSection extends Partial
                 'maxlength' => '',
             ])
 
-	    ->addFields($this->get(sectionCommonFields::class));
+	    ->addFields($this->get(sectionStylingFields::class));
 
         return $buildFields;
     }

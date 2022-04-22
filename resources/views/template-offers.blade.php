@@ -6,18 +6,14 @@
 
 
 @section('content')
-
-<pre>
+    <pre>
 <?php
 
-print_r (get_body_class());
+print_r(get_body_class());
 
-    add_filter( 'body_class', function( $classes ) {
-        return array_merge( $classes, array( 'class-name' ) );
-    } );
-
-
-
+add_filter('body_class', function ($classes) {
+    return array_merge($classes, ['class-name']);
+});
 
 ?>
 </pre>
@@ -28,24 +24,26 @@ print_r (get_body_class());
 
     RMM Section
     <x-testing.testcomponent></x-testing.testcomponent>
-    <section class="rmmsection bg-hulk-800 to-the-edge my-halfMobileVGap lg:to-the-edge lg:my-halfDesktopVGap flex justify-center items-center relative place-items-center">
-        <div class="flex justify-center items-center text-white inner__wrapper bg-primary">
+    <section
+        class="rmmsection bg-hulk-800 to-the-edge lg:to-the-edge relative my-halfMobileVGap flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-center text-white">
             <div class="content">
                 Wit section
             </div>
         </div>
     </section>
 
-    <section class="rmmsection bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap flex justify-center items-center relative place-items-center">
-        <div class="flex flex-col gap-8 justify-between items-center text-white lg:flex-row inner__wrapper bg-primary">
+    <section
+        class="rmmsection bg-hulk-800 relative my-halfMobileVGap flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex flex-col items-center justify-between gap-8 text-white lg:flex-row">
 
-            <div class="flex justify-center items-center bg-black lg:w-1/2 col1">
+            <div class="col1 flex items-center justify-center bg-black lg:w-1/2">
                 <div class="content">
                     Column1
                 </div>
             </div>
 
-            <div class="flex justify-center items-center lg:w-1/2 col2 bl-white">
+            <div class="col2 bl-white flex items-center justify-center lg:w-1/2">
                 <div class="content">
                     Column2
                 </div>
@@ -54,24 +52,27 @@ print_r (get_body_class());
         </div>
     </section>
 
-    <section class="rmmsection full-width bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap flex justify-center items-center relative place-items-center">
-        <div class="flex justify-center items-center text-white inner__wrapper bg-primary">
+    <section
+        class="rmmsection full-width bg-hulk-800 relative my-halfMobileVGap flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-center text-white">
             <div class="content">
                 Full Width Inner
             </div>
         </div>
     </section>
 
-    <section class="rmmsection full-width-bound bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap flex justify-center items-center relative place-items-center">
-        <div class="flex justify-center items-center text-white inner__wrapper bg-primary">
+    <section
+        class="rmmsection full-width-bound bg-hulk-800 relative my-halfMobileVGap flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-center text-white">
             <div class="content">
                 Full Width Bound Inner
             </div>
         </div>
     </section>
 
-    <section class="rmmsection full-width-bound-wide bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap flex justify-center items-center relative place-items-center">
-        <div class="flex justify-center items-center text-white inner__wrapper bg-primary">
+    <section
+        class="rmmsection full-width-bound-wide bg-hulk-800 relative my-halfMobileVGap flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-center text-white">
             <div class="content">
                 Full Width Bound WideInner
             </div>
@@ -79,13 +80,14 @@ print_r (get_body_class());
     </section>
 
     <!--       Content to the end Left -->
-    <section class="rmmsection full-width to-the-edge bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap flex justify-center items-center relative place-items-center">
-        <div class="flex justify-start items-center text-white inner__wrapper bg-primary">
+    <section
+        class="rmmsection full-width to-the-edge bg-hulk-800 relative my-halfMobileVGap flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-start text-white">
             <div class="content-edge__wrapper">
                 Full Width IMAGE TO THE EDGE Inner
             </div>
 
-            <div class="flex justify-center items-center content__wrapper">
+            <div class="content__wrapper flex items-center justify-center">
                 <div class="content">
                     Full Width IMAGE TO THE EDGE Inner
                 </div>
@@ -94,10 +96,11 @@ print_r (get_body_class());
     </section>
 
     <!--       Content to the end Right -->
-    <section class="rmmsection full-width to-the-edge bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap flex justify-center items-center relative place-items-center">
-        <div class="flex justify-start items-center text-white inner__wrapper bg-primary">
+    <section
+        class="rmmsection full-width to-the-edge bg-hulk-800 relative my-halfMobileVGap flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-start text-white">
 
-            <div class="flex justify-center items-center content__wrapper">
+            <div class="content__wrapper flex items-center justify-center">
                 <div class="content">
                     Full Width IMAGE TO THE EDGE Inner
                 </div>
@@ -111,14 +114,15 @@ print_r (get_body_class());
     </section>
 
     <!--       Content to the end both -->
-    <section class="rmmsection full-width to-the-edge bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap flex justify-center items-center relative place-items-center">
-        <div class="flex justify-start items-center text-white inner__wrapper bg-primary">
+    <section
+        class="rmmsection full-width to-the-edge bg-hulk-800 relative my-halfMobileVGap flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-start text-white">
 
             <div class="content-edge__wrapper">
                 Full Width IMAGE TO THE EDGE Inner
             </div>
 
-            <div class="flex justify-center items-center content__wrapper">
+            <div class="content__wrapper flex items-center justify-center">
                 <div class="content">
                     Full Width IMAGE TO THE EDGE Inner
                 </div>
@@ -132,8 +136,8 @@ print_r (get_body_class());
     </section>
 
     <section
-        class="flex justify-center items-center h-40 rmmsection wide-width bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap">
-        <div class="flex justify-center items-center text-white inner__wrapper bg-primary">
+        class="rmmsection wide-width bg-hulk-800 my-halfMobileVGap flex h-40 items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-center text-white">
             <div class="content">
                 Wide Width Inner
             </div>
@@ -142,8 +146,8 @@ print_r (get_body_class());
 
 
     <section
-        class="flex justify-center items-center h-40 rmmsection narrow-width bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap">
-        <div class="flex justify-center items-center text-white inner__wrapper bg-primary">
+        class="rmmsection narrow-width bg-hulk-800 my-halfMobileVGap flex h-40 items-center justify-center lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-center text-white">
             <div class="content">
                 Narrow Width Inner
             </div>
@@ -153,16 +157,16 @@ print_r (get_body_class());
 
 
     <section
-        class="flex justify-center items-center bg-white rmmsection narrow-width my-halfMobileVGap lg:to-the-edge lg:my-halfDesktopVGap">
-        <div class="flex justify-center items-center text-white inner__wrapper bg-primary">
-            <div class="flex place-items-center content lg:w-[585px] lg:py-desktopVGap">
-                <div class="hidden lg:block icon">
-                    <img src="{{ $imageAsset }}placeholder.jpg" alt="placeholder" class="max-w-none h-100 w-100"
+        class="rmmsection narrow-width lg:to-the-edge my-halfMobileVGap flex items-center justify-center bg-white lg:my-halfDesktopVGap">
+        <div class="inner__wrapper bg-primary flex items-center justify-center text-white">
+            <div class="content flex place-items-center lg:w-[585px] lg:py-desktopVGap">
+                <div class="icon hidden lg:block">
+                    <img src="{{ $imageAsset }}placeholder.jpg" alt="placeholder" class="h-100 w-100 max-w-none"
                         height="100px" width="100px" alt="Now Hiring Logo">
                 </div>
                 <div class="ml-[22px]">
                     <a href="#" class="hiringLink">
-                        <h2 class="hover:bg-black group text-1xl bold text-mt2 lg:text-dt1">Join the Experts. Now Hiring
+                        <h2 class="group text-1xl bold text-mt2 hover:bg-black lg:text-dt1">Join the Experts. Now Hiring
                             @svg('images/sage_character_head.svg', 'group-hover:filter-aqua hidden lg:inline',)</h2>
                     </a>
                     <p class="hidden lg:block lg:pt-4">We’re commited to building a team that helps our customers to be

@@ -24,7 +24,7 @@ function get_page_id_by_title($title)
 }
 
 
-get_page_id_by_title('how are you');
+//get_page_id_by_title('how are you');
 //https://www.billerickson.net/disabling-gutenberg-certain-templates/
 
 /**

@@ -5,7 +5,7 @@
       <!-- Start of .col1 -->
       <div class="bottom-bar-col-inner">
         <!-- Start of .bottom-bar-col-inner -->
-        col1 {{$bacon}}
+        col1
       </div> <!-- End of .bottom-bar-col-inner -->
 
     </div> <!-- End of .col1 -->

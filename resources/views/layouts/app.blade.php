@@ -7,15 +7,15 @@
 @include('sections.page-header')
 @include('sections.yoastBreadcrumbs')
 <div id="main-container"
-  class="flex flex-col flex-nowrap justify-between px-0 mx-auto lg:flex-row lg:px-0 content-container max-w-[1200px] relative">
+  class="flex relative flex-col flex-nowrap justify-between px-0 mx-auto lg:flex-row lg:px-0 content-container max-w-[1200px]">
   <!-- Start of #main-container -->
 
-  <main id="main" class="flex flex-col mx-auto w-full main grow px-4 lg-px-0">
+  <main id="main" class="flex flex-col px-4 mx-auto w-full lg:px-0 main grow">
     @yield('content')
   </main>
 
   @hasSection('sidebar')
-    <aside class="lg:ml-desktopVGap lg:w-[370px] sidebar grow lg:grow-0">
+    <aside class="sidebar grow lg:ml-desktopVGap lg:w-[370px] lg:grow-0">
       @yield('sidebar')
     </aside>
   @endif

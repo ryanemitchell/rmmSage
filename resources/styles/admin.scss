@@ -524,3 +524,31 @@ textarea:focus {
 .acf-postbox button.handle-order-lower + span {
   display: none;
 }
+
+.acf-fields > .acf-field {
+  .noPadding {
+    padding: 4px !important;
+
+    > .acf-label {
+      padding-left: 12px;
+    }
+  }
+
+  .noBorder {
+    border: none !important;
+
+    //> .acf-input .acf-fields.-border {
+    //  border: none !important;
+    //  background: #fff;
+    //}
+  }
+
+  .styledLabel {
+    background-color: var(--wp-admin-theme-color);
+
+    > .acf-label {
+      color: #fff;
+      background-color: var(--wp-admin-theme-color);
+    }
+  }
+}
