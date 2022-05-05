@@ -6,25 +6,45 @@
 
 
 @section('content')
+
+    <section
+            class="contactSection rmmsection mobile-to-the-edge my-halfMobileVGap flex items-center justify-center bg-white lg:my-halfDesktopVGap">
+        <div class="inner__wrapper flex items-center justify-center">
+            <div class="grid gap-8 lg:grid-cols-2">
+
+                <div class="col1 lg:p-8">
+                    <!-- Start of .col1 -->
+                    <h2 class="text-center">Job Listings</h2>
+
+                    @include('fieldModules.moduleViewJobsAccordion')
+                </div> <!-- End of .col1 -->
+                <div class="col2 bg-siteGrey p-8 lg:siteBoxed lg:bg-none">
+                    <!-- Start of .col2 -->
+
+                    <h2 class="text-center">Apply Now</h2>
+                    <?php echo FrmFormsController::show_form(3, $key = 'sf-job-application', $title = false, $description = false); ?>
+
+
+                </div> <!-- End of .col2 -->
+
+
+
+            </div> <!-- End of .content -->
+        </div>
+
+    </section>
+
+    <div class="mt-4 lg:mt-6">
+        @include('rmmSections.rmmSectionSharedReviews')
+    </div>
+
+    @include('rmmSections.rmmSectionSharedAbout')
+
+
+
+
     @while (have_posts())
         @php(the_post())
 
-        <div class="contactSection grid gap-8 lg:grid-cols-2">
-            <div class="col1 order-2 rounded-lg border-2 border-black p-8 lg:order-1">
-                <!-- Start of .col1 -->
-                <h2 class="text-center">Job Listings</h2> @include(
-                    'fieldModules.moduleViewJobsAccordion'
-                )
-            </div> <!-- End of .col1 -->
-            <div class="col2 order-1 rounded-lg border-2 border-black p-8 lg:order-2">
-                <!-- Start of .col2 -->
-
-                <h2 class="text-center">Apply Now</h2>
-                <?php echo FrmFormsController::show_form(3, $key = 'sf-job-application', $title = false, $description = false); ?>
-
-
-            </div> <!-- End of .col2 -->
-
-        </div> <!-- End of .contactSection -->
     @endwhile
 @endsection

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="284px" height="392px" viewBox="0 0 284 392" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>blue_triangle_right</title>
+    <defs>
+        <polygon id="path-1" points="161.731065 0 284 192.030435 153.26998 392 0 390.025007 0 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="expert_air_assets-board" transform="translate(-590.000000, -259.000000)">
+            <g id="blue_triangle_right" transform="translate(590.000000, 259.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#F4FCFF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

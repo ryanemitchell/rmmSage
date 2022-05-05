@@ -8,3 +8,4 @@ function rmm_show_business_name() {
 }
 
 add_shortcode( 'show_business_name', 'rmm_show_business_name' );
+add_shortcode( 'show_company_name', 'rmm_show_business_name' );

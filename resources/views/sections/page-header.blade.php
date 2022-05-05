@@ -1,6 +1,20 @@
-<section class="flex relative justify-center items-center place-items-center rmmsection page-header full-width-bound bg-hulk-800">
-	<div class="flex justify-center items-center text-white inner__wrapper bg-primary">
-		<div class="content">
-			<x-sections.page-header-content></x-sections.page-header-content>
-	</div>
+<section class="flex relative justify-center items-center place-items-center bg-center bg-no-repeat bg-cover bg-siteBlack rmmsection page-header full-width-bound bg-home-hero-mobile mt-[-91px] pt-[91px] lg:bg-home-hero">
+{{--	<div class="flex justify-center items-center text-white inner__wrapper">--}}
+
+		@if (is_front_page())
+			@include('sections.pageHeaders.homePageHeader')
+		@elseif (is_home())
+			@include('sections.pageHeaders.blogHomePageHeader')
+		@elseif (is_404())
+			@include('sections.pageHeaders.notFoundPageHeader')
+		@elseif (is_page_template('template-service-page.blade.php'))
+			@include('sections.pageHeaders.servicePageHeader')
+		@elseif (is_category())
+			@include('sections.pageHeaders.blogCategoryPageHeader')
+		@elseif (is_single())
+			@include('sections.pageHeaders.blogPostPageHeader')
+		@else
+			@include('sections.pageHeaders.defaultPageHeader')
+		@endif
+{{--	</div>--}}
 </section>

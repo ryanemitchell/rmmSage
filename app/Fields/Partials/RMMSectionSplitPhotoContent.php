@@ -1,9 +1,16 @@
 <?php
-
+/* ==========================================================================
+    * Filename: RMMSectionSplitPhotoContent.php
+    * Description: Photo and Content Section
+    * - Fields from Single post Only
+    * Reference:
+    * Author: ryan
+    ========================================================================== */
 namespace App\Fields\Partials;
 
 use Log1x\AcfComposer\Partial;
 use StoutLogic\AcfBuilder\FieldsBuilder;
+use app\lib\RmmSageFunctions;
 
 class RMMSectionSplitPhotoContent extends Partial
 {
@@ -11,65 +18,59 @@ class RMMSectionSplitPhotoContent extends Partial
      * The partial field group.
      *
      * @return array
+     * @throws \StoutLogic\AcfBuilder\FieldNotFoundException
      */
     public function fields()
     {
-        $rMMSectionSplitPhotoContent = new FieldsBuilder('r_m_m_section_split_photo_content');
+        $rmmSectionSplitPhotoContent = new FieldsBuilder('rmmSection_split_photo_content');
 
-        $rMMSectionSplitPhotoContent
-            ->addGroup('SectionSplitPhotoContent_group', [
-                'label' => '',
-            ])
+        $rmmSectionSplitPhotoContent
 
-            /* ===========================  CONTENT TAB  ========================== */
+            ->addGroup('rmmSectionSplitPhotoContent', [ 'label' => ''])
+
+            ->addFields($this->get(sectionStylingTab::class))
+
             ->addTab('contentTab', [
                 'label' => 'Content',
             ])
 
-            /* ===  Section Content  ==== */
-            ->addGroup('sectionContent', [
-                'label'   => '',
-                'layout'  => 'block',
-                'wrapper' => [
-                    'width' => '100%',
-                ],
+            ->addText('tagline', [
+                'label' => 'Tagline',
             ])
-            ->addFields($this->get(comboImageWithAltTitle::class))
-            ->addFields($this->get(fieldShowCTA::class))
-            ->endGroup()
 
-            /* ===  Left Column Content  ==== */
-            ->addGroup('sectionContentLeft', [
-                'label'   => '',
-                'layout'  => 'block',
-                'wrapper' => [
-                    'width' => '40%',
-                ],
+            ->addText('header', [
+                'label' => 'Header',
             ])
-            ->addFields($this->get(comboImageWithAltTitle::class))
-            ->addFields($this->get(fieldShowCTA::class))
-            ->endGroup()
 
-            /* ===  Right Column Content  ==== */
-            ->addGroup('sectionContentRight', [
-                'label'   => '',
-                'layout'  => 'block',
-                'wrapper' => [
-                    'width' => '60%',
-                ],
+            ->addWysiwyg('content', [
+                'label' => 'About Content',
             ])
-            ->addFields($this->get(comboHeaderWithLevels::class))
-            ->addFields($this->get(fieldWYSIWYG::class))
-            ->endGroup()
 
-            /* ===========================  STYLING TAB  ========================== */
+            ->addText('footer', [
+                'label' => 'Footer - CTA',
+            ])
+
+	        ->addMessage('Image Info:', 'This image will be resized to 422px wide if the image provided is wider. The aspect ratio will be maintained. ')
+
+	        ->addFields($this->get(comboImageWithAltTitle::class))
+
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+
+
             ->endGroup();
 
 
-        return $rMMSectionSplitPhotoContent;
+
+
+
+
+
+
+
+
+
+        return $rmmSectionSplitPhotoContent;
     }
 }

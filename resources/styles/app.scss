@@ -10,8 +10,8 @@
 @import "dev/dev-debugging";
 
 /* ===========================  Utilities that require theme  ========================== */
-@import "utilities/button-mixins";
-@import "utilities/icons";
+//@import "utilities/button-mixins";
+//@import "utilities/icons";
 
 /* ===========================  Tailwind  ========================== */
 @import "tailwindcss/base";
@@ -24,6 +24,9 @@
 @import "flickity/css/flickity.css";
 //@import "accordion-js/dist/accordion.min.css";
 
+/* ===========================  Typography  ========================== */
+@import "theme/typography";
+
 /* ===========================  Core Styling  ========================== */
 @import "utilities/wordpress-core-styles";
 
@@ -31,13 +34,12 @@
 @import "components/buttons";
 @import "components/accordion-js"; // based on styles from accordion-js package - original is imported above if you need new defaults.
 
-@import "flickity/flickity";
-
 /* ===========================  Layout  ========================== */
 @import "layout/layout-utilities";
 @import "layout/rmmSections";
 
 /* ===========================  Sections  ========================== */
+@import "sections/header";
 @import "sections/sidebar";
 @import "sections/footer";
 @import "sections/bottom-bar";
@@ -48,6 +50,7 @@
 //@import "menus/mobile_slide_menu";
 @import "menus/mobile_menu_dropdown";
 @import "menus/not-found-menu";
+@import "menus/services-navigation";
 
 /* ===========================  Forms  ========================== */
 @import "forms/formidable_styles";
@@ -64,7 +67,6 @@
 
 /* ===========================  Wit Site Plugin Elements  ========================== */
 @import "fieldPartials/businessAddress";
-@import "fieldPartials/socialIcons";
 
 /* ===========================  ThirdParty - Plugins  ========================== */
 @import "third-party/yoast-breadcrumbs";
@@ -72,6 +74,7 @@
 
 /* ===========================  Wit Common Sections  ========================== */
 @import "witCommonSections/contactInformation";
+@import "shared/has-stuck-header";
 
 /* ==========================================================================
    TESTING OUT TAILWIND UTILITIES AND COMPONENTS
@@ -86,23 +89,15 @@
   svg {
     display: inline;
   }
-
-  h1 {
-    font-size: var(--mobile-h1);
-
-    @screen lg {
-      font-size: var(--desktop-h1);
-    }
-  }
-
-  h2 {
-    @apply text-xl;
-  }
 }
 
 @layer utilities {
   .filter-aqua {
     filter: brightness(0) saturate(100%) invert(78%) sepia(89%) saturate(542%) hue-rotate(112deg) brightness(102%) contrast(106%);
+  }
+
+  .filter-white {
+    filter: brightness(0) invert(100%);
   }
 
   .filter-red {
@@ -141,31 +136,41 @@
 //}
 
 @layer utilities {
-  .icon-before-phone {
-    position: relative;
-    align-items: center;
-    display: flex;
 
-    &::before {
-      position: relative;
-      height: 1rem;
-      width: 1rem;
-      display: inline-block;
-      background-size: cover;
-      content: "";
-      //background-color: black;
-      bottom: 0;
-      background-position: center;
-      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.586 11.174c-.871-.87-2.14-1.632-3.12-.653a4.56 4.56 0 0 0-.98 1.488s-1.633.87-4.5-1.996C3.12 7.147 3.992 5.514 3.992 5.514s.798-.29 1.488-.98c.98-.98.217-2.249-.653-3.12C3.81.398 2.43-.472 1.669.29.254 1.704 0 3.52 0 3.52S.69 7.8 4.463 11.537C8.236 15.274 12.48 16 12.48 16s1.815-.29 3.23-1.669c.761-.762-.11-2.14-1.125-3.157Z' fill='%23FFFCF9' fill-rule='nonzero'/%3E%3C/svg%3E");
-      filter: brightness(0) saturate(100%);
-    }
+}
 
-    &:hover {
-      filter: brightness(0) saturate(100%) invert(68%) sepia(60%) saturate(6153%) hue-rotate(160deg) brightness(93%) contrast(103%);
+.rmmShimmer {
+  position: relative;
 
-      &::before {
-        filter: brightness(0) saturate(100%) invert(68%) sepia(60%) saturate(6153%) hue-rotate(160deg) brightness(93%) contrast(103%);
-      }
-    }
+  &:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(102 102 102 / 97%), #fcfcfc, #777);
+    background-size: 400% 400%;
+    background-color: #333;
+    opacity: 0.7;
+    animation-name: gra;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    mix-blend-mode: multiply;
   }
+
+  @keyframes gra {
+    0% { background-position: 10% 0%; }
+    50% { background-position: 91% 100%; }
+    100% { background-position: 10% 0%; }
+  }
+}
+
+#main-container {
+
 }

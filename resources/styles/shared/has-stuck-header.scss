@@ -1,0 +1,77 @@
+.stuck-header {
+  #mobile-menu-toggle::after,
+  #mobile-menu-toggle::before,
+  #mobile-menu-toggle div {
+    background-color: theme("colors.secondary");
+  }
+
+  .phoneIcon {
+    @apply filter-to-secondary;
+  }
+
+  .topCtaWrapper {
+    a.callNow {
+      span {
+        color: theme("colors.primary");
+      }
+
+      span:first-of-type {
+        color: theme("colors.black");
+      }
+
+      &:hover {
+        span {
+          color: theme("colors.secondary");
+        }
+      }
+    }
+
+    .booking {
+      color: theme("colors.black");
+
+      svg {
+        filter: brightness(0) saturate(100%) invert(16%) sepia(25%) saturate(6869%) hue-rotate(190deg) brightness(94%) contrast(101%);
+      }
+
+      &:hover {
+        color: theme("colors.secondary");
+
+        svg {
+          filter: brightness(0) saturate(100%) invert(39%) sepia(100%) saturate(756%) hue-rotate(130deg) brightness(93%) contrast(103%);
+        }
+      }
+    }
+  }
+} /* End of .stuck-header */
+
+.is-stuck {
+  @apply bg-grey shadow-common;
+
+  .icon-before-phone {
+    position: relative;
+    align-items: center;
+    display: flex;
+
+    &::before {
+      position: relative;
+      height: 1rem;
+      width: 1rem;
+      display: inline-block;
+      background-size: cover;
+      content: "";
+      //background-color: black;
+      bottom: 0;
+      background-position: center;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.586 11.174c-.871-.87-2.14-1.632-3.12-.653a4.56 4.56 0 0 0-.98 1.488s-1.633.87-4.5-1.996C3.12 7.147 3.992 5.514 3.992 5.514s.798-.29 1.488-.98c.98-.98.217-2.249-.653-3.12C3.81.398 2.43-.472 1.669.29.254 1.704 0 3.52 0 3.52S.69 7.8 4.463 11.537C8.236 15.274 12.48 16 12.48 16s1.815-.29 3.23-1.669c.761-.762-.11-2.14-1.125-3.157Z' fill='%23FFFCF9' fill-rule='nonzero'/%3E%3C/svg%3E");
+      filter: brightness(0) saturate(100%);
+    }
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(68%) sepia(60%) saturate(6153%) hue-rotate(160deg) brightness(93%) contrast(103%);
+
+      &::before {
+        filter: brightness(0) saturate(100%) invert(68%) sepia(60%) saturate(6153%) hue-rotate(160deg) brightness(93%) contrast(103%);
+      }
+    }
+  }
+}

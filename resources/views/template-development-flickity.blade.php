@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <div class="carousel ::after:content-['flickity'] ::after-hidden lg:flex lg::after:content-['']"
+    <div class="::after:content-[ carousel'flickity'] ::after-hidden lg:flex lg::after:content-['']"
         data-flickity='{ "watchCSS": true }'>
         <div class="carousel-cell">a</div>
         <div class="carousel-cell">b</div>
@@ -85,6 +85,6 @@
         </div>
     @endsection
 
-    @section('sidebar')
-        @include('sections.sidebar')
-    @endsection
+    {{-- @section('sidebar') --}}
+    {{-- @include('sections.sidebar') --}}
+    {{-- @endsection --}}

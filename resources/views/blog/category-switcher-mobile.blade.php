@@ -1,6 +1,6 @@
-<div class="flex flex-col justify-center items-center py-4 px-4 categorySwitcher categorySwitcherMobile mb-halfMobileVGap">
+<div class="flex flex-col justify-center items-center py-4 px-4 my-4 categorySwitcher categorySwitcherMobile mb-halfMobileVGap siteBoxedDark bg-siteBlack">
   <!-- Start of .categorySwitcher -->
-  <h2 class="mb-2">Categories</h2>
+  <h2 class="mb-2 text-white">Categories</h2>
 
   <?php $args = [
       'show_option_all' => 'View All',

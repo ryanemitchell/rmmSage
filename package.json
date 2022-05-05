@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "bud dev",
     "build": "bud build",
+    "clean:lint:build": "bud clean & stylelint --fix \"resources/**/*.{css,scss,vue}\" & bud build",
     "bud:clean": "bud clean",
     "acorn:optimize:clear": "wp acorn optimize:clear",
     "lint": "npm run lint:js && npm run lint:css",
@@ -30,7 +31,8 @@
     "acfComposer:CreateFieldGroup": "echo 'What do you want to name your field group' && read x && wp acorn acf:field ${x} && echo 'https://github.com/Log1x/acf-composer' && echo 'https://github.com/Log1x/acf-builder-cheatsheet'",
     "acfComposer:CreateFieldPartial": "echo 'What do you want to name your field partial' && read x && wp acorn acf:partial ${x} && echo 'https://github.com/Log1x/acf-builder-cheatsheet'",
     "acfComposer:CreateOptionsMenu": "echo 'What do you want to name your Options Name' && read x && wp acorn acf:options ${x} && echo 'https://github.com/Log1x/acf-builder-cheatsheet'",
-    "acfComposer:CreateOptionsMenu:full": "echo 'What do you want to name your Options Name' && read x && wp acorn acf:options ${x} --full && echo 'https://github.com/Log1x/acf-builder-cheatsheet'"
+    "acfComposer:CreateOptionsMenu:full": "echo 'What do you want to name your Options Name' && read x && wp acorn acf:options ${x} --full && echo 'https://github.com/Log1x/acf-builder-cheatsheet'",
+    "composer:update:lock": "composer update --lock"
   },
   "devDependencies": {
     "@roots/bud": "5.7.7",
@@ -42,9 +44,10 @@
     "@roots/eslint-config": "5.7.7",
     "@roots/sage": "5.7.7",
     "@shufo/prettier-plugin-blade": "^1.2.4",
+    "@tailwindcss/typography": "^0.5.2",
     "postcss-scss": "4.0.3",
     "prettier": "^2.6.2",
-    "prettier-plugin-tailwindcss": "^0.1.8",
+    "prettier-plugin-tailwindcss": "^0.1.10",
     "rustywind": "^0.13.0",
     "stylelint": "^14.6.1",
     "stylelint-config-standard-scss": "^3.0.0",
@@ -53,6 +56,8 @@
   "dependencies": {
     "accordion-js": "^3.2.0",
     "aos": "^2.3.4",
+    "breakpoint-helper": "^1.0.4",
+    "createjs": "^1.0.1",
     "flickity": "^3.0.0"
   }
 }

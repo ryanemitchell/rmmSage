@@ -1,0 +1,10 @@
+.witDelivers {
+  transition: all 0.25s ease-in-out;
+  @include respond(mobile) {
+    filter: brightness(0) invert(100%);
+  }
+
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(39%) sepia(100%) saturate(756%) hue-rotate(130deg) brightness(93%) contrast(103%);
+  }
+} /* End of .witDelivers */

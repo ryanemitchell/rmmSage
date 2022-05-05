@@ -25,6 +25,11 @@ class Blog extends Composer
     {
         return [
             'pagi' => $this->pagination(),
+//	         'blogTitle' => $this->blogTitle(),
+//            'blogTitleElement' => $this->blogTitleElement(),
+//            'defaultFeaturedImage' => $this->defaultFeaturedImage(),
+//            'defaultFeaturedImageAlt' => $this->defaultFeaturedImage_alt(),
+//            'defaultFeaturedImageTitle' => $this->defaultFeaturedImage_title(),
         ];
     }
 
@@ -34,5 +39,38 @@ class Blog extends Composer
 
         return $pagination->links('components.pagi');
     }
+
+
+	public function blogTitle()
+	{
+		return get_field('field_site_settings_blog_blog_title', 'options');
+	}
+
+	public function blogTitleElement()
+	{
+		if (get_field('field_site_settings_blog_blog_html_element', 'options')) {
+			return get_field('field_site_settings_blog_blog_html_element', 'options');
+		} else {
+			return 'span';
+		}
+	}
+
+
+	public function defaultFeaturedImage()
+	{
+		return get_field('field_site_settings_blog_default_featuredimage', 'options');
+	}
+
+	public function defaultFeaturedImage_alt()
+	{
+		return get_field('field_site_settings_blog_default_featuredimage_alt', 'options');
+	}
+
+	public function defaultFeaturedImage_title()
+	{
+		return get_field('field_site_settings_blog_default_featuredimage_title', 'options');
+	}
+
+
 
 }

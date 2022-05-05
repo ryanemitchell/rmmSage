@@ -2,6 +2,7 @@
 
 namespace App\View\Composers;
 
+use app\lib\RmmSageFunctions;
 use Roots\Acorn\View\Composer;
 
 class App extends Composer
@@ -31,12 +32,16 @@ class App extends Composer
             'wideWidth' => '1392px',
             'desktopBreakpoint' => "1024px",
             'imageAsset' => get_template_directory_uri() . '/public/images/',
-            'blogTitle' => $this->blogTitle(),
-            'blogTitleElement' => $this->blogTitleElement(),
-            'defaultFeaturedImage' => $this->defaultFeaturedImage(),
-            'defaultFeaturedImageAlt' => $this->defaultFeaturedImage_alt(),
-            'defaultFeaturedImageTitle' => $this->defaultFeaturedImage_title(),
-            "pageTitle" => $this->pageTitle(),
+
+            "pageTitle" =>  html_entity_decode($this->pageTitle()),
+	        /*** phpcs:disable */
+            "businessHours" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_hours_information', 'options'),
+            "licenseInformation" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_license_information', 'options'),
+	        "primaryPhoneNumber" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_witsage_primary_location_primary_phone1', 'options'),
+            "primaryPhoneNumberDisplay" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_witsage_primary_location_primary_phone_display', 'options'),
+
+            "bookingLink" => (new RmmSageFunctions() )->rmmGetFields('field_theme_booking_link', 'options'),
+            'thisPostsFields' => get_field_objects(),
         ];
     }
 
@@ -55,35 +60,7 @@ class App extends Composer
         return get_field('field_business_information_business_name', 'options');
     }
 
-    public function blogTitle()
-    {
-        return get_field('field_site_settings_blog_blog_title', 'options');
-    }
 
-    public function blogTitleElement()
-    {
-        if (get_field('field_site_settings_blog_blog_html_element', 'options')) {
-            return get_field('field_site_settings_blog_blog_html_element', 'options');
-        } else {
-            return 'span';
-        }
-    }
-
-
-    public function defaultFeaturedImage()
-    {
-        return get_field('field_site_settings_blog_default_featuredimage', 'options');
-    }
-
-    public function defaultFeaturedImage_alt()
-    {
-        return get_field('field_site_settings_blog_default_featuredimage_alt', 'options');
-    }
-
-    public function defaultFeaturedImage_title()
-    {
-        return get_field('field_site_settings_blog_default_featuredimage_title', 'options');
-    }
 
 
     /* ===========================  Page Settings (from the active page) ========================== */
@@ -120,7 +97,7 @@ class App extends Composer
             if (get_field('field_site_settings_not_found_page_notfound_title', 'options')) :
                 $pageTitle = get_field('field_site_settings_not_found_page_notfound_title', 'options');
             else :
-                $pageTitle = "No body is here bitch!";
+                $pageTitle = "No body is here";
             endif;
         endif;
 

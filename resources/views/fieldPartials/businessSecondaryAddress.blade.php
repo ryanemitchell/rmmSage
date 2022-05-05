@@ -5,14 +5,15 @@
   <a href="@sub('business_link')" class="business_address_link" target="_blank">
     @endsub
 
+    <div>
     @hassub('business_address')
-    <span class="business_address">@sub('business_address')</span>
+    <span class="inline business_address">@sub('business_address'),</span>
     @endsub
 
     @hassub('business_address_line_2')
-    <span class="business_address_line_2">@sub('business_address_line_2')</span>
+    <span class="inline business_address_line_2">@sub('business_address_line_2')</span>
     @endsub
-
+    </div>
     @hassub('business_city')
     <span class="business_city">@sub('business_city'),</span>
     @endsub

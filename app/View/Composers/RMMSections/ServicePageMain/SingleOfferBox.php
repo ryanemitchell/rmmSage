@@ -12,7 +12,7 @@ class SingleOfferBox extends Composer
      * @var array
      */
     protected static $views = [
-        //
+       'rmmSections.pageMainContentSection.singleOfferBox'
     ];
 
     /**
@@ -23,7 +23,7 @@ class SingleOfferBox extends Composer
     public function with()
     {
         return [
-            //
+             'headerImage'      => 'hello',
         ];
     }
 }

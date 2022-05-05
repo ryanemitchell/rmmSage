@@ -46,7 +46,7 @@ class RmmSageFunctions
 
     public function rmmGetFields($fieldKey, $postID = '')
     {
-        $fieldValue = '';
+        $fieldValue = null;
         if (! empty(get_field($fieldKey, $postID))) :
             $fieldValue = get_field($fieldKey, $postID);
         endif;
@@ -95,18 +95,55 @@ class RmmSageFunctions
         return $fieldValue;
     }
 
-
-
-	public function rmmSetDisplayToggle($fieldKey, $postID = ''): string {
-		if ((new RmmSageFunctions() )->rmmGetFields($fieldKey,$postID )):
+	public function rmmSetDisplayToggle($fieldKey, $postID = ''): string
+	{
+		if ((new RmmSageFunctions() )->rmmGetFields($fieldKey, $postID)) :
 			$mobileDisplay = 'block';
 		else :
 			$mobileDisplay = 'hidden';
 		endif;
 
 		return $mobileDisplay;
-
 	}
+
+
+
+    public function rmmSetMobileDisplayToggle($fieldKey, $postID = ''): string
+    {
+        if ((new RmmSageFunctions() )->rmmGetFields($fieldKey, $postID)) :
+            $mobileDisplay = 'block';
+        else :
+            $mobileDisplay = 'hidden';
+        endif;
+
+        return $mobileDisplay;
+    }
+
+	public function rmmSetDesktopDisplayToggle($fieldKey, $postID = ''): string
+	{
+		if ((new RmmSageFunctions() )->rmmGetFields($fieldKey, $postID)) :
+			$desktopDisplay = 'lg:block';
+		else :
+			$desktopDisplay = 'lg:hidden';
+		endif;
+
+		return $desktopDisplay;
+	}
+
+	public function rmmCreateSectionClasses($sectionName): string
+	{
+			$SectionGroupName =  $sectionName.'_'; // include trailing underscore
+			$className    = (new RmmSageFunctions() )->rmmGetFields($SectionGroupName.'sectionDisplay_'.'class_name');
+            $mobileDisplay = (new RmmSageFunctions() )->rmmSetMobileDisplayToggle($SectionGroupName.'sectionDisplay_'.'show_on_mobile');
+            $desktopDisplay = (new RmmSageFunctions() )->rmmSetDesktopDisplayToggle($SectionGroupName.'sectionDisplay_'.'show_on_desktop');
+			$sectionclasses = $sectionName.' '.$className.' '.$mobileDisplay.' '.$desktopDisplay;
+
+
+
+		return $sectionclasses;
+	}
+
+
 
 
 }

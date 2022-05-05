@@ -6,8 +6,12 @@
 
 
 @section('content')
+    @include('rmmSections.logoBar.logoBarFull')
+    @include('rmmSections.guarantees.guaranteesSlider')
+    @include('rmmSections.guarantees.guaranteesFlat')
+    @include('rmmSections.guarantees.guaranteesFull')
     {{-- @include('offers.alloffers') --}}
-    @include('offers.offers')
+    {{-- @include('offers.offers') --}}
 
 
     {{-- Offers: {{ $offers }} --}}
@@ -76,6 +80,6 @@
         </div>
     @endsection
 
-    @section('sidebar')
-        @include('sections.sidebar')
-    @endsection
+    {{-- @section('sidebar') --}}
+    {{-- @include('sections.sidebar') --}}
+    {{-- @endsection --}}

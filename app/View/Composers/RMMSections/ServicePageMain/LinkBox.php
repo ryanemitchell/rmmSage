@@ -14,7 +14,7 @@ class LinkBox extends Composer
      * @var array
      */
     protected static $views = [
-        'rmmSections.servicePageMain.linkBox',
+        'rmmSections.pageMainContentSection.linkBox',
     ];
 
     /**

@@ -107,9 +107,21 @@ class SettingsTheme extends Field
         $theme = new FieldsBuilder('theme');
 
         $theme
-            ->addRepeater('items')
-                ->addText('item')
-            ->endRepeater();
+	        ->addText('booking_link', [
+		        'label' => 'Booking Link',
+		        'instructions' => '',
+		        'required' => 0,
+		        'wrapper' => [
+			        'width' => '',
+			        'class' => '',
+			        'id' => '',
+		        ],
+		        'default_value' => '',
+		        'placeholder' => '',
+		        'prepend' => '',
+		        'append' => '',
+		        'maxlength' => '',
+	        ]);
 
         return $theme->build();
     }

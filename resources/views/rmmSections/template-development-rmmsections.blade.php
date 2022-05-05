@@ -24,7 +24,7 @@
     <section class="flex relative justify-center items-center place-items-center rmmsection bg-hulk-800 my-halfMobileVGap lg:my-halfDesktopVGap">
         <div class="flex flex-col gap-8 justify-between items-center text-white lg:flex-row inner__wrapper bg-primary">
 
-            <div class="flex justify-center items-center bg-black lg:w-1/2 col1">
+            <div class="flex justify-center items-center lg:w-1/2 bg-siteBlack col1">
                 <div class="content">
                     Column1
                 </div>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="ml-[22px]">
                     <a href="#" class="hiringLink">
-                        <h2 class="hover:bg-black group text-1xl bold text-mt2 lg:text-dt1">Join the Experts. Now Hiring
+                        <h2 class="group text-1xl bold text-mt2 lg:text-dt1 hover:bg-siteBlack">Join the Experts. Now Hiring
                             @svg('images/sage_character_head.svg', 'group-hover:filter-aqua hidden lg:inline',)</h2>
                     </a>
                     <p class="hidden lg:block lg:pt-4">We’re commited to building a team that helps our customers to be

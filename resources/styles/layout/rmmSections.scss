@@ -25,6 +25,17 @@
     }
   }
 
+  .mobile-full-width {
+    @include respond(mobile) {
+      @include fullwidth;
+
+      .inner__wrapper {
+        padding: var(--edgexPadding);
+        padding-block: 0;
+      }
+    }
+  }
+
   .full-width-bound {
     @include fullwidth;
 
@@ -57,16 +68,16 @@
       padding: 0;
 
       .content-edge__wrapper {
-        background: #45ff17;
+        //background: #45ff17;
       }
 
       .content__wrapper {
-        background: #0012ff;
+        //background: #0012ff;
         margin-left: 0;
         flex-grow: 1;
 
         .content {
-          background: green;
+          //background: green;
         }
       }
     }
@@ -99,6 +110,14 @@
       //padding: var(--edgexPadding)
       //  max(2rem, 50vw - var(--narrowWidthContentWidth) / 2);
       //padding-block: 0;
+    }
+  }
+
+  .mobile-to-the-edge {
+    @include respond(mobile) {
+      max-width: 100vw;
+      width: 100vw;
+      align-self: center;
     }
   }
 }

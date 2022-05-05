@@ -40,7 +40,7 @@ class WitSections extends Field
      *
      * @var int
      */
-    public $position = PHP_INT_MAX;
+    public $position = 2;
 
     /**
      * The slug of another admin page to be used as a parent.

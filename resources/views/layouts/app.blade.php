@@ -1,16 +1,12 @@
-<a class="sr-only focus:not-sr-only" href="#main">
-  {{ __('Skip to content') }}
-</a>
+{{--@dump($allFields)--}}
 @include('sections.header')
-
-
 @include('sections.page-header')
 @include('sections.yoastBreadcrumbs')
 <div id="main-container"
   class="flex relative flex-col flex-nowrap justify-between px-0 mx-auto lg:flex-row lg:px-0 content-container max-w-[1200px]">
   <!-- Start of #main-container -->
 
-  <main id="main" class="flex flex-col px-4 mx-auto w-full lg:px-0 main grow">
+  <main id="main" class="flex flex-col px-4 mx-auto mt-0 w-full lg:px-0 main grow">
     @yield('content')
   </main>
 

@@ -22,7 +22,29 @@ class sectionStylingTab extends Partial
                 'layout' => 'block',
             ])
 
-            ->addFields($this->get(sectionDisplayFields::class))
+            ->addText('class_name', [
+                'label'         => 'Class Name',
+                'wrapper'       => [
+                    'width' => '33%',
+                ],
+            ])
+            ->addTrueFalse('show_on_desktop', [
+                'label'             => 'Show on Desktop',
+                'default_value' => 1,
+                'wrapper'           => [
+                    'width' => '33',
+                ],
+
+            ])
+            ->addTrueFalse('show_on_mobile', [
+                'label'             => 'Show on Mobile',
+                'default_value' => 1,
+                'wrapper'           => [
+                    'width' => '33',
+
+                ],
+
+            ])
 
             ->endGroup()
 

@@ -114,10 +114,29 @@ class SiteSettingsBusinessInformation extends Field
                 'default_value' => 'Business Name',
             ])
 
-            ->addText('license_id', [
-                'label' => 'License ID',
+	        ->addText('business_email', [
+		        'label' => 'Business Email',
+		        'instructions' => '',
+		        'default_value' => 'username@domain.com',
+	        ])
+
+
+            ->addTextarea('hours_information', [
+                'label' => 'Hours Information',
+                'instructions' => '',
+                'default_value' => 'Business Name',
+                'new_lines' => '<br>',
+                'rows' => '4'
+            ])
+
+
+
+            ->addTextarea('license_information', [
+                'label' => 'License Information',
                 'instructions' => '',
                 'default_value' => 'ABCDEFG-123456789',
+                'new_lines' => '<br>',
+                'rows' => '3'
             ])
 
             ->addGroup('witsage_primary_location', [

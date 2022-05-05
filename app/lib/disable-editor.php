@@ -16,6 +16,24 @@
    ========================================================================== */
 
 
+// Disable Gutenberg on the back end.
+//add_filter( 'use_block_editor_for_post', '__return_false' );
+//
+//// Disable Gutenberg for widgets.
+//add_filter( 'use_widgets_blog_editor', '__return_false' );
+//
+//add_action( 'wp_enqueue_scripts', function() {
+//	// Remove CSS on the front end.
+//	wp_dequeue_style( 'wp-block-library' );
+//
+//	// Remove Gutenberg theme.
+//	wp_dequeue_style( 'wp-block-library-theme' );
+//
+//	// Remove inline global CSS on the front end.
+//	wp_dequeue_style( 'global-styles' );
+//}, 20 );
+
+
 
 function get_page_id_by_title($title)
 {
@@ -36,13 +54,16 @@ function ea_disable_editor($id = false)
 
     $excluded_templates = array(
         'template-development-flexible-content.blade.php',
-        'page.blade.php'
+		'*'.'.blade.php',
+        'page.blade.php',
+	    'page-offers.blade.php',
+	    'template-city-page.blade.php'
     );
 
     $excluded_ids = array(
-		'36', //contact
-	    '40', //scheduleService
-	    '74', //careers
+//		'36', //contact
+//	    '40', //scheduleService
+//	    '74', //careers
 //	    '55', //DEV
          get_option( 'page_on_front' ),
 	    get_page_id_by_title('careers'),

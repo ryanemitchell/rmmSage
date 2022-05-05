@@ -160,7 +160,8 @@ add_filter( 'body_class', function( $classes ) {
 } );
 
 
-
+add_image_size( 'split-content-image', 422, 281 );
+add_image_size( 'shared-about-image', 555, 309 );
 
 // Include Shortcodes
 foreach (glob(get_template_directory() . "/app/shortcodes/*.php") as $file) {
@@ -204,6 +205,10 @@ if (file_exists(get_template_directory() . '/app/lib/disable-editor.php')) {
     require_once(get_template_directory() . '/app/lib/disable-editor.php');
 }
 
+if (file_exists(get_template_directory() . '/app/lib/disable-commenting.php')) {
+	require_once(get_template_directory() . '/app/lib/disable-commenting.php');
+}
+
 if (file_exists(get_template_directory() . '/app/lib/witSection.php')) {
     require_once(get_template_directory() . '/app/lib/witSection.php');
 }
@@ -227,5 +232,11 @@ if (file_exists(get_template_directory() . '/app/lib/RmmSageFunctions.php')) {
 	require_once(get_template_directory() . '/app/lib/RmmSageFunctions.php');
 }
 
+if (file_exists(get_template_directory() . '/app/lib/RmmOffersFunctions.php')) {
+	require_once(get_template_directory() . '/app/lib/RmmOffersFunctions.php');
+}
 
 
+/* ===========================  Hide ACF  ========================== */
+
+add_filter('acf/settings/show_admin', '__return_false');

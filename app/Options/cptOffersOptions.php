@@ -2,7 +2,7 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\cptOffersSharedFields;
+use App\Fields\Partials\CPTOffersSharedFields;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -41,7 +41,7 @@ class cptOffersOptions extends Field
      *
      * @var int
      */
-    public $position = PHP_INT_MAX;
+    public $position = 3;
 
     /**
      * The slug of another admin page to be used as a parent.
@@ -132,7 +132,7 @@ class cptOffersOptions extends Field
 
 
 
-            ->addFields($this->get(cptOffersSharedFields::class));
+            ->addFields($this->get(CPTOffersSharedFields::class));
 
 
 

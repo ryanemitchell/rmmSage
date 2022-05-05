@@ -19,7 +19,9 @@ class comboHeaderSubHeaderContent extends Partial
         $comboHeaderSubHeaderContent
 	        ->addFields($this->get(comboHeaderWithLevels::class))
 	        ->addFields($this->get(comboSubHeaderwithLevels::class))
-	        ->addFields($this->get(fieldWYSIWYG::class));
+	        ->addWysiwyg('content', [
+		        'label' => 'Content',
+	        ]);
 
         return $comboHeaderSubHeaderContent;
     }

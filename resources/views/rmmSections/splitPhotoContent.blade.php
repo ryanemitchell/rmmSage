@@ -3,7 +3,7 @@
 
 	<div class="flex flex-col gap-8 justify-between items-center text-white lg:flex-row inner__wrapper bg-primary">
 
-		<div class="flex justify-center items-center lg:w-1/2 col1 ">
+		<div class="flex justify-center items-center lg:w-1/2 col1">
 
 			<div class="content">
 
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 
-		<div class="flex justify-center items-center lg:w-1/2 col2  ">
+		<div class="flex justify-center items-center lg:w-1/2 col2">
 			<div class="content">
 				@notempty($headerText)
 				<{{$headerElement}} class="header">

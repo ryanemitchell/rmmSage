@@ -1,6 +1,6 @@
-<div class="flex flex-col justify-center items-center categorySwitcher py-desktopVGap px-desktopVGap">
+<div class="flex flex-col justify-center items-center px-4 categorySwitcher py-desktopVGap siteBoxed bg-siteBlack">
   <!-- Start of .categorySwitcher -->
-  <h2>Categories</h2>
+  <h2 >Categories</h2>
 
   <?php $args = [
       'show_option_all' => 'View All',
@@ -18,7 +18,7 @@
       'hierarchical' => 0,
       'name' => 'cat',
       'id' => '',
-      'class' => 'postform min-w-[80%] m-0 bg-white inline px-2 py-2 box-border leading-6 border-none appearance-none border rounded-none',
+      'class' => 'postform min-w-[80%] m-0 bg-white inline px-2 py-2 box-border leading-6 border-none appearance-none border rounded-none ',
       'depth' => 0,
       'tab_index' => 0,
       'taxonomy' => 'category',

@@ -22,18 +22,18 @@ return [
             'has_archive' => false,
             'menu_position' => 0,
             'admin_cols' => array(
-	            'featured_image' => array(
-		            'title'          => 'Illustration',
-		            'featured_image' => 'thumbnail'
-	            ),
-	            'published' => array(
-		            'title'       => 'Published',
-		            'meta_key'    => 'published_date',
-		            'date_format' => 'd/m/Y'
-	            ),
-	            'genre' => array(
-		            'taxonomy' => 'genre'
-	            )
+//	            'featured_image' => array(
+//		            'title'          => 'Illustration',
+//		            'featured_image' => 'thumbnail'
+//	            ),
+//	            'published' => array(
+//		            'title'       => 'Published',
+//		            'meta_key'    => 'published_date',
+//		            'date_format' => 'd/m/Y'
+//	            ),
+//	            'genre' => array(
+//		            'taxonomy' => 'genre'
+//	            )
             ),
 
             'labels' => [

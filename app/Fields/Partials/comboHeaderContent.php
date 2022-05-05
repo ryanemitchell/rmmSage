@@ -18,8 +18,9 @@ class comboHeaderContent extends Partial
 
         $comboHeaderContent
 	        ->addFields($this->get(comboHeaderWithLevels::class))
-	        ->addFields($this->get(fieldWYSIWYG::class));
-
+	        ->addWysiwyg('content', [
+		        'label' => 'Content',
+	        ]);
         return $comboHeaderContent;
     }
 }

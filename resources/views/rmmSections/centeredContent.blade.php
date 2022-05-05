@@ -6,6 +6,21 @@
 			Mobile Display: {{$mobileDisplay}} <br>
 			Desktop Display: {{$desktopDisplay}} <br>
 
+			@notempty($menu)
+			{!! wp_nav_menu([
+		  'menu_class' => 'menu interior-menu grid grid-cols-4',
+            'container' => 'nav',
+  		 'container_id' => 'services-navigation',
+			'container_class' => 'services-navigation',
+  		  'depth' => '1',
+  		   'add_li_class'  => 'p-2 text-center',
+
+
+	  ]) !!}
+			@endnotempty
+
+
+
 			@notempty($headerText)
 			<{{$headerElement}} class
 			='mainHeader'>
@@ -13,17 +28,14 @@
 		</{{$headerElement}}>
 		@endnotempty
 
-		<div class="mainContent bg-blue"> <!-- Start of .mainContent bg-blue -->
+		<div class="mainContent bg-blue">
 			@notempty($content)
 			@wpautokp($content)
 			@endnotempty
-		</div> <!-- End of .mainContent bg-blue -->
+		</div> {{--== End of .mainContent bg-blue ==--}}
 
-		<div class="cta bg-blue">
-			@notempty($showCTA)
-			Main CTA GOES HERE!
-			@endnotempty
-		</div>
+
+
 
 
 		@notempty($listItems)
@@ -43,6 +55,15 @@
 
 					@endforeach
 		</ul>
+		@endnotempty
+
+
+
+		{{--== Footer ==--}}
+		@notempty($footerText)
+		<div class="footer bg-blue">
+			{{$footerText}}
+		</div>
 		@endnotempty
 
 		<style>
@@ -99,21 +120,21 @@
 </section>
 
 
-{{--<div class="devBox mx-auto flex w-11/12 flex-col justify-center bg-white rounded-sm shadow-sm shadow-slate-300/60 p-2">--}}
-{{--	<h2>This Sections Fields</h2>--}}
-{{--	@dump($sectionGroup)--}}
-{{--	<br>--}}
-{{--	<hr>--}}
+<div class="flex flex-col justify-center p-2 mx-auto w-11/12 bg-white rounded-sm shadow-sm devBox shadow-slate-300/60">
+	<h2>This Sections Fields</h2>
+	@dump($sectionGroup)
+	<br>
+	<hr>
 
-{{--	<h2>This Sections Composer Fields</h2>--}}
+	<h2>This Sections Composer Fields</h2>
 {{--	@dump($thisDump)--}}
-{{--	<br>--}}
-{{--	<hr>--}}
+	<br>
+	<hr>
 
-{{--	--}}{{--    @include('dev.showAllPageFields')--}}
-{{--	--}}{{--    @include('dev.showAllAcfFields')--}}
+	    @include('dev.showAllPageFields')
+	    @include('dev.showAllAcfFields')
 
-{{--</div>--}}
+</div>
 
 
 <?php

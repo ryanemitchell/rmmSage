@@ -17,14 +17,21 @@ class comboSubHeaderwithLevels extends Partial
         $comboSubHeaderwithLevels = new FieldsBuilder('combo_sub_headerwith_levels');
 
         $comboSubHeaderwithLevels
-	        ->addFields($this->get(fieldSubHeaderText::class))
-	        ->modifyField('subheader_text', [
+	        ->addText('subheader_text', [
 		        'label' => 'Subheader',
+		        'instructions' => '',
+		        'required' => 0,
 		        'wrapper' => [
+			        'width' => '50%',
 			        'class' => 'acfHeaderText',
+			        'id' => '',
 		        ],
+		        'default_value' => '',
+		        'placeholder' => '',
+		        'prepend' => '',
+		        'append' => '',
+		        'maxlength' => '',
 	        ])
-
 
 
 	        ->addSelect('subheader_element', [

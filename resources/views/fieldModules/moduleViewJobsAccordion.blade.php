@@ -1,8 +1,8 @@
 {{-- Careers Job Listing Accordion  --}}
 
 @php
-	$id = bin2hex(random_bytes(8));
-	$moduleID = 'module_'.$id;
+    $id = bin2hex(random_bytes(8));
+    $moduleID = 'module_'.$id;
 @endphp
 
 {{-- Set var for allowing Multiple Accordiona--}}
@@ -10,26 +10,26 @@
 @php $allowMultiple = 'true' @endphp
 
 @else
-	@php $allowMultiple = 'false' @endphp
+    @php $allowMultiple = 'false' @endphp
 
-	@endfield
+    @endfield
 
-	@hasfield('field_jobs_accordion_openfirst')
-	@php $openfirst = '0' @endphp
+    @hasfield('field_jobs_accordion_openfirst')
+    @php $openfirst = '0' @endphp
 
-	@else
-		@php $openfirst = '' @endphp
+    @else
+        @php $openfirst = '' @endphp
 
-		@endfield
-
-
+        @endfield
 
 
 
 
 
 
-		<style>
+
+
+        <style>
             .{{ $moduleID }} .ac-panel {
                 display: none;
             }
@@ -37,32 +37,32 @@
             .{{ $moduleID }} .js-enabled .ac-panel {
                 display: block;
             }
-		</style>
-		@hasfields('field_jobs_accordion_job_listings')
-		<div class="{{ $moduleID }} accordion-container-{{ $moduleID }} accordion-container">
-			@fields('field_jobs_accordion_job_listings')
+        </style>
+        @hasfields('field_jobs_accordion_accordion')
+        <div class="{{ $moduleID }} accordion-container-{{ $moduleID }} accordion-container">
+            @fields('field_jobs_accordion_accordion')
 
-			<div class="ac">
-				<h2 class="ac-header">
-					<button type="button" class="ac-trigger">@sub('title')</button>
-				</h2>
-				<div class="ac-panel">
-					@sub('content')
-				</div>
-			</div>
-
-
-			@endfields
-		</div>
-		@endhasfields
+            <div class="rmmAccordion ac bg-grey">
+                <h2 class="ac-header">
+                    <button type="button" class="ac-trigger"><span class="textWrapper">@sub('title')</span><span class="toggle"></span></button>
+                </h2>
+                <div class="ac-panel">
+                    @sub('content')
+                </div>
+            </div>
 
 
-		<script>
+            @endfields
+        </div>
+        @endhasfields
+
+
+        <script>
 
 
             document.addEventListener('DOMContentLoaded', function () {
                 window.addEventListener("load", onLoadFunction_{{ $moduleID }});
-				{{--window.addEventListener("resize", onLoadFunction_{{ $moduleID }});--}}
+                {{--window.addEventListener("resize", onLoadFunction_{{ $moduleID }});--}}
 
                 function onLoadFunction_{{ $moduleID }}(e) {
                     if (document.getElementsByClassName('accordion-container-{{ $moduleID }}').length > 0) {
@@ -77,13 +77,13 @@
 
 
                             });
-							{{ $moduleID }}_accordion.closeAll();
-							{{ $moduleID }}_accordion.open({{$openfirst}})
-							{{ $moduleID }}_accordion.update();
+                            {{ $moduleID }}_accordion.closeAll();
+                            {{ $moduleID }}_accordion.open({{$openfirst}})
+                            {{ $moduleID }}_accordion.update();
                         } else {
                             const {{ $moduleID }}_accordion = new Accordion('.accordion-container--{{ $moduleID }}');
-							{{ $moduleID }}_accordion.destroy();
-							{{ $moduleID }}_accordion.detachEvents();
+                            {{ $moduleID }}_accordion.destroy();
+                            {{ $moduleID }}_accordion.detachEvents();
 
                         }
 
@@ -96,5 +96,20 @@
             }, false);
 
 
-		</script>
+        </script>
 
+{{--        @include('dev.showAllAcfFields')--}}
+
+{{--        <?php--}}
+
+{{--        $fields = get_fields();--}}
+
+{{--        if ($fields) : ?>--}}
+{{--        <ul>--}}
+{{--            <?php foreach ($fields as $name => $value) :
+    ?>--}}
+{{--            <li><b><?php echo $name; ?></b> <?php var_dump($value); ?></li>--}}
+{{--
+                <?php endforeach; ?>--}}
+{{--        </ul>--}}
+{{--        <?php endif; ?>--}}

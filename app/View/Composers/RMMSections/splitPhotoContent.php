@@ -12,7 +12,7 @@ class splitPhotoContent extends Composer
      * @var array
      */
     protected static $views = [
-	    'rmmSections.splitPhotoContent',
+//	    'rmmSections.splitPhotoContent',
     ];
 
 	/**

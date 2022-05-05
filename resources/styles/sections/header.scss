@@ -1,0 +1,76 @@
+.main-header {
+  .desktopLogo,
+  .mobileLogo {
+    a {
+      position: relative;
+      top: 5px;
+
+      @include respond(desktop) {
+        top: unset;
+      }
+    }
+
+    .logoWrapper {
+      position: relative;
+    }
+
+    img {
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .default {
+      opacity: 1;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .scrolled {
+      opacity: 0;
+      position: relative;
+      left: 11px;
+      top: -30px;
+      margin-bottom: -30px;
+      padding-block: 0.5rem;
+
+      @include respond(desktop) {
+        position: relative;
+        top: -42px;
+        left: 0;
+        margin-bottom: -42px;
+        padding-block: unset;
+      }
+    }
+  }
+
+  &.is-stuck {
+    background-color: theme("colors.grey");
+
+    .default {
+      opacity: 0;
+    }
+
+    .scrolled {
+      opacity: 1;
+    }
+  }
+}
+
+@include respond(mobile) {
+  .main-header {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    transition: padding-top 0.5s ease-in-out;
+
+    &.is-stuck {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: theme("colors.grey");
+
+      .scrolled {
+        top: -35px;
+        transition: top 0.5s ease-in-out;
+      }
+    }
+  }
+}

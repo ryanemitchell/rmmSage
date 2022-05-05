@@ -1,4 +1,11 @@
-.breadcrumbsWrapper {
+#breadcrumbs {
+  color: theme("colors.primary");
+  font-size: 12px;
+  font-family: theme("fontFamily.body");
+
+  .breadcrumb_last {
+    color: theme("colors.siteBlack");
+  }
 
   @at-root {
     .home .breadcrumbsWrapper {

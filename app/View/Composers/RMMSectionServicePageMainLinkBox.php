@@ -6,7 +6,7 @@ use Illuminate\View\View;
 use Roots\Acorn\View\Composer;
 use app\lib\RmmSageFunctions;
 
-class RMMSectionStarterCopy extends Composer
+class RMMSectionServicePageMainLinkBox extends Composer
 {
     /**
      * List of views served by this composer.
@@ -14,7 +14,7 @@ class RMMSectionStarterCopy extends Composer
      * @var array
      */
     protected static $views = [
-//	    'rmmSections.servicePageMain.linkBox',
+//	    'rmmSections.pageMainContentSection.linkBox',
     ];
 
     /**

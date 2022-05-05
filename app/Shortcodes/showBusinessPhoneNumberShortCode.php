@@ -8,3 +8,4 @@ function rmm_show_business_phone_number() {
 }
 
 add_shortcode( 'show_business_phone_number', 'rmm_show_business_phone_number' );
+add_shortcode( 'show_phone_number', 'rmm_show_business_phone_number' );

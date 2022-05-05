@@ -12,7 +12,7 @@ class ServicePageMain extends Composer
      * @var array
      */
     protected static $views = [
-        'rmmSections.servicePageMain.servicePageMain',
+//        'rmmSections.pageMainContentSection.pageMainContentSection',
     ];
 
     /**
@@ -62,8 +62,8 @@ class ServicePageMain extends Composer
 
     public function getDisplayGroup(): array
     {
-        if (! empty(get_field('RMMSectionStarterCopy_group')['sectionDisplay'])) {
-            return get_field('RMMSectionStarterCopy_group')['sectionDisplay'];
+        if (! empty(get_field('field_page_template_services_sectionmainservicessection_group')['sectionDisplay'])) {
+            return get_field('field_page_template_services_sectionmainservicessection_group')['sectionDisplay'];
         } else {
             return [];
         }

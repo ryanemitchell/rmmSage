@@ -1,22 +1,43 @@
-.error404 {
-  .main {
-    @apply grid grid-cols-1 place-items-center w-full;
-
-    background: #ac1a19;
-  }
-
+body.error404 {
   /* ===========================  404 Page Menu  ========================== */
-  ul#not-found-navigation {
-    display: grid;
-    @apply grid grid-cols-1 gap-4 place-items-center witSectionYMargins;
-
-    @screen lg {
-      @apply grid-cols-3;
-    }
-
+  ul#menu-not-found-menu {
     li.menu-item {
+
+      @include respond(desktop) {
+        border-right: 2px solid theme("colors.secondary");
+      }
+
+      &:last-of-type {
+        border-right: none;
+      }
+
       a {
-        @apply rounded text-center text-white bg-amber-700 hover:bg-amber-50 hover:text-black w-[90vw] lg:w-[148px] py-2.5 block transition duration-[0.8s] ;
+        @apply font-display font-bold;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          width: 18px;
+          height: 12px;
+          background-image: url("data:image/svg+xml,%3Csvg width='9' height='15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.111 0H.338l5.059 7.05L0 14.46h3.773l3.75-5.293L9 7.083z' fill='%2300C295' fill-rule='nonzero'/%3E%3C/svg%3E%0A");
+          background-repeat: no-repeat;
+          background-size: contain;
+          filter: brightness(0) saturate(100%) invert(16%) sepia(25%) saturate(6869%) hue-rotate(190deg) brightness(94%) contrast(101%);
+          opacity: 0.7;
+        }
+
+        &:hover {
+          color: theme("colors.secondary");
+
+          &::after {
+            filter: none;
+          }
+        }
       }
     }
   }
