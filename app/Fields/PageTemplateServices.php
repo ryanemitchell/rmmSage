@@ -40,10 +40,10 @@ class PageTemplateServices extends Field
 //
 //
 //
-//            ->addTab('mainContent_tab', [
-//                'label' => 'Main Content',
-//            ])
-//           ->addFields($this->get(rmmSectionMainServicesSection::class))
+            ->addTab('mainContent_tab', [
+                'label' => 'Main Content',
+            ])
+           ->addFields($this->get(rmmSectionMainServicesSection::class))
 //
 //            ->addTab('clubPromo_tab', [
 //                'label' => 'Club Promo',
@@ -55,11 +55,11 @@ class PageTemplateServices extends Field
 //
 //          ->addFields($this->get(rmmSectionCenteredContent::class))
 //
-//            ->addTab('relatedPosts_tab', [
-//                'label' => 'Related Posts',
-//            ])
-//
-//          ->addFields($this->get(RMMSectionRelatedPosts::class))
+            ->addTab('relatedPosts_tab', [
+                'label' => 'Related Posts',
+            ])
+
+          ->addFields($this->get(RMMSectionRelatedPosts::class))
 
 
 

@@ -14,7 +14,7 @@ class RelatedPosts extends Composer
      * @var array
      */
     protected static $views = [
-        'Posts.*',
+        'Posts.related-posts',
     ];
 
     /**
@@ -22,51 +22,37 @@ class RelatedPosts extends Composer
      *
      * @return array
      */
-    public function with()
-    {
-
-//      Check this post for Selected Related Posts
-        if (get_field('related_posts')) :
-            $relatedPosts = get_field('related_posts');
-//      Check this post's closest ancestors for Selected Related Posts
-//      @todo this is heavy, lighten the load 🙄
-        elseif (($this->getFieldFromClosestAncestor(( new \app\lib\RmmSageFunctions() )->getAncestors()))) :
-            $relatedPosts = ($this->getFieldFromClosestAncestor(( new \app\lib\RmmSageFunctions() )->getAncestors()));
-        else :
-            $relatedPosts = "";
-        endif;
+	public function with()
 
 
-        return [
-            'relatedPosts' => $relatedPosts,//
-            'ancestors' => ( new \app\lib\RmmSageFunctions() )->getAncestors(),
-        ];
-    }
+	{
+		$sectionName =  'sectionrelatedpost_group'; // include trailing underscore
+		$SectionGroupName =  $sectionName.'_'; // include trailing underscore
+		$ancestors = ( new RmmSageFunctions() )->getAncestors();
+
+		return [
+			/*** phpcs:disable */
+			'tagline'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_tagline' ),
+			'header'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_header' ),
+			'content'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_content' ),
+			'showCTA'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_showCTA' ),
+			'relatedPosts' => ( new RmmSageFunctions() )->rmmGetFieldsRecursive( 'field_page_template_services_sectionrelatedpost_group', $ancestors )['sectionContent']['related_posts'],
+			'image'      => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_combo_image_with_alt_title_image' ),
+			'imageTitle' => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_combo_image_with_alt_title' )['title'],
+			'imageALT'   => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_combo_image_with_alt_title' )['alt'],
 
 
-    /**
-     * Get the related posts field from the closest Ancestor
-     *
-     * @param array $ancestors Post IDs
-     *
-     * @return array
-     */
+			//  Styling Fields
+			'sectionClasses' => (new RmmSageFunctions() )->rmmCreateSectionClasses($sectionName),
 
-    public function getFieldFromClosestAncestor(array $ancestors): array
-    {
-        $ancestorsRelatedPosts = $ancestors;
+			//	 For Debugging
+			'sectionFields'    => ( new RmmSageFunctions() )->rmmGetFields( $sectionName ),
 
-        foreach ($ancestorsRelatedPosts as $ancestor) {
-//          Get the related posts from the closest ancestor the break and return
-            if (get_field('related_posts', $ancestor)) {
-                $ancestorsRelatedPosts = get_field('related_posts', $ancestor);
-                break;
-            } else {
-//               Return Empty Array if all ancestors are empty (for now)
-                $ancestorsRelatedPosts = [];
-            }
-        }
+			'testies' => ( new RmmSageFunctions() )->rmmGetFields( 'field_page_template_services_sectionrelatedpost_group' )['sectionContent']['related_posts'],
 
-        return $ancestorsRelatedPosts;
-    }
+
+		];
+	}
 }
+
+

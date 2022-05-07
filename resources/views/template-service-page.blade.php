@@ -11,14 +11,14 @@
 
 
 
-	{{-- Service Menu --}}
-	{{-- @include('rmmSections.centeredMenu') --}}
+{{--	 Service Menu--}}
+{{--	 @include('rmmSections.centeredMenu')--}}
 
-	{{-- Main Content --}}
-	{{--        @include('rmmSections.servicePageMain.servicePageMain')--}}
+{{--	 Main Content --}}
+	        @include('rmmSections.pageMainContentSection.rmmSectionServicePageMainContent')
 
 	{{-- Club Promo --}}
-
+	@include('rmmSections.shared.RMMSectionSharedMaintenancePlan')
 
 	{{-- Closing Content --}}
 	{{-- @include('rmmSections.centeredContent') --}}
@@ -29,7 +29,7 @@
 
 	{{-- @include('dev.showAllAcfFields') --}}
 
-	{{--        @include('Posts.related-posts')--}}
+	        @include('Posts.related-posts')
 
 {{--    @while (have_posts())--}}
 {{--        @php(the_post())--}}

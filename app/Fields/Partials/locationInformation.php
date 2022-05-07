@@ -38,7 +38,7 @@ class locationInformation extends Partial
             ->addText('primary_phone_display', [
                 'label' => 'Primary Number to Display',
                 'instructions' => 'Formatted phone number',
-                'default_value' => '(123) 456-7890',
+                'default_value' => '(123) 456-7899',
                 'wrapper' => [
                     'width' => '50%',
                     'class' => '',

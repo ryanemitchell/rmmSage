@@ -31,7 +31,8 @@ class rmmSectionSplitPhotoContent extends Composer
 	        'tagline'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_tagline' ),
 	        'header'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_header' ),
 	        'content'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_content' ),
-	        'footer'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_footer' ),
+	        'showCTA'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_showCTA' ),
+
 	        'image'      => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_combo_image_with_alt_title_image' ),
 	        'imageTitle' => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_combo_image_with_alt_title' )['title'],
 	        'imageALT'   => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_combo_image_with_alt_title' )['alt'],

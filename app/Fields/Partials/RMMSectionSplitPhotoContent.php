@@ -28,11 +28,14 @@ class RMMSectionSplitPhotoContent extends Partial
 
             ->addGroup('rmmSectionSplitPhotoContent', [ 'label' => ''])
 
-            ->addFields($this->get(sectionStylingTab::class))
+
 
             ->addTab('contentTab', [
                 'label' => 'Content',
             ])
+	        ->addMessage('Image Info:', 'This image will be resized to 422px wide if the image provided is wider. The aspect ratio will be maintained. ')
+
+	        ->addFields($this->get(comboImageWithAltTitle::class))
 
             ->addText('tagline', [
                 'label' => 'Tagline',
@@ -46,18 +49,20 @@ class RMMSectionSplitPhotoContent extends Partial
                 'label' => 'About Content',
             ])
 
-            ->addText('footer', [
-                'label' => 'Footer - CTA',
-            ])
+	        ->addTrueFalse('showCTA', [
+		        'label' => 'Show CTA?',
+		        'default_value' => 1,
+		        'ui' => 1,
 
-	        ->addMessage('Image Info:', 'This image will be resized to 422px wide if the image provided is wider. The aspect ratio will be maintained. ')
+	        ])
 
-	        ->addFields($this->get(comboImageWithAltTitle::class))
+
+
 
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-
+	        ->addFields($this->get(sectionStylingTab::class))
 
             ->endGroup();
 

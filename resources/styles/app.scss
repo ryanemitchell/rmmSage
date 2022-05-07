@@ -174,3 +174,59 @@
 #main-container {
 
 }
+
+/* ==========================================================================
+   @todo Get the following into Tailwind
+   ========================================================================== */
+
+.list-marker-none::marker {
+  content: "check";
+}
+
+.list-marker-dot::marker {
+  content: "dot";
+}
+
+.list-marker-check {
+  padding-left: 1rem;
+  list-style-position: outside;
+  padding-right: 3rem;
+  margin-left: 3rem;
+  position: relative;
+}
+
+.list-marker-check::marker {
+  content: "";
+}
+
+.list-marker-check::before {
+  display: block !important;
+  position: absolute;
+  left: -16px;
+  top: 4px;
+  content: url("../images/expertAir/icons_check.svg");
+}
+
+.list-marker-arrow::marker {
+  content: "arrow";
+}
+
+.list-marker-arrowAfter::after {
+  content: "arrowAfter";
+}
+
+//.list-marker-marker::marker {
+//  content: "marker";
+//}
+
+.list-marker-marker::marker {
+  content: "disc";
+}
+
+.list-marker-circle::marker {
+  content: "circle";
+}
+
+.list-marker-square::marker {
+  content: "square";
+}

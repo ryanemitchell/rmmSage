@@ -2,6 +2,7 @@
 
 namespace App\Fields;
 
+use App\Fields\Partials\rmmSectionCityPageMainContent;
 use App\Fields\Partials\RMMSectionSplitPhotoContent;
 use App\Fields\Partials\RMMSectionLogoBarFull;
 use App\Fields\Partials\rmmSectionSharedReviews;
@@ -47,7 +48,7 @@ class pageTemplateCityPage extends Field
                 'label' => 'Main Content',
             ])
 
-
+	        ->addFields($this->get(rmmSectionCityPageMainContent::class))
             /* ===  Reviews  ==== */
             ->addTab('reviews_tab', [
                 'label' => 'Shared Reviews',

@@ -5,8 +5,6 @@
 * Reference: NA
 * Author: @ryanemitchell
 ==========================================================================--}}
-@dump($image)
-
 <section class="{{$sectionClasses}} flex relative justify-center items-center place-items-center bg-no-repeat rmmsection to-the-edge full-width-bound bg-blueTriangle pt-mobileVGap mb-mobileVGap lg:pt-desktopVGap">
     <div class="flex justify-center items-center pt-4 lg:pt-12 inner__wrapper">
         <div class="flex flex-col justify-between items-center w-full lg:flex-row content">

@@ -6,20 +6,17 @@
     {{-- Intro Content --}}
     @include('rmmSections.rmmSectionSplitPhotoContent')
 
-    {{-- Maintenance Plan Highlights --}}
-    @include('rmmSections.SplitStyledImageMaintenancePlan')
+{{-- Maintenance Plan Highlights --}}
+    @include('rmmSections.maintenancePlan.styledImagePlanHighlights')
 
-    {{-- Club List --}}
-    @include('rmmSections.centeredListsWitMore')
+{{-- Club List --}}
+    @include('rmmSections.maintenancePlan.planBenefits')
 
-    {{-- Main Content --}}
-    @include(
-        'rmmSections.pageMainContentSection.cityPageMainContentSection'
-    )
+{{-- Main Content --}}
+    @include('rmmSections.rmmSectionMaintenancePlanPageMainContent')
 
 
-
-
+`
 
 
 

@@ -162,6 +162,7 @@ add_filter( 'body_class', function( $classes ) {
 
 add_image_size( 'split-content-image', 422, 281 );
 add_image_size( 'shared-about-image', 555, 309 );
+add_image_size( 'shared-sidebarHeader-image', 420, 166, true );
 
 // Include Shortcodes
 foreach (glob(get_template_directory() . "/app/shortcodes/*.php") as $file) {

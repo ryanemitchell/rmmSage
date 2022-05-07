@@ -54,6 +54,18 @@ class RmmSageFunctions
         return $fieldValue;
     }
 
+	public function rmmGetTrueFalseField($fieldKey, $postID = '')
+	{
+		$fieldValue = null;
+		if (! empty(get_field($fieldKey, $postID))) :
+			$fieldValue = get_field($fieldKey, $postID);
+		else:
+			$fieldValue = 'false';
+		endif;
+
+		return $fieldValue;
+	}
+
     public function rmmGetFieldsRecursive($fieldKey, $ancestors, $postID = '')
     {
         $fieldValue = '';

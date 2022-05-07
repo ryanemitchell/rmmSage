@@ -82,7 +82,7 @@ class componentAccordion extends Partial
                 'ui_off_text' => 'Off',
             ])
 
-            ->addTrueFalse('openfirst', [
+            ->addTrueFalse('openFirst', [
                 'label' => 'Open first accordion on load?',
                 'instructions' => 'Start with the first accordion open.',
                 'required' => 0,

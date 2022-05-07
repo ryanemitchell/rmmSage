@@ -5,9 +5,7 @@
 * Reference: NA
 * Author: @ryanemitchell
 ==========================================================================--}}
-{{--@dump($sectionFields)--}}
-{{--@dump($sectionClasses)--}}
-<section class="{{$sectionClasses}} flex narrow-width relative justify-center items-center place-items-center rmmsection bg-hulk-800 to-the-edge mobile-to-the-edge lg:to-the-edge">
+<section class="@notempty($sectionClasses){{$sectionClasses}}@endnotempty flex narrow-width relative justify-center items-center place-items-center rmmsection bg-hulk-800 to-the-edge mobile-to-the-edge lg:to-the-edge">
 
     <div class="flex justify-center items-center inner__wrapper">
         <div class="flex flex-col justify-between items-center w-full lg:flex-row content">
@@ -32,11 +30,11 @@
                 </div>
                 @endnotempty
 
-                @notempty($footer)
-                <div class="cta">
-                    {{$footer}}
+                @istrue($showCTA)
+                <div class="cta grandChildren:self-start">
+                    @include('fieldPartials.callNow')
                 </div>
-                @endnotempty
+                @endistrue
 
 
             </div>

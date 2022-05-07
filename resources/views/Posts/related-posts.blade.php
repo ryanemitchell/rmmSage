@@ -1,3 +1,5 @@
+@dump($testies)
+
 @notempty($relatedPosts)
 <div class="flex flex-col justify-center w-full md:flex-row featuredPosts">
 

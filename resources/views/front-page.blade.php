@@ -22,7 +22,7 @@
     {{-- LogoBAr --}}
     @include('rmmSections.logoBar.logoBarFull')
 
-    {{-- Emergency Services --}}
+    {{-- BeCool --}}
     @include('rmmSections.SplitContentStyledImage')
 
     {{-- Emergency Services --}}

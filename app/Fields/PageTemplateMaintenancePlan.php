@@ -2,7 +2,11 @@
 
 namespace App\Fields;
 
-use App\Fields\Partials\RMMSectionSplitCardCard;
+use App\Fields\Partials\MaintenancePlan\planBenefits;
+use App\Fields\Partials\rmmSectionMaintenancePlanPageMainContent;
+use App\Fields\Partials\maintenancePlanStyledImagePlanHighlights;
+use App\Fields\Partials\MaintenancePlan\styledImagePlanHighlights;
+
 use App\Fields\Partials\RMMSectionSplitContentLinksImage;
 use App\Fields\Partials\RMMSectionSplitContentReviews;
 use App\Fields\Partials\rmmSectionSplitContentServices;
@@ -32,64 +36,35 @@ class PageTemplateMaintenancePlan extends Field
 
         $pageTemplateMaintenancePlan
             ->addTab('openingContent_tab', [
-                'label' => 'Opening Content and Services',
+                'label' => 'Opening Content',
             ])
 
-
-
-          ->addFields($this->get(rmmSectionSplitPhotoContent::class))
-
+            ->addFields($this->get(rmmSectionSplitPhotoContent::class))
 
 
 
-            ->addTab('locations_tab', [
-                'label' => 'Locations',
+            ->addTab('planHighlights_tab', [
+                'label' => 'Plan Highlights',
             ])
-
-//          ->addFields($this->get(RMMSectionSplitContentLinksImage::class))
-
+	        ->addFields($this->get(styledImagePlanHighlights::class))
 
 
-            ->addTab('guarantees_tab', [
-                'label' => 'Guarantees',
-            ])
 //           ->addFields($this->get(rmmSectionMainServicesSection::class))
 
-            ->addTab('dualPromo_tab', [
-                'label' => 'Promo Boxes',
+            ->addTab('planBenefits_tab', [
+                'label' => 'Plan Benefits',
             ])
+	        ->addFields($this->get(planBenefits::class))
 
-//            ->addFields($this->get(RMMSectionSplitCardCard::class))
+	        /* ===  Main Content  ==== */
+	        ->addTab('mainContent_tab', [
+		        'label' => 'Main Content',
+	        ])
 
-            ->addTab('reviews_tab', [
-                'label' => 'Reviews',
-            ])
+	        ->addFields($this->get(rmmSectionMaintenancePlanPageMainContent::class))
 
-//            ->addFields($this->get(RMMSectionSplitContentReviews::class))
 
-            ->addTab('logos_tab', [
-                'label' => 'Logo Bar',
-            ])
 
-//          ->addFields($this->get(RMMSectionRelatedPosts::class))
-
-            ->addTab('bottomContent_tab', [
-                'label' => 'Bottom Content',
-            ])
-
-//          ->addFields($this->get(RMMSectionSplitContentStyledImage::class))
-
-            ->addTab('about_tab', [
-                'label' => 'About',
-            ])
-
-//          ->addFields($this->get(RMMSectionSplitPhotoContent::class))
-
-            ->addTab('careers_tab', [
-                'label' => 'Careers',
-            ])
-
-//          ->addFields($this->get(RMMSectionRelatedPosts::class))
 
 
         ;
