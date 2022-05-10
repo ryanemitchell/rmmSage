@@ -5,6 +5,9 @@ const rmmRecurrentStyles = plugin(({ addBase, theme }) => {
 
     addBase({
         // "pipe" divider for horizontal navigation
+        'img' : {
+           maxWidth: 'unset',
+        },
         '.hasDivider': {
             position: 'relative',
             display: 'flex',

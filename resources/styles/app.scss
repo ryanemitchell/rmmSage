@@ -183,8 +183,24 @@
   content: "check";
 }
 
+.list-marker-dot {
+  position: relative;
+}
+
+.list-marker-dot::before {
+  //content: "•";
+  //display: block !important;
+  //position: absolute;
+  //left: -16px;
+  //top: 4px;
+}
+
 .list-marker-dot::marker {
-  content: "dot";
+  //content: "•";
+  //display: block !important;
+  //position: absolute;
+  //left: -16px;
+  //top: 4px;
 }
 
 .list-marker-check {

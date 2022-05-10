@@ -5,69 +5,45 @@
 * Reference: NA
 * Author: @ryanemitchell
 ==========================================================================--}}
-
-<section  class="rmmsection {{$className}} {{$mobileDisplay}} {{$desktopDisplay}} bg-siteBlack to-the-edge bg-contain my-halfMobileVGap to-the-edge lg:my-halfDesktopVGap shadow-common flex justify-center items-center relative place-items-center lr:rounded-common mobile-full-width">
+<section  class="centeredMenu bg-siteBlack to-the-edge bg-contain my-halfMobileVGap to-the-edge lg:my-halfDesktopVGap shadow-common flex justify-center items-center relative place-items-center lr:rounded-common mobile-full-width bg-watermark-x bg-no-repeat">
 	<div class="w-full bg-no-repeat bg-contain bgImageHolder bg-hero-pattern bg-[-2rem_center] rounded-common lg:bg-[1rem_center]">
-	<div class="flex justify-center items-center place-items-center my-24 text-white inner__wrapper lg:my-50px">
-		<div class="flex flex-col place-items-center content">
+	<div class="flex justify-center items-center place-items-center text-white inner__wrapper ">
+		<div class="flex flex-col place-items-center content my-[60px]">
 
 			{{--== Header ==--}}
-		@notempty($headerText)
-			<{{$headerElement}} class="mb-16 lg:mb-24 header text-mh2 lg:text-h2">
-				{{$headerText}}
-			</{{$headerElement}}>
+		@notempty($header)
+			<h2 class="mb-6 lg:mb-4 header text-mh2 lg:text-h2 text-siteWhite">
+				{{$header}}
+			</h2>
 		@endnotempty
 
 		{{--== Menu ==--}}
 
 		@notempty($menu)
-		<div class="mb-16 lg:mb-24 serviceNavWrapper">
+		<div class="mb-6 lg:mb-6 serviceNavWrapper">
+
 			{{--== Menu is styled in SCSS @ resources/styles/menus/services-navigation.scss ==--}}
 			{!! wp_nav_menu([
+				'menu' => $menu->term_id,
 				'menu_class' => 'menu interior-menu',
 				'container' => 'nav',
 				'container_id' => 'services-navigation',
 				'container_class' => 'services-navigation',
 				'depth' => '1',
-				'add_li_class'  => '',
+				'add_li_class'  => 'children:text-siteWhite',
 			]) !!}
 		</div>
 		@endnotempty
 
 		{{--== Footer ==--}}
-		@notempty($footerText)
-		<div class="footer bg-blue">
-			{{$footerText}}
-		</div>
-		@endnotempty
-
-
-			<a href="#" class="btn">@svg('images.sage_character_head') Book Now</a>
+			@notempty($showCTA)
+			<div class="mb-4 cta grandChildren:self-start">
+				@include('fieldPartials.bookNowOnDark')
+			</div>
+			@endnotempty
 
 
 
-			<a href="#" class="btn btn-grad">@svg('images.sage_character_head', 'iconBefore') Book Now</a>
-
-
-
-			<a href="#" class="btn btn-grad-onDark">Book Now</a>
-
-
-
-			<a href="#"class="btn btn-white-onDark" >Book Now</a>
-		<a href="#" class="btn">@svg('images.sage_character_head') Book Now</a>
-
-
-
-		<a href="#" class="btn btn-grad">@svg('images.sage_character_head', 'iconBefore') Book Now</a>
-
-
-
-		<a href="#" class="btn btn-grad-onDark">Book Now</a>
-
-
-
-		<a href="#"class="btn btn-white-onDark" >Book Now</a>
 
 
 	</div>

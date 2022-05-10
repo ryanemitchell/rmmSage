@@ -37,8 +37,9 @@ class App extends Composer
 	        /*** phpcs:disable */
             "businessHours" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_hours_information', 'options'),
             "licenseInformation" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_license_information', 'options'),
-	        "primaryPhoneNumber" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_witsage_primary_location_primary_phone1', 'options'),
-            "primaryPhoneNumberDisplay" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_witsage_primary_location_primary_phone_display', 'options'),
+            "primaryPhoneNumber" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_witsage_primary_location', 'options')['primary_phone'],
+            "primaryPhoneNumberDisplay" => (new RmmSageFunctions() )->rmmGetFields('field_business_information_witsage_primary_location', 'options')['primary_phone_display'],
+
 
             "bookingLink" => (new RmmSageFunctions() )->rmmGetFields('field_theme_booking_link', 'options'),
             'thisPostsFields' => get_field_objects(),
@@ -72,7 +73,7 @@ class App extends Composer
 
 
         if (get_field('field_page_settings_pagetitle')) :
-            $pageTitle = get_the_title();
+            $pageTitle = get_field('field_page_settings_pagetitle');
         elseif (is_front_page()) :
             $pageTitle = get_the_title();
         elseif (is_home()) : // Blog title

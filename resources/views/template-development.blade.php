@@ -80,6 +80,34 @@
         </div>
     @endsection
 
+
+        <a href="#" class="btn">@svg('images.sage_character_head') Book Now</a>
+
+
+
+        <a href="#" class="btn btn-grad">@svg('images.sage_character_head', 'iconBefore') Book Now</a>
+
+
+
+        <a href="#" class="btn btn-grad-onDark">Book Now</a>
+
+
+
+        <a href="#"class="btn btn-white-onDark" >Book Now</a>
+        <a href="#" class="btn">@svg('images.sage_character_head') Book Now</a>
+
+
+
+        <a href="#" class="btn btn-grad">@svg('images.sage_character_head', 'iconBefore') Book Now</a>
+
+
+
+        <a href="#" class="btn btn-grad-onDark">Book Now</a>
+
+
+
+        <a href="#"class="btn btn-white-onDark" >Book Now</a>
+
     {{-- @section('sidebar') --}}
     {{-- @include('sections.sidebar') --}}
     {{-- @endsection --}}

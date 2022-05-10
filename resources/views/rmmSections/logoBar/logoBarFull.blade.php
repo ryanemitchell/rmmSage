@@ -1,4 +1,4 @@
-<div class="{{$sectionClasses}} mt-8 mb-12 lg:my-8 logoBar logoBarFull">
+<div class="mt-8 mb-12 lg:my-8 logoBar logoBarFull">
 
 	<div class="lg:flex lg:justify-between carousel disableOnDesktop"
 	     data-flickity='{ "watchCSS": true, "freeScroll": true, "prevNextButtons": false, "fade": true }'>

@@ -6,9 +6,8 @@
 
 
 @section('content')
-
     <section
-            class="contactSection rmmsection mobile-to-the-edge my-halfMobileVGap flex items-center justify-center bg-white lg:my-halfDesktopVGap">
+        class="contactSection rmmsection mobile-to-the-edge my-halfMobileVGap flex items-center justify-center bg-white lg:my-halfDesktopVGap">
         <div class="inner__wrapper flex items-center justify-center">
             <div class="grid gap-8 lg:grid-cols-2">
 
@@ -45,6 +44,5 @@
 
     @while (have_posts())
         @php(the_post())
-
     @endwhile
 @endsection

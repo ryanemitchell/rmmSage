@@ -35,7 +35,7 @@ ul#primary-desktop-menu {
   a {
     font-size: 15px;
     font-weight: bold;
-    font-family: var(--body-font-family);
+    font-family: var(--display-font-family);
     padding: 0 8px 14px 14px;
     //margin: 0 0 12px 0;
     display: inline-block;
@@ -63,6 +63,7 @@ ul#primary-desktop-menu {
     top: 100%;
     left: -20px;
     min-width: 270px;
+    font-family: var(--body-font-family);
     //display: none;
     opacity: 0;
     padding: 16px 0;
@@ -153,6 +154,10 @@ ul#primary-desktop-menu {
           border-bottom: 2px solid theme("colors.grey");
           //border-top: 1px solid theme("colors.grey");
         }
+      }
+
+      ul#primary-desktop-menu > li.current_page_item > a {
+        color: theme("colors.primary") !important;
       }
     }
   }

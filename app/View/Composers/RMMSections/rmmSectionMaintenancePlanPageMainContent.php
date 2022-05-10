@@ -41,6 +41,8 @@ class rmmSectionMaintenancePlanPageMainContent extends Composer
 	        'bottomContent'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionMaintenancePlanPageMainContent_sectionContent_mainContent_bottomContent' ),
 	        'bottomShowCTA'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionMaintenancePlanPageMainContent_sectionContent_mainContent_bottomShowCTA' ),
 
+	        'downloadFile'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionMaintenancePlanPageMainContent_sectionContent_mainContent_downloadFile' ),
+
 	        'showLocationsNavBox'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionMaintenancePlanPageMainContent_sectionContent' )['mainSidebar']['showLocationsNavBox'],
 	        'showGuaranteesBox'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionMaintenancePlanPageMainContent_sectionContent' )['mainSidebar']['showGuaranteesBox'],
 

@@ -1,11 +1,9 @@
-@dump($sectionFields)
-
 <section class="flex relative justify-center items-center place-items-center rmmsection to-the-edge my-halfMobileVGap mobile-to-the-edge lg:to-the-edge lg:my-halfDesktopVGap lg:mb-halfDesktopVGap">
 	<div class="flex flex-row flex-col justify-center items-center w-full cursor-pointer lg:justify-center inner__wrapper service bg-siteGrey shadow-common rounded-common">
-		<div class="flex flex-col justify-center items-center lg:py-12 lg:px-12 content">
+		<div class="flex flex-col justify-center items-center py-4 lg:py-8 lg:px-12 content">
 
 			@notempty($header)
-			<h3 class="mb-6 lg:mb-8">
+			<h3 class="mb-6 lg:mb-8 text-[24px] text-center max-w-[280px] leading-7 lg:max-w-fit">
 				{{$header}}
 			</h3> {{--== End of .mainContent bg-blue ==--}}
 			@endnotempty
@@ -37,7 +35,7 @@
 			</ul>
 			{{--	If more than 4 items, provide toggle and the script for it to function. --}}
 			@if (count($benefits) > 4)
-				<div class="mb-8 lg:hidden btn" id="moreTrigger">More Benefits</div>
+				<div class="mb-0 lg:hidden btn" id="moreTrigger">More Benefits</div>
 
 
 			<script>

@@ -54,17 +54,17 @@ class RmmSageFunctions
         return $fieldValue;
     }
 
-	public function rmmGetTrueFalseField($fieldKey, $postID = '')
-	{
-		$fieldValue = null;
-		if (! empty(get_field($fieldKey, $postID))) :
-			$fieldValue = get_field($fieldKey, $postID);
-		else:
-			$fieldValue = 'false';
-		endif;
+    public function rmmGetTrueFalseField($fieldKey, $postID = '')
+    {
+        $fieldValue = null;
+        if (! empty(get_field($fieldKey, $postID))) :
+            $fieldValue = get_field($fieldKey, $postID);
+        else :
+            $fieldValue = 'false';
+        endif;
 
-		return $fieldValue;
-	}
+        return $fieldValue;
+    }
 
     public function rmmGetFieldsRecursive($fieldKey, $ancestors, $postID = '')
     {
@@ -107,16 +107,16 @@ class RmmSageFunctions
         return $fieldValue;
     }
 
-	public function rmmSetDisplayToggle($fieldKey, $postID = ''): string
-	{
-		if ((new RmmSageFunctions() )->rmmGetFields($fieldKey, $postID)) :
-			$mobileDisplay = 'block';
-		else :
-			$mobileDisplay = 'hidden';
-		endif;
+    public function rmmSetDisplayToggle($fieldKey, $postID = ''): string
+    {
+        if ((new RmmSageFunctions() )->rmmGetFields($fieldKey, $postID)) :
+            $mobileDisplay = 'block';
+        else :
+            $mobileDisplay = 'hidden';
+        endif;
 
-		return $mobileDisplay;
-	}
+        return $mobileDisplay;
+    }
 
 
 
@@ -131,31 +131,36 @@ class RmmSageFunctions
         return $mobileDisplay;
     }
 
-	public function rmmSetDesktopDisplayToggle($fieldKey, $postID = ''): string
-	{
-		if ((new RmmSageFunctions() )->rmmGetFields($fieldKey, $postID)) :
-			$desktopDisplay = 'lg:block';
-		else :
-			$desktopDisplay = 'lg:hidden';
-		endif;
+    public function rmmSetDesktopDisplayToggle($fieldKey, $postID = ''): string
+    {
+        if ((new RmmSageFunctions() )->rmmGetFields($fieldKey, $postID)) :
+            $desktopDisplay = 'lg:block';
+        else :
+            $desktopDisplay = 'lg:hidden';
+        endif;
 
-		return $desktopDisplay;
-	}
+        return $desktopDisplay;
+    }
 
-	public function rmmCreateSectionClasses($sectionName): string
-	{
-			$SectionGroupName =  $sectionName.'_'; // include trailing underscore
-			$className    = (new RmmSageFunctions() )->rmmGetFields($SectionGroupName.'sectionDisplay_'.'class_name');
+    public function rmmCreateSectionClasses($sectionName): string
+    {
+            $SectionGroupName =  $sectionName.'_'; // include trailing underscore
+            $className    = (new RmmSageFunctions() )->rmmGetFields($SectionGroupName.'sectionDisplay_'.'class_name');
             $mobileDisplay = (new RmmSageFunctions() )->rmmSetMobileDisplayToggle($SectionGroupName.'sectionDisplay_'.'show_on_mobile');
             $desktopDisplay = (new RmmSageFunctions() )->rmmSetDesktopDisplayToggle($SectionGroupName.'sectionDisplay_'.'show_on_desktop');
-			$sectionclasses = $sectionName.' '.$className.' '.$mobileDisplay.' '.$desktopDisplay;
+            $sectionclasses = $sectionName.' '.$className.' '.$mobileDisplay.' '.$desktopDisplay;
 
+            return $sectionclasses;
+    }
 
+    public function rmmCreateSectionClassesDeep($sectionName): string
+    {
+	    $SectionGroupName =  $sectionName.'_'; // include trailing underscore
+	    $className    = (new RmmSageFunctions() )->rmmGetFields($SectionGroupName.'sectiondisplay_'.'class_name');
+	    $mobileDisplay = (new RmmSageFunctions() )->rmmSetMobileDisplayToggle($SectionGroupName.'sectiondisplay_'.'show_on_mobile');
+	    $desktopDisplay = (new RmmSageFunctions() )->rmmSetDesktopDisplayToggle($SectionGroupName.'sectiondisplay_'.'show_on_desktop');
+	    $sectionclasses = $sectionName.' '.$className.' '.$mobileDisplay.' '.$desktopDisplay;
 
-		return $sectionclasses;
-	}
-
-
-
-
+	    return $sectionclasses;
+    }
 }

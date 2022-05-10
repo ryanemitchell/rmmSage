@@ -26,6 +26,7 @@
     "translate": "npm run translate:pot && npm run translate:js",
     "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
     "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
+    "createRMMSection": "echo 'What do you want to name your section?' && read x && touch ./resources/views/rmmSections/${x}.blade.php && wp acorn make:composer RMMSections/${x} && wp acorn acf:partial RMMSections/${x} && phpstorm ./app/View/Composers/RMMSections/${x}.php && phpstorm ./app/Fields/Partials/RMMSections/${x}.php && phpstorm ./app/Fields/Partials/./resources/views/rmmSections/${x}.blade.php",
     "acorn:make:composer": "echo 'What do you want to name your composer?' && read x && wp acorn make:composer ${x} && echo 'https://docs.roots.io/sage/10.x/composers/'",
     "acorn:make:component": "echo 'What do you want to name your component?' && read x && wp acorn make:component ${x} && echo 'https://docs.roots.io/sage/10.x/components/'",
     "acfComposer:CreateFieldGroup": "echo 'What do you want to name your field group' && read x && wp acorn acf:field ${x} && echo 'https://github.com/Log1x/acf-composer' && echo 'https://github.com/Log1x/acf-builder-cheatsheet'",

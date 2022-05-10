@@ -11,13 +11,13 @@
 	</h2>
 
 	<div class="flex lg:flex-col lg:items-center">
-		<div class="inline mb-11 lg:block lg:order-2 lg:mb-8">@include('fieldPartials.bookNowOnDark')</div>
-
-		<div class="inline mb-2 ml-2 lg:block lg:order-1 lg:mb-2 lg:ml-0">
-			@include('fieldPartials.callNowOnDark')
+		<div class="inline mb-11 lg:block lg:order-2 lg:mb-8 ">
+			@include('fieldPartials.pageHeaderBookNowOnDark')
 		</div>
 
-
+		<div class="inline mb-2 ml-2 lg:block lg:order-1 lg:mb-2 lg:ml-0 children:font-[24px]">
+			@include('fieldPartials.pageHeaderCallNowOnDark')
+		</div>
 	</div>
 
 </div>

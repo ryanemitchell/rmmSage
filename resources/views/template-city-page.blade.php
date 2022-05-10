@@ -10,7 +10,7 @@
     @include('rmmSections.logoBar.logoBarFull')
 
     {{-- Main Content --}}
-    @include('rmmSections.rmmSectionCityPageMainContent' )
+    @include('rmmSections.rmmSectionCityPageMainContent')
 
     {{-- Reviews --}}
     @include('rmmSections.rmmSectionSharedReviews')

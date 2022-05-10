@@ -38,8 +38,8 @@ const rmmTypography = plugin(({ addBase, theme }) => {
             fontSize: '20px',
             lineHeight: '24px',
             '@screen lg' : {
-                fontSize: '20px',
-                lineHeight: '24px',
+                fontSize: '24px',
+                lineHeight: '28px',
             },
         },
         /* ==========================================================================
@@ -61,6 +61,13 @@ const rmmTypography = plugin(({ addBase, theme }) => {
         'main ul li::marker': {
             color: theme("colors.secondary"),
             fontSize: '1em',
+        },
+        'main p' : {
+            marginBottom: '1em',
+        },
+
+        'main p:last-of-type' : {
+            marginBottom: '0',
         },
 
 
@@ -102,6 +109,37 @@ const rmmTypography = plugin(({ addBase, theme }) => {
             textShadow: '0 0 0.65px theme("colors.primary"), 0 0 0.65px theme("colors.primary")',
             color: theme("colors.primary"),
         },
+
+
+        '.pageTitle': {    //  " H1 interior"
+            fontSize: '30px',
+            lineHeight: '34px',
+            '@screen lg' : {
+                fontSize: '36px',
+                lineHeight: '40px',
+            },
+        },
+
+
+
+        '.tagline': {
+            fontSize: '18px',
+            lineHeight: '22px',
+            '@screen lg' : {
+                fontSize: '24px',
+                lineHeight: '26px',
+            },
+        },
+
+        '.largeHeader': {    //  " H1 interior"
+            fontSize: '28px',
+            lineHeight: '32px',
+            '@screen lg' : {
+                fontSize: '32px',
+                lineHeight: '36px',
+            },
+        },
+
 
 
 

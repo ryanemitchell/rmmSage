@@ -1,4 +1,4 @@
-<section class="{{$sectionClasses}} flex relative justify-center items-center place-items-center bg-center bg-no-repeat bg-cover bg-siteBlack rmmsection page-header full-width-bound bg-geometricReversed">
+<section class=" flex relative justify-center items-center place-items-center bg-center bg-no-repeat bg-cover bg-siteBlack rmmsection page-header full-width-bound bg-geometricReversed">
 
 	<div class="flex flex-col gap-8 justify-between items-center text-white lg:flex-row inner__wrapper">
 
@@ -8,7 +8,7 @@
 
 				<h2 class="text-center text-white lg:mb-8 max-w-[250px]">{{$header}}</h2>
 				<div class="hidden mb-4 lg:block cta grandChildren:self-start">
-					<a href="#" class="mb-2 btn btn-white-onDark">Read Reviews</a>
+					<a href="/about-us/reviews" class="mb-2 btn btn-white-onDark">Read Reviews</a>
 				</div>
 
 			</div>
@@ -22,7 +22,7 @@
 				</div>
 
 				<div class="mb-4 lg:hidden cta grandChildren:self-start">
-					<a href="#" class="mb-2 btn btn-white-onDark">Read Reviews</a>
+					<a href="/about-us/reviews" class="mb-2 btn btn-white-onDark">Read Reviews</a>
 				</div>
 
 			</div>

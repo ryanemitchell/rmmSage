@@ -10,7 +10,7 @@ use App\Fields\Partials\rmmSectionSharedAbout;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class pageTemplateCityPage extends Field
+class PageTemplateCityPage extends Field
 {
     /**
      * The field group.

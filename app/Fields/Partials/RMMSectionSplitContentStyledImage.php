@@ -41,6 +41,17 @@ class RMMSectionSplitContentStyledImage extends Partial
                 ],
             ])
             ->addFields($this->get(comboImageWithAltTitle::class))
+
+
+	        ->addText('header', [
+		        'label' => 'Header',
+	        ])
+
+	        ->addWysiwyg('content', [
+		        'label' => 'Content',
+	        ])
+
+
             ->addTrueFalse('show_CTA', [
                 'label' => 'Show CTA?',
                 'default_value' => 1,
@@ -50,37 +61,8 @@ class RMMSectionSplitContentStyledImage extends Partial
             ])
             ->endGroup()
 
-            /* ===  Left Column Content  ==== */
-            ->addGroup('sectionContentLeft', [
-                'label'   => '',
-                'layout'  => 'block',
-                'wrapper' => [
-                    'width' => '40%',
-                ],
-            ])
-            ->addFields($this->get(comboImageWithAltTitle::class))
-            ->addTrueFalse('show_CTA', [
-                'label' => 'Show CTA?',
-                'default_value' => 1,
-                'ui' => 1,
-                'ui_on_text' => 'Yes',
-                'ui_off_text' => 'No',
-            ])
-            ->endGroup()
 
-            /* ===  Right Column Content  ==== */
-            ->addGroup('sectionContentRight', [
-                'label'   => '',
-                'layout'  => 'block',
-                'wrapper' => [
-                    'width' => '60%',
-                ],
-            ])
-            ->addFields($this->get(comboHeaderWithLevels::class))
-            ->addWysiwyg('content', [
-                'label' => 'Content',
-            ])
-            ->endGroup()
+
 
             /* ===========================  STYLING TAB  ========================== */
             ->addTab('stylingTab', [

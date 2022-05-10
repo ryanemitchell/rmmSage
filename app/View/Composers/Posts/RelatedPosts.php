@@ -33,9 +33,11 @@ class RelatedPosts extends Composer
 		return [
 			/*** phpcs:disable */
 			'tagline'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_tagline' ),
-			'header'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_header' ),
+//			'header'     => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_header' ),
 			'content'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_content' ),
 			'showCTA'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_showCTA' ),
+			'header' => ( new RmmSageFunctions() )->rmmGetFieldsRecursive( 'field_page_template_services_sectionrelatedpost_group', $ancestors )['sectionContent']['header'],
+
 			'relatedPosts' => ( new RmmSageFunctions() )->rmmGetFieldsRecursive( 'field_page_template_services_sectionrelatedpost_group', $ancestors )['sectionContent']['related_posts'],
 			'image'      => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_combo_image_with_alt_title_image' ),
 			'imageTitle' => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_combo_image_with_alt_title' )['title'],
@@ -46,9 +48,8 @@ class RelatedPosts extends Composer
 			'sectionClasses' => (new RmmSageFunctions() )->rmmCreateSectionClasses($sectionName),
 
 			//	 For Debugging
-			'sectionFields'    => ( new RmmSageFunctions() )->rmmGetFields( $sectionName ),
+//			'sectionFields'    => ( new RmmSageFunctions() )->rmmGetFields( $sectionName ),
 
-			'testies' => ( new RmmSageFunctions() )->rmmGetFields( 'field_page_template_services_sectionrelatedpost_group' )['sectionContent']['related_posts'],
 
 
 		];

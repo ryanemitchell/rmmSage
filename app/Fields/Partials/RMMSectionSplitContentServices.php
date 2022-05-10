@@ -32,14 +32,14 @@ class RMMSectionSplitContentServices extends Partial
                 'label' => 'Content',
             ])
 
-            ->addFields($this->get(comboDisplayToggles::class))
-            ->modifyField('display_from', [
-                'choices' => [
-                    'on' => 'Show',
-                    'Off' => 'Off',
-                ],
-                'default_value' => 'on',
-            ])
+//            ->addFields($this->get(comboDisplayToggles::class))
+//            ->modifyField('display_from', [
+//                'choices' => [
+//                    'on' => 'Show',
+//                    'Off' => 'Off',
+//                ],
+//                'default_value' => 'on',
+//            ])
 
 
             /* ===  Section Content  ==== */
@@ -56,46 +56,194 @@ class RMMSectionSplitContentServices extends Partial
             ])
 
 
-	        /* ===  Left Column Content  ==== */
-	        ->addGroup('sectionContentLeft', [
-		        'label'   => '',
-		        'layout'  => 'block',
-		        'wrapper' => [
-			        'width' => '60%',
-		        ],
-	        ])
-	        ->addFields($this->get(comboSubHeaderWithLevels::class))
-	        ->addFields($this->get(comboHeaderWithLevels::class))
-	        ->addWysiwyg('content', [
-		        'label' => 'Content',
-	        ])
-	        ->addTrueFalse('show_CTA', [
-		        'label' => 'Show CTA?',
-		        'default_value' => 1,
-		        'ui' => 1,
-		        'ui_on_text' => 'Yes',
-		        'ui_off_text' => 'No',
-	        ])
-	        ->endGroup()
+            /* ===  Left Column Content  ==== */
+            ->addGroup('sectionContentLeft', [
+                'label'   => '',
+                'layout'  => 'block',
+                'wrapper' => [
+                    'width' => '50%',
+                ],
+            ])
 
-	        /* ===  Right Column Content  ==== */
-	        ->addGroup('sectionContentRight', [
-		        'label'   => '',
-		        'layout'  => 'block',
-		        'wrapper' => [
-			        'width' => '40%',
-		        ],
-	        ])
+            ->addText('tagline', [
+                'label' => 'Tagline',
+            ])
 
+            ->addText('header', [
+                'label' => 'Header',
+            ])
 
+            ->addWysiwyg('content', [
+                'label' => 'About Content',
+            ])
 
-            ->addFields($this->get(comboHeaderWithLevels::class))
+            ->addTrueFalse('showCTA', [
+                'label' => 'Show CTA?',
+                'default_value' => 1,
+                'ui' => 1,
 
-            ->addFields($this->get(comboListWithOptions::class))
+            ])
+
 
 
             ->endGroup()
+
+            /* ===  Right Column Content  ==== */
+            ->addGroup('sectionContentRight', [
+                'label'   => '',
+                'layout'  => 'block',
+                'wrapper' => [
+                    'width' => '50%',
+                ],
+            ])
+
+
+            ->addTab('featuredService', [
+                'label' => 'Featured Service',
+            ])
+
+            ->addGroup('featuredService', [
+                'label'   => ' Service',
+                'layout'  => 'block',
+                'wrapper' => [
+                    'width' => '',
+                ],
+            ])
+
+            ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->modifyField('combo_image_with_alt_title', ['required' => 1])
+
+
+
+	    ->addText('title', [
+                'label' => 'Featured Service Title',
+                'required' => 1,
+            ])
+            ->addText('link', [
+                'label' => 'Featured Service Link',
+                'required' => 1,
+            ])
+
+            ->addText('subServiceOneTitle', [
+                'label' => 'Sub-service 1 Title',
+                'required' => 1,
+            ])
+            ->addText('subServiceOneLink', [
+                'label' => 'Sub-service 1 link',
+                'required' => 1,
+            ])
+
+            ->addText('subServiceTwoTitle', [
+                'label' => 'Sub-service 2 Title',
+                'required' => 1,
+            ])
+            ->addText('subServiceTwoLink', [
+                'label' => 'Sub-service 2 link',
+                'required' => 1,
+            ])
+
+            ->addText('subServiceThreeTitle', [
+                'label' => 'Sub-service 3 Title',
+                'required' => 1,
+            ])
+            ->addText('subServiceThreeLink', [
+                'label' => 'Sub-service 3 link',
+                'required' => 1,
+            ])
+
 	        ->endGroup()
+
+
+	        ->addTab('serviceOne', [
+		        'label' => 'Service 1',
+	        ])
+
+            ->addGroup('serviceOne', [
+                'label'   => 'Service 1',
+                'layout'  => 'block',
+                'wrapper' => [
+                    'width' => '',
+                ],
+            ])
+
+            ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->modifyField('combo_image_with_alt_title', ['required' => 1])
+
+            ->addText('title', [
+                'label' => 'Title',
+                'required' => 1,
+            ])
+
+            ->addText('link', [
+                'label' => 'Link',
+                'required' => 1,
+            ])
+
+            ->endGroup()
+
+	        ->addTab('servicetwo', [
+		        'label' => 'Service 2',
+	        ])
+
+	        ->addGroup('serviceTwo', [
+		        'label'   => 'Service 2',
+		        'layout'  => 'block',
+		        'wrapper' => [
+			        'width' => '',
+		        ],
+	        ])
+
+	        ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->modifyField('combo_image_with_alt_title', ['required' => 1])
+
+	        ->addText('title', [
+		        'label' => 'Title',
+		        'required' => 1,
+	        ])
+
+	        ->addText('link', [
+		        'label' => 'Link',
+		        'required' => 1,
+	        ])
+
+	        ->endGroup()
+
+	        ->addTab('servicethree', [
+		        'label' => 'Service 3',
+	        ])
+
+	        ->addGroup('serviceThree', [
+		        'label'   => 'Service 3',
+		        'layout'  => 'block',
+		        'wrapper' => [
+			        'width' => '',
+		        ],
+	        ])
+
+	        ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->modifyField('combo_image_with_alt_title', ['required' => 1])
+
+	        ->addText('title', [
+		        'label' => 'Title',
+		        'required' => 1,
+	        ])
+
+	        ->addText('link', [
+		        'label' => 'Link',
+		        'required' => 1,
+	        ])
+
+	        ->endGroup()
+
+
+
+
+
+
+
+
+            ->endGroup()
+            ->endGroup()
             /* ===========================  STYLING TAB  ========================== */
             ->addTab('stylingTab', [
                 'label' => 'Styling',

@@ -48,16 +48,22 @@ class RMMSectionCenteredMenu extends Partial
                     'value' => 'On',],
             ])
 
-            ->addFields($this->get(comboHeaderWithLevels::class))
+	        ->addText('header', [
+		        'label' => 'Header',
+	        ])
 
             ->addField('menu', 'menu')
             ->setLabel('Menu')
             ->setInstructions('Select a Menu')
             ->setConfig('return_format', 'object')
 
-            ->addText('footer_text', [
-                'label' => 'Footer',
-                          ])
+	        ->addTrueFalse('showCTA', [
+		        'label' => 'Show CTA?',
+		        'default_value' => 1,
+		        'ui' => 1,
+		        'ui_on_text' => 'Yes',
+		        'ui_off_text' => 'No',
+	        ])
             ->endGroup()
 
             /* ===========================  STYLING TAB  ========================== */

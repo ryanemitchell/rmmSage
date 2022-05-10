@@ -6,17 +6,19 @@
     {{-- Intro Content --}}
     @include('rmmSections.rmmSectionSplitPhotoContent')
 
-{{-- Maintenance Plan Highlights --}}
-    @include('rmmSections.maintenancePlan.styledImagePlanHighlights')
+    {{-- Maintenance Plan Highlights --}}
+    @include(
+        'rmmSections.maintenancePlan.styledImagePlanHighlights'
+    )
 
-{{-- Club List --}}
+    {{-- Club List --}}
     @include('rmmSections.maintenancePlan.planBenefits')
 
-{{-- Main Content --}}
-    @include('rmmSections.rmmSectionMaintenancePlanPageMainContent')
+    {{-- Main Content --}}
+    @include(
+        'rmmSections.rmmSectionMaintenancePlanPageMainContent'
+    )
 
-
-`
 
 
 

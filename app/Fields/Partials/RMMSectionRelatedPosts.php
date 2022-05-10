@@ -38,6 +38,11 @@ class RMMSectionRelatedPosts extends Partial
 			        'value' => 'On',],
 	        ])
 
+	        ->addText('header', [
+		        'label' => 'Header',
+		        'default_value' => 'Recomended Readings',
+	        ])
+
             ->addRelationship('related_posts', [
                 'label' => 'Related Posts',
                 'instructions' => '',

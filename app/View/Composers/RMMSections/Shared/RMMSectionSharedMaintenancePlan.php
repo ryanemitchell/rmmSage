@@ -32,7 +32,7 @@ class RMMSectionSharedMaintenancePlan extends Composer
 			'header'            => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedmaintenanceplan_maintenanceplanfields', 'options' )['header'],
 			'content'            => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedmaintenanceplan_maintenanceplanfields', 'options' )['content'],
 
-			'image'            => ( new RmmSageFunctions() )->rmmGetTrueFalseField( 'field_sharedmaintenanceplan_maintenanceplanfields','options')['combo_image_with_alt_title']['image'],
+			'image'            => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedmaintenanceplan_maintenanceplanfields','options')['combo_image_with_alt_title']['image'],
 			'imageTitle'         => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedmaintenanceplan_maintenanceplanfields', 'options' )['combo_image_with_alt_title']['title'],
 			'imageALT'           => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedmaintenanceplan_maintenanceplanfields', 'options' )['combo_image_with_alt_title']['title'],
 //

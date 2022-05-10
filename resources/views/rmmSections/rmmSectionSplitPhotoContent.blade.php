@@ -11,7 +11,7 @@
         <div class="flex flex-col justify-between items-center w-full lg:flex-row content">
             <div class="mb-6 lg:mb-0 lg:w-1/2 col1 flex justify-center <?php echo'page-'.$post->post_name;?> w-full lg:w-auto">
                 @notempty($image)
-                <img src="{{$image['sizes']['split-content-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image aboutImage" loading="auto" height="{{$image['sizes']['split-content-image-height']}}px" width="{{$image['sizes']['split-content-image-width']}}px">
+                <img src="{{$image['sizes']['split-content-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image aboutImage p-4 pb-0 lg:p-0" loading="auto" height="{{$image['sizes']['split-content-image-height']}}px" width="{{$image['sizes']['split-content-image-width']}}px">
                 @endnotempty
             </div>
             <div class="px-4 mb-6 lg:pl-0 lg:mb-0 lg:w-1/2 col2 lg:px-o">
@@ -21,7 +21,7 @@
                 @endnotempty
 
                 @notempty($header)
-                <h2 class="max-w-xs lg:mb-4 lg:max-w-fit lg:text-mt1">{{$header}}</h2>
+                <h1 class="max-w-xs lg:mb-4 lg:max-w-fit ">{{$header}}</h1>
                 @endnotempty
 
                 @notempty($content)
@@ -32,7 +32,15 @@
 
                 @istrue($showCTA)
                 <div class="cta grandChildren:self-start">
-                    @include('fieldPartials.callNow')
+
+                    @if (is_page_template('page-maintenance-plan.blade.php'))
+                        @include('fieldPartials.maintenancePlanCallNow')
+                    @else
+                        @include('fieldPartials.callNow')
+                    @endif
+
+
+
                 </div>
                 @endistrue
 

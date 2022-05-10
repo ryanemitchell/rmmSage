@@ -32,11 +32,11 @@ class PageTemplateServices extends Field
 
           ->addFields($this->get(rMMSectionSplitPhotoContent::class))
 
-//            ->addTab('serviceMenu_tab', [
-//                'label' => 'Service Menu',
-//            ])
-//
-//          ->addFields($this->get(rmmSectionCenteredMenu::class))
+            ->addTab('serviceMenu_tab', [
+                'label' => 'Service Menu',
+            ])
+
+          ->addFields($this->get(rmmSectionCenteredMenu::class))
 //
 //
 //
@@ -49,11 +49,11 @@ class PageTemplateServices extends Field
 //                'label' => 'Club Promo',
 //            ])
 //
-//            ->addTab('closingContent_tab', [
-//                'label' => 'Closing Content',
-//            ])
+            ->addTab('closingContent_tab', [
+                'label' => 'Closing Content',
+            ])
 //
-//          ->addFields($this->get(rmmSectionCenteredContent::class))
+          ->addFields($this->get(rmmSectionCenteredContent::class))
 //
             ->addTab('relatedPosts_tab', [
                 'label' => 'Related Posts',

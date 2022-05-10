@@ -41,11 +41,11 @@ module.exports = async(app) => {
      *
      * This should be the URL you use to visit your local development server.
      */
-    .proxy('http://sb-expert-air.local')
+    .proxy('http://expertair.local/')
 
     /**
      * Development URL to be used in the browser.
      */
-    .serve('http://sb-expert-air.local:3000');
+    .serve('http://expertair.local:3000');
 
 };

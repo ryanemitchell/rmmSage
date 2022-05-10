@@ -56,7 +56,7 @@
 					</div>
 				</div>
 
-				<a href="#" class="lg:ml-36 rmmShimmer" title="Expert Air Maintenance Plan">
+				<a href="/about-us/maintenance-plans" class="lg:ml-36 rmmShimmer" title="Expert Air Maintenance Plan">
 					<img src="{{$imageAsset}}expertAir/maintenance_plan.png" alt="Expert Air Maintenance Plan"
 					     title="Expert Air Maintenance Plan"
 					     class="transition duration-500 cursor-pointer hover:scale-105" loading="lazy" width="273px"

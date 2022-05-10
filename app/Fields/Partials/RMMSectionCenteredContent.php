@@ -26,12 +26,9 @@ class RMMSectionCenteredContent extends Partial
                 'label' => 'Content',
             ])
 
-            ->addFields($this->get(comboDisplayToggles::class))
+//            ->addFields($this->get(comboDisplayToggles::class))
 
-            ->addField('menu', 'menu')
-            ->setLabel('Menu')
-            ->setInstructions('Select a Menu')
-            ->setConfig('return_format', 'object')
+
 
             /* ===  Section Content  ==== */
             ->addGroup('sectionContent', [
@@ -45,7 +42,12 @@ class RMMSectionCenteredContent extends Partial
                     'operator' => '==',
                     'value' => 'On',],
             ])
-            ->addFields($this->get(comboHeaderWithLevels::class))
+
+	        ->addText('header', [
+		        'label' => 'Header',
+	        ])
+
+
             ->addWysiwyg('content', [
                 'label' => 'Content',
                 'instructions' => '',
@@ -64,13 +66,13 @@ class RMMSectionCenteredContent extends Partial
             ])
             ->addFields($this->get(comboListWithOptions::class))
 
-
-
-
-
-            ->addText('footer_text', [
-                'label' => 'Footer',
-                          ])
+	        ->addTrueFalse('showCTA', [
+		        'label' => 'Show CTA?',
+		        'default_value' => 1,
+		        'ui' => 1,
+		        'ui_on_text' => 'Yes',
+		        'ui_off_text' => 'No',
+	        ])
             ->endGroup()
 
             /* ===========================  STYLING TAB  ========================== */

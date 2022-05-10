@@ -2,13 +2,15 @@
 
 namespace App\Fields;
 
+use App\Fields\Partials\RMMSections\SplitContentListImageOverlap;
 use App\Fields\Partials\RMMSectionSplitCardCard;
-use App\Fields\Partials\RMMSectionSplitContentLinksImage;
+use App\Fields\Partials\RMMSections\SplitContentStyledImageToOverlay;
+use App\Fields\Partials\RMMSections\SplitCardCard;
 use App\Fields\Partials\RMMSectionSplitContentReviews;
 use App\Fields\Partials\rmmSectionSplitContentServices;
 use App\Fields\Partials\RMMSectionSplitContentStyledImage;
 use App\Fields\Partials\RMMSectionSplitPhotoContent;
-use App\Fields\Partials\rmmSectionCenteredMenu;
+use App\Fields\Partials\NarrowIconContent;
 use App\Fields\Partials\rmmSectionMainServicesSection;
 use App\Fields\Partials\rmmSectionCenteredContent;
 use App\Fields\Partials\RMMSectionRelatedPosts;
@@ -28,7 +30,7 @@ class PageTemplateFrontPage extends Field
 
         $pageTemplateFrontPage
 //            ->setLocation('page', '==', '17');
-	    ->setLocation('page', '==', '17');
+	        ->setLocation('page_template', '==', 'front-page.blade.php');
         $pageTemplateFrontPage
             ->addTab('openingContent_tab', [
                 'label' => 'Opening Content and Services',
@@ -41,7 +43,7 @@ class PageTemplateFrontPage extends Field
                 'label' => 'Locations',
             ])
 
-          ->addFields($this->get(RMMSectionSplitContentLinksImage::class))
+          ->addFields($this->get(SplitContentListImageOverlap::class))
 
 
 
@@ -54,7 +56,7 @@ class PageTemplateFrontPage extends Field
                 'label' => 'Promo Boxes',
             ])
 
-            ->addFields($this->get(RMMSectionSplitCardCard::class))
+            ->addFields($this->get(SplitCardCard::class))
 
             ->addTab('reviews_tab', [
                 'label' => 'Reviews',
@@ -67,6 +69,13 @@ class PageTemplateFrontPage extends Field
             ])
 
 //          ->addFields($this->get(RMMSectionRelatedPosts::class))
+	        ->addTab('emergencies_tab', [
+		        'label' => 'Emergencies',
+	        ])
+
+	        ->addFields($this->get(SplitContentStyledImageToOverlay::class))
+
+
 
             ->addTab('bottomContent_tab', [
                 'label' => 'Bottom Content',
@@ -78,13 +87,13 @@ class PageTemplateFrontPage extends Field
                 'label' => 'About',
             ])
 
-          ->addFields($this->get(RMMSectionSplitPhotoContent::class))
+//          ->addFields($this->get(RMMSectionSplitPhotoContent::class))
 
             ->addTab('careers_tab', [
                 'label' => 'Careers',
             ])
 
-//          ->addFields($this->get(RMMSectionRelatedPosts::class))
+          ->addFields($this->get(NarrowIconContent::class))
 
 
         ;

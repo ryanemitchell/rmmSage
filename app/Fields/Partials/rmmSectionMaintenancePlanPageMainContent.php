@@ -36,6 +36,24 @@ class rmmSectionMaintenancePlanPageMainContent extends Partial
             ])
             ->addFields($this->get(comboVertContentAccordionContent::class))
 
+
+	        ->addFile('downloadFile', [
+		        'label' => 'Download',
+		        'instructions' => '',
+		        'required' => 0,
+		        'conditional_logic' => [],
+		        'wrapper' => [
+			        'width' => '',
+			        'class' => '',
+			        'id' => '',
+		        ],
+		        'return_format' => 'url',
+		        'library' => 'all',
+		        'min_size' => '',
+		        'max_size' => '',
+		        'mime_types' => '',
+	        ])
+
             ->endgroup()
             ->addGroup('mainSidebar', [
                 'label'   => 'Sidebar',

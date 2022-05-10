@@ -54,6 +54,8 @@ function ea_disable_editor($id = false)
 
     $excluded_templates = array(
         'template-development-flexible-content.blade.php',
+		'page-maintenance-plan.blade.php',
+	    'template-service-page.blade.php',
 		'*'.'.blade.php',
         'page.blade.php',
 	    'page-offers.blade.php',

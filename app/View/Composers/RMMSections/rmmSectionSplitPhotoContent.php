@@ -26,6 +26,9 @@ class rmmSectionSplitPhotoContent extends Composer
 	    $sectionName =  'rmmSectionSplitPhotoContent'; // include trailing underscore
 		$SectionGroupName =  $sectionName.'_'; // include trailing underscore
 
+
+
+
         return [
 	        /*** phpcs:disable */
 	        'tagline'    => ( new RmmSageFunctions() )->rmmGetFields( 'rmmSectionSplitPhotoContent_tagline' ),

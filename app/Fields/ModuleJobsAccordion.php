@@ -6,7 +6,7 @@ use App\Fields\Partials\componentAccordion;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class moduleJobsAccordion extends Field
+class ModuleJobsAccordion extends Field
 {
 	/**
 	 * The field group.

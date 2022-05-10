@@ -8,22 +8,19 @@
 
 
     {{-- Locations --}}
-    @include('rmmSections.rmmSectionLocationsImageOverlap')
+    @include('rmmSections.SplitContentListImageOverlap')
 
     {{-- Guarantees --}}
     @include('rmmSections.SplitStyledImageGuarantees')
 
     {{-- PromoBxes --}}
-    @include('rmmSections.rmmsectionSplitCardCard')
+    @include('rmmSections.SplitCardCard')
 
     {{-- Reviews --}}
     @include('rmmSections.rmmSectionSharedReviews')
 
     {{-- LogoBAr --}}
     @include('rmmSections.logoBar.logoBarFull')
-
-    {{-- BeCool --}}
-    @include('rmmSections.SplitContentStyledImage')
 
     {{-- Emergency Services --}}
     @include('rmmSections.SplitContentStyledImageToOverlay')

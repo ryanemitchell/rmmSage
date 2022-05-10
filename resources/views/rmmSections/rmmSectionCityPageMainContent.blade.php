@@ -16,9 +16,9 @@
 
 
 
-				@istrue($showLocationsNavBox)
-				@include('rmmSections.shared.sectionsSharedLocationsNavBox')
-				@endistrue
+{{--				@istrue($showLocationsNavBox)--}}
+{{--				@include('rmmSections.shared.sectionsSharedLocationsNavBox')--}}
+{{--				@endistrue--}}
 
 
 				@istrue($showGuaranteesBox)
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 
-		<div class="flex justify-center items-center lg:order-1 col1 lg:grow order-1 lg:order-2">
+		<div class="flex justify-center items-center lg:order-1 col1 lg:grow order-1">
 			<div class="px-4 lg:px-0 content w-full">
 				@notempty($topHeader)
 				<h2 class="mb-4">{{$topHeader}}</h2>

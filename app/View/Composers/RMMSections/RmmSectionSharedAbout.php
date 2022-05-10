@@ -31,10 +31,10 @@ class RmmSectionSharedAbout extends Composer {
 			'header'             => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields', 'options' )['header'],
 			'content'            => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields', 'options' )['content'],
 			'videoID'            => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields', 'options' )['videoID'],
-			'image'              => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields_combo_image_with_alt_title', 'options' )['image'],
-			'imageURL'           => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields_combo_image_with_alt_title', 'options' )['image']['url'],
-			'imageTitle'         => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields_combo_image_with_alt_title', 'options' )['title'],
-			'imageALT'           => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields_combo_image_with_alt_title', 'options' )['title'],
+			'image'              => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields', 'options' )['combo_image_with_alt_title']['image'],
+			'imageURL'           => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields', 'options' )['combo_image_with_alt_title']['image']['url'],
+			'imageTitle'         => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields', 'options' )['combo_image_with_alt_title']['title'],
+			'imageALT'          => ( new RmmSageFunctions() )->rmmGetFields( 'field_sharedaboutsection_aboutfields', 'options' )['combo_image_with_alt_title']['title'],
 
 
 			//  Styling Fields

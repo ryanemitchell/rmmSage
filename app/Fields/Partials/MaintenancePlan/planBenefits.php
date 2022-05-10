@@ -22,7 +22,6 @@ class planBenefits extends Partial
             ])
             ->addText('header', [
                 'label' => 'Header',
-
             ])
             ->addRepeater('benefits', [
                 'label'        => 'Plan Benefits',
