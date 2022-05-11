@@ -2,7 +2,7 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\locationInformation;
+use App\Fields\Partials\LocationInformation;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
