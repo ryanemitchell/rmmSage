@@ -2,10 +2,10 @@
 
 namespace App\Fields;
 
-use App\Fields\Partials\MaintenancePlan\planBenefits;
+use App\Fields\Partials\MaintenancePlan\PlanBenefits;
 use App\Fields\Partials\RMMSectionMaintenancePlanPageMainContent;
 use App\Fields\Partials\maintenancePlanStyledImagePlanHighlights;
-use App\Fields\Partials\MaintenancePlan\styledImagePlanHighlights;
+use App\Fields\Partials\MaintenancePlan\StyledImagePlanHighlights;
 
 use App\Fields\Partials\RMMSectionSplitContentLinksImage;
 use App\Fields\Partials\RMMSectionSplitContentReviews;

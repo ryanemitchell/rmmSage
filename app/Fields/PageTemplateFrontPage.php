@@ -3,17 +3,12 @@
 namespace App\Fields;
 
 use App\Fields\Partials\RMMSections\SplitContentListImageOverlap;
-use App\Fields\Partials\RMMSectionSplitCardCard;
 use App\Fields\Partials\RMMSections\SplitContentStyledImageToOverlay;
 use App\Fields\Partials\RMMSections\SplitCardCard;
 use App\Fields\Partials\RMMSectionSplitContentReviews;
 use App\Fields\Partials\RMMSectionSplitContentServices;
 use App\Fields\Partials\RMMSectionSplitContentStyledImage;
-use App\Fields\Partials\RMMSectionSplitPhotoContent;
 use App\Fields\Partials\NarrowIconContent;
-use App\Fields\Partials\RMMSectionMainServicesSection;
-use App\Fields\Partials\RMMSectionCenteredContent;
-use App\Fields\Partials\RMMSectionRelatedPosts;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -30,7 +25,7 @@ class PageTemplateFrontPage extends Field
 
         $pageTemplateFrontPage
 //            ->setLocation('page', '==', '17');
-	        ->setLocation('page_template', '==', 'front-page.blade.php');
+            ->setLocation('page_template', '==', 'front-page.blade.php');
         $pageTemplateFrontPage
             ->addTab('openingContent_tab', [
                 'label' => 'Opening Content and Services',
@@ -47,9 +42,9 @@ class PageTemplateFrontPage extends Field
 
 
 
-            ->addTab('guarantees_tab', [
-                'label' => 'Guarantees',
-            ])
+//            ->addTab('guarantees_tab', [
+//                'label' => 'Guarantees',
+//            ])
 //           ->addFields($this->get(RMMSectionMainServicesSection::class))
 
             ->addTab('dualPromo_tab', [
@@ -62,30 +57,30 @@ class PageTemplateFrontPage extends Field
                 'label' => 'Reviews',
             ])
 
-            ->addFields($this->get(RMMSectionSplitContentReviews::class))
+//            ->addFields($this->get(RMMSectionSplitContentReviews::class))
 
-            ->addTab('logos_tab', [
-                'label' => 'Logo Bar',
+//            ->addTab('logos_tab', [
+//                'label' => 'Logo Bar',
+//            ])
+//
+////          ->addFields($this->get(RMMSectionRelatedPosts::class))
+            ->addTab('emergencies_tab', [
+                'label' => 'Emergencies',
             ])
 
-//          ->addFields($this->get(RMMSectionRelatedPosts::class))
-	        ->addTab('emergencies_tab', [
-		        'label' => 'Emergencies',
-	        ])
-
-	        ->addFields($this->get(SplitContentStyledImageToOverlay::class))
+            ->addFields($this->get(SplitContentStyledImageToOverlay::class))
 
 
 
-            ->addTab('bottomContent_tab', [
-                'label' => 'Bottom Content',
-            ])
+//            ->addTab('bottomContent_tab', [
+//                'label' => 'Bottom Content',
+//            ])
+//
+//          ->addFields($this->get(RMMSectionSplitContentStyledImage::class))
 
-          ->addFields($this->get(RMMSectionSplitContentStyledImage::class))
-
-            ->addTab('about_tab', [
-                'label' => 'About',
-            ])
+//            ->addTab('about_tab', [
+//                'label' => 'About',
+//            ])
 
 //          ->addFields($this->get(RMMSectionSplitPhotoContent::class))
 
