@@ -1,5 +1,5 @@
 @php
-//  Template Name: Service Page
+//  Template Name: Service or Top City Page
 @endphp
 
 @extends('layouts.app')

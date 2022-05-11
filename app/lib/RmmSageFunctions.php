@@ -86,6 +86,8 @@ class RmmSageFunctions
     }
 
 
+
+
     public function rmmGetFieldsDisplayFrom($fieldKey, $displayFrom, $ancestors, $postID = '')
     {
 
@@ -163,4 +165,28 @@ class RmmSageFunctions
 
 	    return $sectionclasses;
     }
+
+	public function rmmGetAllFieldsRecursive($ancestors, $postID = '')
+	{
+		$fieldValue = '';
+//    If available get the field value from the current post
+		if (! empty(get_fields( $postID))) :
+			$fieldValue = get_field( $postID);
+		else :
+			foreach ($ancestors as $ancestor) :
+//  Get the field values from the closest ancestor then break out.
+				if (get_fields($ancestor)) :
+					$fieldValue = get_fields($ancestor);
+					break;
+				endif;
+			endforeach;
+		endif;
+
+		return $fieldValue;
+	}
+
+
+
+
+
 }
