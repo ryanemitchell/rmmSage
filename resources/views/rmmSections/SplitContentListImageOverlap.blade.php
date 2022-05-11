@@ -40,7 +40,7 @@
 					</div>
 				</div>
 				@notempty($image)
-				<div class="order-1 col-span-12 col-start-7 row-span-full self-center text-white lg:order-2 col-end-20">
+				<div class="order-1 col-span-12 col-start-7 row-span-full self-center text-white lg:order-2 col-end-20" data-aos="fade-left">
 					<img src="{{$image['url']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image" loading="lazy" height="{{$image['height']}}px" width="{{$image['width']}}px">
 				</div>
 				@endnotempty

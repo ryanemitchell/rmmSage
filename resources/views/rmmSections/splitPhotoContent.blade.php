@@ -46,8 +46,8 @@ CTA GOES HERE!
 
 </section>
 
-@dump($DisplayGroup)
+{{--@dump($DisplayGroup)--}}
 
-@dump($sectionGroup)
+{{--@dump($sectionGroup)--}}
 
-@dump($post)
+{{--@dump($post)--}}

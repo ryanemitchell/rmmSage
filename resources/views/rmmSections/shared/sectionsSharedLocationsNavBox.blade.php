@@ -1,7 +1,7 @@
 <div class="flex flex-col justify-center items-center bg-no-repeat shadow-common rounded-common min-h-[240px] bg-siteGrey smallBox-bg lg:w-[420px] mx-2 lg-mx-0 mb-8">
 	<div class="w-full imageWrapper"> <!-- Start of .imageWrapper -->
 		@notempty($image)
-		<img src="{{$image['sizes']['shared-sidebarHeader-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image rounded-common" loading="lazy" height="{{$image['sizes']['shared-sidebarHeader-image-height']}}px" width="{{$image['sizes']['shared-sidebarHeader-image-width']}}px">
+		<img src="{{$image['sizes']['shared-sidebarHeader-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image rounded-common w-full lg:w-auto " loading="lazy" height="{{$image['sizes']['shared-sidebarHeader-image-height']}}px" width="{{$image['sizes']['shared-sidebarHeader-image-width']}}px">
 		@endnotempty
 
 

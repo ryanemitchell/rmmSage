@@ -6,4 +6,7 @@
 
         @includeFirst(['partials.content-page', 'partials.content'])
     @endwhile
+
+    @include('rmmSections.shared.RMMSectionSharedMaintenancePlan')
+    @include('rmmSections.rmmSectionSharedAbout')
 @endsection

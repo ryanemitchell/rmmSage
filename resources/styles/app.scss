@@ -246,3 +246,13 @@
 .list-marker-square::marker {
   content: "square";
 }
+
+.service-areas .wp-block-navigation .wp-block-navigation__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  @include respond(desktop) {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  margin-bottom: 24px;
+}

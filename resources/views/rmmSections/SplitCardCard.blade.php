@@ -15,7 +15,7 @@
 					     @notempty($leftPromoImage)style='background-image:url("{{$leftPromoImage['url']}}")'@endnotempty>
 						<div class="flex flex-col justify-center items-center py-6 px-4 lg:py-0 lg:px-0 content text-siteWhite">
 							@notempty($leftPromoIcon)
-							<div class="imageWrapper icon lg:mb-4 mb-2">
+							<div class="imageWrapper icon lg:mb-4 mb-2 " data-aos="fade-up">
 								<img src="{{$leftPromoIcon['url']}}" alt="{{$leftPromoIconALT}}"
 								     title="{{$leftPromoIconTitle}}" class="image" loading="lazy"
 								     height="{{$leftPromoIcon['height']}}px" width="{{$leftPromoIcon['width']}}px">
@@ -23,16 +23,16 @@
 							@endnotempty
 
 							@notempty($leftPromoHeader)
-							<h2 class="mb-4 text-center lg:mb-4 text-siteWhite">{{$leftPromoHeader}}</h2>
+							<h2 class="mb-4 text-center lg:mb-4 text-siteWhite" data-aos="fade-up">{{$leftPromoHeader}}</h2>
 							@endnotempty
 							@notempty($leftPromoContent)
-							<div class="mb-4 text-center lg:mb-4 lg:max-w-[400px]">
+							<div class="mb-4 text-center lg:mb-4 lg:max-w-[400px]" data-aos="fade-up">
 								@wpautokp($leftPromoContent)
 							</div>
 							@endnotempty
 
 							@istrue($leftPromoShowCTA)
-							<div class="cta grandChildren:self-start">
+							<div class="cta grandChildren:self-start" data-aos="fade-up">
 								@include('fieldPartials.bookNowOnDark')
 							</div>
 							@endistrue
@@ -50,7 +50,7 @@
 				     @notempty($rightPromoImage)style='background-image:url("{{$rightPromoImage['url']}}")'@endnotempty>
 					<div class="flex flex-col justify-center items-center py-6 px-4 lg:py-0 lg:px-0 content text-siteWhite">
 						@notempty($rightPromoIcon)
-						<div class="imageWrapper icon lg:mb-4 mb-2">
+						<div class="imageWrapper icon lg:mb-4 mb-2" data-aos="fade-up">
 							<img src="{{$rightPromoIcon['url']}}" alt="{{$rightPromoIconALT}}"
 							     title="{{$rightPromoIconTitle}}" class="image" loading="lazy"
 							     height="{{$rightPromoIcon['height']}}px" width="{{$rightPromoIcon['width']}}px">
@@ -58,16 +58,16 @@
 						@endnotempty
 
 						@notempty($rightPromoHeader)
-						<h2 class="mb-4 text-center lg:mb-4 text-siteWhite">{{$rightPromoHeader}}</h2>
+						<h2 class="mb-4 text-center lg:mb-4 text-siteWhite" data-aos="fade-up">{{$rightPromoHeader}}</h2>
 						@endnotempty
 						@notempty($rightPromoContent)
-						<div class="mb-4 text-center lg:mb-4 lg:max-w-[400px]">
+						<div class="mb-4 text-center lg:mb-4 lg:max-w-[400px]" data-aos="fade-up">
 							@wpautokp($rightPromoContent)
 						</div>
 						@endnotempty
 
 						@istrue($rightPromoShowCTA)
-						<div class="cta grandChildren:self-start">
+						<div class="cta grandChildren:self-start" data-aos="fade-up">
 						<a href="/about-us/coupons" class="btn btn-grad-onDark">View Promotions</a>
 						</div>
 						@endistrue

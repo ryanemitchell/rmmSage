@@ -1,5 +1,5 @@
-@dump($parentHeader)
-@dump($parentMenu)
+{{--@dump($parentHeader)--}}
+{{--@dump($parentMenu)--}}
 <div class="flex flex-col justify-center items-center bg-no-repeat shadow-common rounded-common min-h-[240px] bg-siteGrey smallBox-bg lg:w-[420px] mx-2 lg-mx-0 mb-4">
 	<div class="flex flex-row flex-col items-center px-4 pt-3 pb-3 w-full lg:justify-center lg:pt-6 lg:pb-6 content">
 		@notempty($header)
