@@ -23,7 +23,7 @@ class RMMSectionRelatedPosts extends Partial
             ->addTab('contentTab', [
                 'label' => 'Content',
             ])
-	        ->addFields($this->get(comboDisplayToggles::class))
+	        ->addFields($this->get(ComboDisplayToggles::class))
 
 	        /* ===  Section Content  ==== */
 	        ->addGroup('sectionContent', [
@@ -83,7 +83,7 @@ class RMMSectionRelatedPosts extends Partial
                 'append'            => '',
                 'maxlength'         => '',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+            ->addFields($this->get(SectionStylingTab::class))
             ->endGroup();
 
 

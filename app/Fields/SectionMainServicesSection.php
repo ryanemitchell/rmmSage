@@ -2,10 +2,10 @@
 
 namespace App\Fields;
 
-use App\Fields\Partials\comboFlexContent;
-use App\Fields\Partials\componentLinkBox;
-use App\Fields\Partials\offerSelectSingleOffer;
-use App\Fields\Partials\sectionStylingTab;
+use App\Fields\Partials\ComboFlexContent;
+use App\Fields\Partials\ComponentLinkBox;
+use App\Fields\Partials\OfferSelectSingleOffer;
+use App\Fields\Partials\SectionStylingTab;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -42,7 +42,7 @@ class SectionMainServicesSection extends Field
                 ],
                 'layout'  => 'block',
             ])
-            ->addFields($this->get(comboFlexContent::class))
+            ->addFields($this->get(ComboFlexContent::class))
             ->endgroup()
             ->addGroup('main_service_sidebar', [
                 'label'   => 'Services Sidebar',
@@ -52,8 +52,8 @@ class SectionMainServicesSection extends Field
                 ],
                 'layout'  => 'block',
             ])
-            ->addFields($this->get(componentLinkBox::class))
-            ->addFields($this->get(offerSelectSingleOffer::class))
+            ->addFields($this->get(ComponentLinkBox::class))
+            ->addFields($this->get(OfferSelectSingleOffer::class))
             ->endgroup()
             ->endGroup()
             ->addTab('stylingTab', [
@@ -72,7 +72,7 @@ class SectionMainServicesSection extends Field
                 'append'            => '',
                 'maxlength'         => '',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+            ->addFields($this->get(SectionStylingTab::class))
             ->endGroup();
 
         return $SectionMainServicesSection->build();

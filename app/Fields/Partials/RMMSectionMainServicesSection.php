@@ -35,7 +35,7 @@ class RMMSectionMainServicesSection extends Partial
             ],
             'layout'  => 'block',
         ])
-        ->addFields($this->get(comboVertContentAccordionContent::class))
+        ->addFields($this->get(ComboVertContentAccordionContent::class))
 
         ->endgroup()
         ->addGroup('mainSidebar', [
@@ -49,11 +49,11 @@ class RMMSectionMainServicesSection extends Partial
 
 
 //    @todo remove this after added to services page
-//        ->addFields($this->get(componentLinkBox::class))
+//        ->addFields($this->get(ComponentLinkBox::class))
 
-//            ->addFields($this->get(offerSelectSingleOffer::class))
+//            ->addFields($this->get(OfferSelectSingleOffer::class))
 
-        ->addFields($this->get(sectionServiceNavBox::class))
+        ->addFields($this->get(SectionServiceNavBox::class))
         ->addFields($this->get(sidebarBoxSinglePromotion::class))
 
 
@@ -71,7 +71,7 @@ class RMMSectionMainServicesSection extends Partial
 
         ])
 
-//          ->addFields($this->get(comboVertImageContentNav::class))
+//          ->addFields($this->get(ComboVertImageContentNav::class))
 //          ->modifyField('comboVertImageContentNav', ['label' => 'City'])
 
 
@@ -81,7 +81,7 @@ class RMMSectionMainServicesSection extends Partial
             'label' => 'Styling',
         ])
 
-        ->addFields($this->get(sectionStylingTab::class))
+        ->addFields($this->get(SectionStylingTab::class))
         ->endGroup();
 
         return $rmmSectionMaintenancePlanPageMainContent;

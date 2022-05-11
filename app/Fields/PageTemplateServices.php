@@ -2,10 +2,10 @@
 
 namespace App\Fields;
 
-use App\Fields\Partials\rMMSectionSplitPhotoContent;
-use App\Fields\Partials\rmmSectionCenteredMenu;
-use App\Fields\Partials\rmmSectionMainServicesSection;
-use App\Fields\Partials\rmmSectionCenteredContent;
+use App\Fields\Partials\RMMSectionSplitPhotoContent;
+use App\Fields\Partials\RMMSectionCenteredMenu;
+use App\Fields\Partials\RMMSectionMainServicesSection;
+use App\Fields\Partials\RMMSectionCenteredContent;
 use App\Fields\Partials\RMMSectionRelatedPosts;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
@@ -30,20 +30,20 @@ class PageTemplateServices extends Field
                 'label' => 'Opening Content',
             ])
 
-          ->addFields($this->get(rMMSectionSplitPhotoContent::class))
+          ->addFields($this->get(RMMSectionSplitPhotoContent::class))
 
             ->addTab('serviceMenu_tab', [
                 'label' => 'Service Menu',
             ])
 
-          ->addFields($this->get(rmmSectionCenteredMenu::class))
+          ->addFields($this->get(RMMSectionCenteredMenu::class))
 //
 //
 //
             ->addTab('mainContent_tab', [
                 'label' => 'Main Content',
             ])
-           ->addFields($this->get(rmmSectionMainServicesSection::class))
+           ->addFields($this->get(RMMSectionMainServicesSection::class))
 //
 //            ->addTab('clubPromo_tab', [
 //                'label' => 'Club Promo',
@@ -53,7 +53,7 @@ class PageTemplateServices extends Field
                 'label' => 'Closing Content',
             ])
 //
-          ->addFields($this->get(rmmSectionCenteredContent::class))
+          ->addFields($this->get(RMMSectionCenteredContent::class))
 //
             ->addTab('relatedPosts_tab', [
                 'label' => 'Related Posts',

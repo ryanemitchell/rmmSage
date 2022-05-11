@@ -52,7 +52,7 @@ class RMMSectionSharedAbout extends Partial
 		        'label' => 'Styling',
 	        ])
 
-	        ->addFields($this->get(sectionStylingTab::class))
+	        ->addFields($this->get(SectionStylingTab::class))
 
             ->endGroup();
 

@@ -30,7 +30,7 @@ class NarrowIconContent extends Partial
 
 
 
-	        ->addFields($this->get(comboIconWithAltTitle::class))
+	        ->addFields($this->get(ComboIconWithAltTitle::class))
 
 
 	        ->addText('header', [
@@ -58,7 +58,7 @@ class NarrowIconContent extends Partial
 	        ->addTab('stylingTab', [
 		        'label' => 'Styling',
 	        ])
-	        ->addFields($this->get(sectionStylingTab::class))
+	        ->addFields($this->get(SectionStylingTab::class))
 	        ->endGroup();
 
 

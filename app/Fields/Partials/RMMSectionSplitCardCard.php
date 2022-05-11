@@ -32,7 +32,7 @@ class RMMSectionSplitCardCard extends Partial
                 'label' => 'Content',
             ])
 
-            ->addFields($this->get(comboDisplayToggles::class))
+            ->addFields($this->get(ComboDisplayToggles::class))
             ->modifyField('display_from', [
                 'choices' => [
                     'on' => 'Show',
@@ -64,8 +64,8 @@ class RMMSectionSplitCardCard extends Partial
 			        'width' => '60%',
 		        ],
 	        ])
-	        ->addFields($this->get(comboSubHeaderWithLevels::class))
-	        ->addFields($this->get(comboHeaderWithLevels::class))
+	        ->addFields($this->get(ComboSubHeaderWithLevels::class))
+	        ->addFields($this->get(ComboHeaderWithLevels::class))
 	        ->addWysiwyg('content', [
 		        'label' => 'Content',
 	        ])
@@ -89,9 +89,9 @@ class RMMSectionSplitCardCard extends Partial
 
 
 
-            ->addFields($this->get(comboHeaderWithLevels::class))
+            ->addFields($this->get(ComboHeaderWithLevels::class))
 
-            ->addFields($this->get(comboListWithOptions::class))
+            ->addFields($this->get(ComboListWithOptions::class))
 
 
             ->endGroup()
@@ -100,7 +100,7 @@ class RMMSectionSplitCardCard extends Partial
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+            ->addFields($this->get(SectionStylingTab::class))
             ->endGroup();
 
         return $rmmSectionSplitCardCard;

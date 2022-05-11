@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Fields\Partials\RMMSections;
-use App\Fields\Partials\comboIconWithAltTitle;
-use App\Fields\Partials\comboImageWithAltTitle;
-use App\Fields\Partials\sectionStylingTab;
+use App\Fields\Partials\ComboIconWithAltTitle;
+use App\Fields\Partials\ComboImageWithAltTitle;
+use App\Fields\Partials\SectionStylingTab;
 use Log1x\AcfComposer\Partial;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -37,8 +37,8 @@ class SplitCardCard extends Partial
 		        ],
 	        ])
 
-	        ->addFields($this->get(comboImageWithAltTitle::class))
-	        ->addFields($this->get(comboIconWithAltTitle::class))
+	        ->addFields($this->get(ComboImageWithAltTitle::class))
+	        ->addFields($this->get(ComboIconWithAltTitle::class))
 
 
 
@@ -72,8 +72,8 @@ class SplitCardCard extends Partial
 		        ],
 	        ])
 
-	        ->addFields($this->get(comboImageWithAltTitle::class))
-	        ->addFields($this->get(comboIconWithAltTitle::class))
+	        ->addFields($this->get(ComboImageWithAltTitle::class))
+	        ->addFields($this->get(ComboIconWithAltTitle::class))
 
 
 
@@ -105,7 +105,7 @@ class SplitCardCard extends Partial
 	        ->addTab('stylingTab', [
 		        'label' => 'Styling',
 	        ])
-	        ->addFields($this->get(sectionStylingTab::class))
+	        ->addFields($this->get(SectionStylingTab::class))
 	        ->endGroup();
 
         return $splitCardCard;

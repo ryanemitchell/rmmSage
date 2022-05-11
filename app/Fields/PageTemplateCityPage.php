@@ -2,11 +2,11 @@
 
 namespace App\Fields;
 
-use App\Fields\Partials\rmmSectionCityPageMainContent;
+use App\Fields\Partials\RMMSectionCityPageMainContent;
 use App\Fields\Partials\RMMSectionSplitPhotoContent;
 use App\Fields\Partials\RMMSectionLogoBarFull;
-use App\Fields\Partials\rmmSectionSharedReviews;
-use App\Fields\Partials\rmmSectionSharedAbout;
+use App\Fields\Partials\RMMSectionSharedReviews;
+use App\Fields\Partials\RMMSectionSharedAbout;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -32,7 +32,7 @@ class PageTemplateCityPage extends Field
                 'label' => 'Opening Content',
             ])
 
-                 ->addFields($this->get(rmmSectionSplitPhotoContent::class))
+                 ->addFields($this->get(RMMSectionSplitPhotoContent::class))
 
 
 	        /* ===  Logo Bar  ==== */
@@ -40,7 +40,7 @@ class PageTemplateCityPage extends Field
                 'label' => 'Shared Logos',
             ])
 
-            ->addFields($this->get(rmmSectionLogoBarFull::class))
+            ->addFields($this->get(RMMSectionLogoBarFull::class))
 
 
             /* ===  Main Content  ==== */
@@ -48,13 +48,13 @@ class PageTemplateCityPage extends Field
                 'label' => 'Main Content',
             ])
 
-	        ->addFields($this->get(rmmSectionCityPageMainContent::class))
+	        ->addFields($this->get(RMMSectionCityPageMainContent::class))
             /* ===  Reviews  ==== */
             ->addTab('reviews_tab', [
                 'label' => 'Shared Reviews',
             ])
 
-            ->addFields($this->get(rmmSectionSharedReviews::class))
+            ->addFields($this->get(RMMSectionSharedReviews::class))
 
 
 
@@ -63,7 +63,7 @@ class PageTemplateCityPage extends Field
                 'label' => 'Shared About',
             ])
 
-            ->addFields($this->get(rmmSectionSharedAbout::class))
+            ->addFields($this->get(RMMSectionSharedAbout::class))
 
 
         ;

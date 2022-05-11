@@ -26,7 +26,7 @@ class RMMSectionGuaranteesFull extends Partial
                 'label' => 'Content',
             ])
 
-            ->addFields($this->get(comboDisplayToggles::class))
+            ->addFields($this->get(ComboDisplayToggles::class))
 
             ->addField('menu', 'menu')
             ->setLabel('Menu')
@@ -45,7 +45,7 @@ class RMMSectionGuaranteesFull extends Partial
                     'operator' => '==',
                     'value' => 'On',],
             ])
-            ->addFields($this->get(comboHeaderWithLevels::class))
+            ->addFields($this->get(ComboHeaderWithLevels::class))
             ->addWysiwyg('content', [
                 'label' => 'Content',
                 'instructions' => '',
@@ -62,7 +62,7 @@ class RMMSectionGuaranteesFull extends Partial
                 'media_upload' => 1,
                 'delay' => 0,
             ])
-            ->addFields($this->get(comboListWithOptions::class))
+            ->addFields($this->get(ComboListWithOptions::class))
 
 
 
@@ -77,7 +77,7 @@ class RMMSectionGuaranteesFull extends Partial
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+            ->addFields($this->get(SectionStylingTab::class))
             ->endGroup();
 
         return $rmmSectionGuaranteesFull;

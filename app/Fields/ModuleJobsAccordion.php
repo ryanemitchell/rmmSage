@@ -2,7 +2,7 @@
 
 namespace App\Fields;
 
-use App\Fields\Partials\componentAccordion;
+use App\Fields\Partials\ComponentAccordion;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -22,7 +22,7 @@ class ModuleJobsAccordion extends Field
 
 		$moduleJobsAccordion
 
-			->addFields($this->get(componentAccordion::class));
+			->addFields($this->get(ComponentAccordion::class));
 
 		return $moduleJobsAccordion->build();
 	}

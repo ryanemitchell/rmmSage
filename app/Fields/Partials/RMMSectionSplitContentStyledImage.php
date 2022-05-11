@@ -40,7 +40,7 @@ class RMMSectionSplitContentStyledImage extends Partial
                     'width' => '100%',
                 ],
             ])
-            ->addFields($this->get(comboImageWithAltTitle::class))
+            ->addFields($this->get(ComboImageWithAltTitle::class))
 
 
 	        ->addText('header', [
@@ -68,7 +68,7 @@ class RMMSectionSplitContentStyledImage extends Partial
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+            ->addFields($this->get(SectionStylingTab::class))
             ->endGroup();
 
 

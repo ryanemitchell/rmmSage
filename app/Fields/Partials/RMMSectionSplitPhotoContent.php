@@ -35,7 +35,7 @@ class RMMSectionSplitPhotoContent extends Partial
             ])
 	        ->addMessage('Image Info:', 'This image will be resized to 422px wide if the image provided is wider. The aspect ratio will be maintained. ')
 
-	        ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->addFields($this->get(ComboImageWithAltTitle::class))
 
             ->addText('tagline', [
                 'label' => 'Tagline',
@@ -62,7 +62,7 @@ class RMMSectionSplitPhotoContent extends Partial
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-	        ->addFields($this->get(sectionStylingTab::class))
+	        ->addFields($this->get(SectionStylingTab::class))
 
             ->endGroup();
 

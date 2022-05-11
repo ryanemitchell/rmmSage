@@ -3,18 +3,18 @@
 namespace App\Fields;
 
 use App\Fields\Partials\MaintenancePlan\planBenefits;
-use App\Fields\Partials\rmmSectionMaintenancePlanPageMainContent;
+use App\Fields\Partials\RMMSectionMaintenancePlanPageMainContent;
 use App\Fields\Partials\maintenancePlanStyledImagePlanHighlights;
 use App\Fields\Partials\MaintenancePlan\styledImagePlanHighlights;
 
 use App\Fields\Partials\RMMSectionSplitContentLinksImage;
 use App\Fields\Partials\RMMSectionSplitContentReviews;
-use App\Fields\Partials\rmmSectionSplitContentServices;
+use App\Fields\Partials\RMMSectionSplitContentServices;
 use App\Fields\Partials\RMMSectionSplitContentStyledImage;
 use App\Fields\Partials\RMMSectionSplitPhotoContent;
-use App\Fields\Partials\rmmSectionCenteredMenu;
-use App\Fields\Partials\rmmSectionMainServicesSection;
-use App\Fields\Partials\rmmSectionCenteredContent;
+use App\Fields\Partials\RMMSectionCenteredMenu;
+use App\Fields\Partials\RMMSectionMainServicesSection;
+use App\Fields\Partials\RMMSectionCenteredContent;
 use App\Fields\Partials\RMMSectionRelatedPosts;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
@@ -39,29 +39,29 @@ class PageTemplateMaintenancePlan extends Field
                 'label' => 'Opening Content',
             ])
 
-            ->addFields($this->get(rmmSectionSplitPhotoContent::class))
+            ->addFields($this->get(RMMSectionSplitPhotoContent::class))
 
 
 
             ->addTab('planHighlights_tab', [
                 'label' => 'Plan Highlights',
             ])
-	        ->addFields($this->get(styledImagePlanHighlights::class))
+	        ->addFields($this->get(StyledImagePlanHighlights::class))
 
 
-//           ->addFields($this->get(rmmSectionMainServicesSection::class))
+//           ->addFields($this->get(RMMSectionMainServicesSection::class))
 
             ->addTab('planBenefits_tab', [
                 'label' => 'Plan Benefits',
             ])
-	        ->addFields($this->get(planBenefits::class))
+	        ->addFields($this->get(PlanBenefits::class))
 
 	        /* ===  Main Content  ==== */
 	        ->addTab('mainContent_tab', [
 		        'label' => 'Main Content',
 	        ])
 
-	        ->addFields($this->get(rmmSectionMaintenancePlanPageMainContent::class))
+	        ->addFields($this->get(RMMSectionMaintenancePlanPageMainContent::class))
 
 
 

@@ -2,9 +2,9 @@
 
 namespace App\Fields\Partials\RMMSections;
 
-use App\Fields\Partials\comboImageWithAltTitle;
-use App\Fields\Partials\comboLinksRepeater;
-use App\Fields\Partials\sectionStylingTab;
+use App\Fields\Partials\ComboImageWithAltTitle;
+use App\Fields\Partials\ComboLinksRepeater;
+use App\Fields\Partials\SectionStylingTab;
 use Log1x\AcfComposer\Partial;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -33,7 +33,7 @@ class SplitContentListImageOverlap extends Partial
 
 
 
-	        ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->addFields($this->get(ComboImageWithAltTitle::class))
 
 	        ->addText('tagline', [
 		        'label' => 'Tagline',1
@@ -61,7 +61,7 @@ class SplitContentListImageOverlap extends Partial
 	        ->addTab('stylingTab', [
 		        'label' => 'Styling',
 	        ])
-	        ->addFields($this->get(sectionStylingTab::class))
+	        ->addFields($this->get(SectionStylingTab::class))
 	        ->endGroup();
 
         return $splitContentListImageOverlap;

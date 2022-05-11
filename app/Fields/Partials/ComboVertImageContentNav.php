@@ -34,7 +34,7 @@ class ComboVertImageContentNav extends Partial
                 'instructions' => 'Leave empty to hide',
             ])
 
-	        ->addFields($this->get(fieldLinksRepeater::class))
+	        ->addFields($this->get(FieldLinksRepeater::class))
 
             ->addTrueFalse('showCTA', [
                     'label' => 'Show CTA?',

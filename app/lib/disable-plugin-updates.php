@@ -7,7 +7,7 @@
 function disable_plugin_updates( $value ) {
 
 	$pluginsToDisable = [
-		'wp-migrate-db-pro/wp-migrate-db-pro.php',
+		'wp-migrate-db-pro/plugin.php',
 		'plugin-folder2/plugin2.php'
 	];
 

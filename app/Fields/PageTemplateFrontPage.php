@@ -7,12 +7,12 @@ use App\Fields\Partials\RMMSectionSplitCardCard;
 use App\Fields\Partials\RMMSections\SplitContentStyledImageToOverlay;
 use App\Fields\Partials\RMMSections\SplitCardCard;
 use App\Fields\Partials\RMMSectionSplitContentReviews;
-use App\Fields\Partials\rmmSectionSplitContentServices;
+use App\Fields\Partials\RMMSectionSplitContentServices;
 use App\Fields\Partials\RMMSectionSplitContentStyledImage;
 use App\Fields\Partials\RMMSectionSplitPhotoContent;
 use App\Fields\Partials\NarrowIconContent;
-use App\Fields\Partials\rmmSectionMainServicesSection;
-use App\Fields\Partials\rmmSectionCenteredContent;
+use App\Fields\Partials\RMMSectionMainServicesSection;
+use App\Fields\Partials\RMMSectionCenteredContent;
 use App\Fields\Partials\RMMSectionRelatedPosts;
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
@@ -36,7 +36,7 @@ class PageTemplateFrontPage extends Field
                 'label' => 'Opening Content and Services',
             ])
 
-          ->addFields($this->get(rmmSectionSplitContentServices::class))
+          ->addFields($this->get(RMMSectionSplitContentServices::class))
 
 
             ->addTab('locations_tab', [
@@ -50,7 +50,7 @@ class PageTemplateFrontPage extends Field
             ->addTab('guarantees_tab', [
                 'label' => 'Guarantees',
             ])
-//           ->addFields($this->get(rmmSectionMainServicesSection::class))
+//           ->addFields($this->get(RMMSectionMainServicesSection::class))
 
             ->addTab('dualPromo_tab', [
                 'label' => 'Promo Boxes',

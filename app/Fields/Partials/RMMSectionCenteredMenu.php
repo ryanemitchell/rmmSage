@@ -32,7 +32,7 @@ class RMMSectionCenteredMenu extends Partial
                 'label' => 'Content',
             ])
 
-//            ->addFields($this->get(comboDisplayToggles::class))
+//            ->addFields($this->get(ComboDisplayToggles::class))
 
 
             /* ===  Section Content  ==== */
@@ -70,7 +70,7 @@ class RMMSectionCenteredMenu extends Partial
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+            ->addFields($this->get(SectionStylingTab::class))
             ->endGroup();
 
         return $rmmSectionCenteredMenu;

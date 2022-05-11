@@ -26,7 +26,7 @@ class RMMSectionCenteredContent extends Partial
                 'label' => 'Content',
             ])
 
-//            ->addFields($this->get(comboDisplayToggles::class))
+//            ->addFields($this->get(ComboDisplayToggles::class))
 
 
 
@@ -64,7 +64,7 @@ class RMMSectionCenteredContent extends Partial
                 'media_upload' => 1,
                 'delay' => 0,
             ])
-            ->addFields($this->get(comboListWithOptions::class))
+            ->addFields($this->get(ComboListWithOptions::class))
 
 	        ->addTrueFalse('showCTA', [
 		        'label' => 'Show CTA?',
@@ -79,7 +79,7 @@ class RMMSectionCenteredContent extends Partial
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+            ->addFields($this->get(SectionStylingTab::class))
             ->endGroup();
 
         return $rmmSectionCenteredContent;

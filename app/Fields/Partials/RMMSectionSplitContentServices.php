@@ -32,7 +32,7 @@ class RMMSectionSplitContentServices extends Partial
                 'label' => 'Content',
             ])
 
-//            ->addFields($this->get(comboDisplayToggles::class))
+//            ->addFields($this->get(ComboDisplayToggles::class))
 //            ->modifyField('display_from', [
 //                'choices' => [
 //                    'on' => 'Show',
@@ -110,7 +110,7 @@ class RMMSectionSplitContentServices extends Partial
                 ],
             ])
 
-            ->addFields($this->get(comboImageWithAltTitle::class))
+            ->addFields($this->get(ComboImageWithAltTitle::class))
 	        ->modifyField('combo_image_with_alt_title', ['required' => 1])
 
 
@@ -166,7 +166,7 @@ class RMMSectionSplitContentServices extends Partial
                 ],
             ])
 
-            ->addFields($this->get(comboImageWithAltTitle::class))
+            ->addFields($this->get(ComboImageWithAltTitle::class))
 	        ->modifyField('combo_image_with_alt_title', ['required' => 1])
 
             ->addText('title', [
@@ -193,7 +193,7 @@ class RMMSectionSplitContentServices extends Partial
 		        ],
 	        ])
 
-	        ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->addFields($this->get(ComboImageWithAltTitle::class))
 	        ->modifyField('combo_image_with_alt_title', ['required' => 1])
 
 	        ->addText('title', [
@@ -220,7 +220,7 @@ class RMMSectionSplitContentServices extends Partial
 		        ],
 	        ])
 
-	        ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->addFields($this->get(ComboImageWithAltTitle::class))
 	        ->modifyField('combo_image_with_alt_title', ['required' => 1])
 
 	        ->addText('title', [
@@ -248,7 +248,7 @@ class RMMSectionSplitContentServices extends Partial
             ->addTab('stylingTab', [
                 'label' => 'Styling',
             ])
-            ->addFields($this->get(sectionStylingTab::class))
+            ->addFields($this->get(SectionStylingTab::class))
             ->endGroup();
 
         return $rmmSectionSplitContentServices;
