@@ -2,8 +2,8 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\comboHeaderWithLevels;
-use App\Fields\Partials\fieldHeaderText;
+use App\Fields\Partials\ComboHeaderWithLevels;
+use App\Fields\Partials\FieldHeaderText;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 

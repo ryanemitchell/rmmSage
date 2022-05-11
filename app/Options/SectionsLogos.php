@@ -2,7 +2,7 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\comboImageWithAltTitle;
+use App\Fields\Partials\ComboImageWithAltTitle;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -118,7 +118,7 @@ class SectionsLogos extends Field
                 'button_label' => 'Add Logo',
 
             ])
-            ->addFields($this->get(comboImageWithAltTitle::class))
+            ->addFields($this->get(ComboImageWithAltTitle::class))
             ->endRepeater();
 
         return $sectionsLogos->build();

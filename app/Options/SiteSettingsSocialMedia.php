@@ -2,7 +2,7 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\socialLinks;
+use App\Fields\Partials\SocialLinks;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 

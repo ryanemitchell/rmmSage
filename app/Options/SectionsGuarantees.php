@@ -2,7 +2,7 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\comboImageWithAltTitle;
+use App\Fields\Partials\ComboImageWithAltTitle;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -196,7 +196,7 @@ class SectionsGuarantees extends Field
 
 
 
-            ->addFields($this->get(comboImageWithAltTitle::class))
+            ->addFields($this->get(ComboImageWithAltTitle::class))
 
 
 

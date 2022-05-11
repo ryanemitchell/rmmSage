@@ -2,8 +2,8 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\scripts;
-use App\Fields\Partials\settingsScripts;
+use App\Fields\Partials\Scripts;
+use App\Fields\Partials\SettingsScripts;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 

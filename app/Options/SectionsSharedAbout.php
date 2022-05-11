@@ -2,7 +2,7 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\comboImageWithAltTitle;
+use App\Fields\Partials\ComboImageWithAltTitle;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -127,7 +127,7 @@ class SectionsSharedAbout extends Field
 	        ])
 
 	        ->addMessage('message_field', 'This image will be resized to 555px wide if the image provided is wider. The aspect ratio will be maintained. ')
-            ->addFields($this->get(comboImageWithAltTitle::class))
+            ->addFields($this->get(ComboImageWithAltTitle::class))
 
         ;
         return $sectionsSharedAbout->build();

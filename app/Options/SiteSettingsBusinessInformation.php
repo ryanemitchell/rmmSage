@@ -152,7 +152,7 @@ class SiteSettingsBusinessInformation extends Field
                 'layout' => 'block',
                 'sub_fields' => ['witsage_business_zip_code'],
             ])
-            ->addFields($this->get(locationInformation::class))
+            ->addFields($this->get(LocationInformation::class))
             ->endGroup()
 
             ->addGroup('witsage_secondary_location', [
@@ -168,7 +168,7 @@ class SiteSettingsBusinessInformation extends Field
                 'layout' => 'block',
                 'sub_fields' => ['witsage_business_zip_code'],
             ])
-            ->addFields($this->get(locationInformation::class))
+            ->addFields($this->get(LocationInformation::class))
             ->endGroup()
         ;
 

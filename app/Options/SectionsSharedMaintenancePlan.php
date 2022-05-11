@@ -2,7 +2,7 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\comboImageWithAltTitle;
+use App\Fields\Partials\ComboImageWithAltTitle;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -111,7 +111,7 @@ class SectionsSharedMaintenancePlan extends Field
             ->addGroup('MaintenancePlanFields', [ 'label' => ''])
 
 	        ->addMessage('Inage Notes:', 'Check the front end after changing this image. It may require resizing to lay out properly in the design. Check desktop and mobile.')
-	        ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->addFields($this->get(ComboImageWithAltTitle::class))
 
             ->addText('header', [
                 'label' => 'Header',

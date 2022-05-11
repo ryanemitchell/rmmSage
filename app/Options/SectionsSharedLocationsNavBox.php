@@ -2,8 +2,8 @@
 
 namespace App\Options;
 
-use App\Fields\Partials\comboImageWithAltTitle;
-use App\Fields\Partials\fieldLinksRepeater;
+use App\Fields\Partials\ComboImageWithAltTitle;
+use App\Fields\Partials\FieldLinksRepeater;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -112,7 +112,7 @@ class SectionsSharedLocationsNavBox extends Field
             ->addGroup('SharedLocationsNavBox', [ 'label' => ''])
 
 	        ->addMessage('message_field', 'This image will be resized to 420px wide if the image provided is wider. The aspect ratio will be maintained. ')
-	        ->addFields($this->get(comboImageWithAltTitle::class))
+	        ->addFields($this->get(ComboImageWithAltTitle::class))
 
 
             ->addText('tagline', [
@@ -123,7 +123,7 @@ class SectionsSharedLocationsNavBox extends Field
                 'label' => 'Header',
             ])
 
-	        ->addFields($this->get( fieldLinksRepeater::class))
+	        ->addFields($this->get(FieldLinksRepeater::class))
 
 
 
