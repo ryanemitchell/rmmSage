@@ -1,8 +1,5 @@
 const plugin = require('tailwindcss/plugin')
 module.exports = {
-    presets: [
-        require('./tailwindPLugins/rmmTailwindPresets.js'),
-    ],
     content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
     theme: {
         extend: {
