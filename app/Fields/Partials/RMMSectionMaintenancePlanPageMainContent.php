@@ -71,7 +71,7 @@ class RMMSectionMaintenancePlanPageMainContent extends Partial
 //            ->addFields($this->get(OfferSelectSingleOffer::class))
 
 	            ->addFields($this->get(SectionServiceNavBox::class))
-	         ->addFields($this->get(sidebarBoxSinglePromotion::class))
+	         ->addFields($this->get(SidebarBoxSinglePromotion::class))
 
 
 		        ->addTrueFalse('showLocationsNavBox', [
