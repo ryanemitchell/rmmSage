@@ -1,5 +1,8 @@
 const plugin = require('tailwindcss/plugin')
 module.exports = {
+    presets: [
+        require('./tailwindPlugins/rmmTailwindPresets.js'),
+    ],
     content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
     theme: {
         extend: {
@@ -121,10 +124,10 @@ module.exports = {
         function ({addVariant}) {
             addVariant('grandChildren', '& > * > *')
         },
-        require('./tailwindPLugins/rmmRecurrentStyles'),
-        require('./tailwindPLugins/rmmTypography'),
-        require('./tailwindPLugins/rmmButtons'),
-        require('./tailwindPLugins/rmmFlickity'),
+        require('./tailwindPlugins/rmmRecurrentStyles'),
+        require('./tailwindPlugins/rmmTypography'),
+        require('./tailwindPlugins/rmmButtons'),
+        require('./tailwindPlugins/rmmFlickity'),
         plugin(function ({addBase, addComponents, addUtilities, theme}) {
             addBase({
             })
