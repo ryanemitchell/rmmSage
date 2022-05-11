@@ -1,0 +1,6 @@
+resources/views/template-development.blade.php
+resources/views/template-development-accordion.blade.php
+resources/views/template-development-flexible-content.blade.php
+resources/views/template-development-flickity.blade.php
+resources/views/template-development-show-all-acf-field.blade.php
+resources/views/template-development-swiper.blade.php
