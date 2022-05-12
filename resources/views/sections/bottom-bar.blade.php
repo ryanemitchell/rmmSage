@@ -12,7 +12,7 @@
 
         <small class="legal">
                 <span>
-                    <a href="/about/terms-and-conditions/" class="text-siteWhite lg:text-siteBlack hover:text-primary" data-wpel-link="internal">Terms and Conditions</a> | <a href="/about/privacy-policy/" class="text-siteWhite lg:text-siteBlack hover:text-primary" data-wpel-link="internal">Privacy
+                    <a href="/terms-and-conditions/" class="text-siteWhite lg:text-siteBlack hover:text-primary" data-wpel-link="internal">Terms and Conditions</a> | <a href="/privacy-policy/" class="text-siteWhite lg:text-siteBlack hover:text-primary" data-wpel-link="internal">Privacy
                     Policy</a>
                 </span>
 
