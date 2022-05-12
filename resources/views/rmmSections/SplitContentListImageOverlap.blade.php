@@ -9,7 +9,7 @@
 	<div class="flex justify-center items-center pt-4 lg:pt-12 inner__wrapper">
 		<div class="mx-auto w-full wrap">
 			<div class="flex flex-col lg:block">
-				<div class="flex flex-row order-2  justify-center self-center py-6 lg:w-[941px]  w-full bg-contain lg:order-1 lg:items-center bg-siteBlack bg-watermark-x bg-left-center lg:h-[400px] h-[209px]">
+				<div class="flex flex-row order-2  justify-center self-center py-6 lg:w-[941px]  w-full bg-contain lg:order-1 lg:items-center bg-siteBlack bg-watermark-x bg-left-center bg-no-repeat lg:h-[400px] h-[209px]">
 					<div class="flex flex-col justify-center items-center location lg:pr-[240px]">
 						@notempty($tagline)
 						<div class="tagline text-secondaryOnDark text-taglineMobile lg:text-[1.5rem]">{{$tagline}}</div>
