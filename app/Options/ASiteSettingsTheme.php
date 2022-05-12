@@ -5,7 +5,7 @@ namespace App\Options;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class SiteSettingsTheme extends Field
+class ASiteSettingsTheme extends Field
 {
     /**
      * The option page menu name.
