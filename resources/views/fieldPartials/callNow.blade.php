@@ -4,7 +4,7 @@
             <span class="font-bold text-siteBlack font-display">Call Now</span>&nbsp;<span class="font-bold text-primary group-hover:text-secondary">{{$primaryPhoneNumberDisplay}}</span>
         </a>
 
-        <a href="#" class="mb-2 lg:hidden btn btn-grad">Call Now</a>
+        <a href="tel:{{$primaryPhoneNumber}}" class="mb-2 lg:hidden btn btn-grad">Call Now</a>
 
 
 </span>

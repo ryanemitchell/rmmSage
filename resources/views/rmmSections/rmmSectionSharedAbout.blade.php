@@ -10,7 +10,7 @@
         <div class="flex flex-col justify-between items-center w-full lg:flex-row content">
             <div class="mb-6 w-11/12 lg:mb-0 lg:w-1/2 col1 flex justify-center <?php echo 'page' . $post->post_name;?>">
                 @notempty($image)
-                <img src="{{$image['sizes']['shared-about-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image aboutImage" loading="auto" height="{{$image['sizes']['shared-about-image-height']}}px" width="{{$image['sizes']['shared-about-image-width']}}px">
+                <img src="{{$image['sizes']['shared-about-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image aboutImage w-full lg:w-auto" loading="auto" height="{{$image['sizes']['shared-about-image-height']}}px" width="{{$image['sizes']['shared-about-image-width']}}px">
                 @endnotempty
                 <iframe loading="lazy" title="The Sansone Air Conditioning Story" width="500" height="281" data-src="https://www.youtube.com/embed/{{$videoID}}?feature=oembed" allow="" allowfullscreen="" class="lazy aboutVideo"></iframe>
 
