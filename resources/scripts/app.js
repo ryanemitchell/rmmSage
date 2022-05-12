@@ -4,11 +4,13 @@ import Flickity from "flickity/js"
 import AOS from 'aos';
 import {rmmExternalLinks} from "@scripts/modules/rmmExternalinks";
 import {slideToggle} from "@scripts/modules/slide-functions";
+import LazyLoad from "vanilla-lazyload";
 
 
 window.Flickity = Flickity;
 window.Accordion = Accordion;
 window.slideToggle = slideToggle;
+window.Lazyload = LazyLoad;
 /**
  * app.main
  */
@@ -53,9 +55,19 @@ domReady(() => {
 
   // https://github.com/michu2k/Accordion
 
-
-
-
+  /* ===========================  Lazy Loading  ========================== */
+  window.lazyLoadOptions = {
+    // Your custom settings go here
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+      "LazyLoad::Initialized",
+      function (event) {
+        window.lazyLoadInstance = event.detail.instance;
+      },
+      false
+  );
 
 
   /* ===========================  InItialize multiple Accordions  ========================== */

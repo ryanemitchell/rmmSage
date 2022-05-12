@@ -59,6 +59,7 @@
     "aos": "^2.3.4",
     "breakpoint-helper": "^1.0.4",
     "createjs": "^1.0.1",
-    "flickity": "^3.0.0"
+    "flickity": "^3.0.0",
+    "vanilla-lazyload": "^17.8.1"
   }
 }

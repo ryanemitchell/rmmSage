@@ -12,7 +12,26 @@
                 @notempty($image)
                 <img src="{{$image['sizes']['shared-about-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image aboutImage" loading="auto" height="{{$image['sizes']['shared-about-image-height']}}px" width="{{$image['sizes']['shared-about-image-width']}}px">
                 @endnotempty
-                <iframe loading="lazy" title="The Sansone Air Conditioning Story" width="500" height="281" src="https://www.youtube.com/embed/{{$videoID}}?feature=oembed" allow="" allowfullscreen="" class="aboutVideo"></iframe>
+                <iframe loading="lazy" title="The Sansone Air Conditioning Story" width="500" height="281" data-src="https://www.youtube.com/embed/{{$videoID}}?feature=oembed" allow="" allowfullscreen="" class="lazy aboutVideo"></iframe>
+
+
+                <!-- Embedded YouTube video Markup with the lazy class -->
+                <script>
+                    // Set the options globally
+                    // to make LazyLoad self-initialize
+                    window.lazyLoadOptions = {
+                        // Your custom settings go here
+                    };
+
+                    // Listen to the initialization event
+                    // and get the instance of LazyLoad
+                    window.addEventListener("LazyLoad::Initialized", function (event) {
+                        window.lazyLoadInstance = event.detail.instance;
+                    }, false);
+                </script>
+
+
+
                 <style>
 
                     @if (is_front_page())
