@@ -5,28 +5,28 @@ namespace App\Options;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class SettingsTheme extends Field
+class SiteSettingsDeveloper extends Field
 {
     /**
      * The option page menu name.
      *
      * @var string
      */
-    public $name = 'Theme';
+    public $name = 'Developer';
 
     /**
      * The option page menu slug.
      *
      * @var string
      */
-    public $slug = 'theme';
+    public $slug = 'site-settings-developer';
 
     /**
      * The option page document title.
      *
      * @var string
      */
-    public $title = 'Theme';
+    public $title = 'Developer';
 
     /**
      * The option page permission capability.
@@ -94,7 +94,7 @@ class SettingsTheme extends Field
      */
     public function updatedMessage()
     {
-        return __('Theme Updated', 'acf');
+        return __('Developer Updated', 'acf');
     }
 
     /**
@@ -104,25 +104,26 @@ class SettingsTheme extends Field
      */
     public function fields()
     {
-        $theme = new FieldsBuilder('theme');
+        $developer = new FieldsBuilder('developer');
 
-        $theme
-	        ->addText('booking_link', [
-		        'label' => 'Booking Link',
+        $developer
+	        ->addTrueFalse('rmm_visual_debug', [
+		        'label' => 'Visual Debugging',
 		        'instructions' => '',
 		        'required' => 0,
+		        'conditional_logic' => [],
 		        'wrapper' => [
 			        'width' => '',
 			        'class' => '',
 			        'id' => '',
 		        ],
-		        'default_value' => '',
-		        'placeholder' => '',
-		        'prepend' => '',
-		        'append' => '',
-		        'maxlength' => '',
+		        'message' => '',
+		        'default_value' => 0,
+		        'ui' => 0,
+		        'ui_on_text' => '',
+		        'ui_off_text' => '',
 	        ]);
 
-        return $theme->build();
+        return $developer->build();
     }
 }

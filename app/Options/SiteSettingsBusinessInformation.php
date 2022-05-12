@@ -20,7 +20,7 @@ class SiteSettingsBusinessInformation extends Field
      *
      * @var string
      */
-    public $slug = 'business-information';
+    public $slug = 'site-settings-businessinformation';
 
     /**
      * The option page document title.

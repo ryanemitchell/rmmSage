@@ -21,7 +21,7 @@ class SiteSettingsInsertScripts extends Field
      *
      * @var string
      */
-    public $slug = 'insert-scripts';
+    public $slug = 'site-settings-scripts';
 
     /**
      * The option page document title.

@@ -21,7 +21,7 @@ class SiteSettingsNotFoundPage extends Field
      *
      * @var string
      */
-    public $slug = 'site-settings-not-found-page';
+    public $slug = 'site-settings-notfound';
 
     /**
      * The option page document title.
