@@ -8,22 +8,23 @@
 					<!-- Start of .footer-col-inner -->
 					<div class="my-6 lg:hidden mobileLogo">
 						<a href="{!! Site_url() !!}" class="" class="block flex justify-center items-center">
-							<img src="{{$imageAsset}}expertAir/expert_air_logo_desktop_footer.png" alt="Expert Air Logo"
+							<img src="{{$imageAsset}}expertAir/expert_air_logo_mobile_footer.png" alt="Expert Air Logo"
 							     class="" loading="lazy" width="311px" height="64px">
 						</a>
 
 					</div>
 					<div class="hidden lg:block lg:mb-4 desktopLogo">
 						<a href="{!! Site_url() !!}">
-							<img src="{{$imageAsset}}expertAir/expert_air_logo_mobile_footer.png" alt="Expert Air Logo"
-							     class="" loading="lazy" width="288px" height="59px">
+							<img src="{{$imageAsset}}expertAir/expert_air_logo_desktop_footer.png" alt="Expert Air Logo"
+
+							     class="" loading="lazy" width="311px" height="64px">
 						</a>
 					</div>
 
 					<div class="flex flex-col items-center mb-6 lg:mb-4 cta">
 
-						@include('fieldPartials.callNow')
-						@include('fieldPartials.bookNow')
+						<div class="lg:mb-4">@include('fieldPartials.callNow')</div>
+						<div class="">@include('fieldPartials.bookNow')</div>
 
 					</div>
 

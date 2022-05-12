@@ -11,7 +11,7 @@
         <div class="flex flex-col justify-between items-center w-full lg:flex-row content">
             <div class="mb-6 lg:mb-0 lg:w-1/2 col1 flex justify-center <?php echo'page-'.$post->post_name;?> w-full lg:w-auto">
                 @notempty($image)
-                <img src="{{$image['sizes']['split-content-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image aboutImage p-4 pb-0 lg:p-0" loading="auto" height="{{$image['sizes']['split-content-image-height']}}px" width="{{$image['sizes']['split-content-image-width']}}px">
+                <img src="{{$image['sizes']['split-content-image']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image aboutImage p-4 pb-0 lg:p-0  lg:mr-16" loading="auto" height="{{$image['sizes']['split-content-image-height']}}px" width="{{$image['sizes']['split-content-image-width']}}px">
                 @endnotempty
             </div>
             <div class="px-4 mb-6 lg:pl-0 lg:mb-0 lg:w-1/2 col2 lg:px-o">

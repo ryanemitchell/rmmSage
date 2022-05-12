@@ -13,7 +13,7 @@
             <div class="flex flex-col justify-center items-center py-6 px-4 lg:py-0 lg:px-0 content text-siteWhite" data-aos="fade-right">
                 @svg('images/expertAir/x_icon_dual_tone.svg', 'icon lg:mb-4 mb-2')
                 @notempty($header)
-                <h2 class="mb-4 lg:mb-4 text-siteWhite">{{$header}}</h2>
+                <h2 class="mb-4 lg:mb-4 text-siteWhite lg:text-[32px] text-[28px]">{{$header}}</h2>
                 @endnotempty
                 @notempty($content)
                 <div class="mb-4 text-left lg:mb-4 lg:text-center lg:max-w-[400px]">

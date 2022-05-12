@@ -9,7 +9,7 @@
 
 		@foreach($relatedPosts as $relatedPost)
 
-				<a href="@permalink($relatedPost->ID)" class="flex items-center mr-9 font-bold lg:border-r-2 lg:border-secondary only:border-none only:mr-0 last-of-type:border-none last-of-type:mr-0 lg:h-12">
+				<a href="@permalink($relatedPost->ID)" class="flex items-center mr-9 font-bold lg:border-r-2 lg:border-secondary only:border-none only:mr-0 last-of-type:border-none last-of-type:mr-0 lg:h-12 font-display">
 					<div class="postTitle max-w-[200px]">{{$relatedPost->post_title}}</div>
 					<div class="mr-10 postTitle">@svg('images/expertAir/arrow-small-green.svg', 'linkIndicator ml-2')</div>
 				</a>

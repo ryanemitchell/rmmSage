@@ -10,7 +10,7 @@
 
 
 		<div class="flex justify-center items-center content__wrapper">
-			<div class="flex flex-col justify-center items-center py-6 px-4 lg:py-0 lg:py-16 lg:px-0 content text-siteWhite" data-aos="fade-left">
+			<div class="flex flex-col justify-center items-center py-0 px-4 lg:py-0 lg:py-16 lg:px-0 content text-siteWhite" data-aos="fade-left">
 				<div class="tagline text-secondaryOnDark">Technology-Led HVAC Solutions</div>
 				<h2 class="mb-6 text-white lg:mb-8">The Seamless Experience</h2>
 

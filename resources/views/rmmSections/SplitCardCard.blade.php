@@ -6,14 +6,14 @@
 * Author: @ryanemitchell
 ==========================================================================--}}
 <section
-		class="@notempty($sectionClasses){{$sectionClasses}}@endnotempty flex relative justify-center items-center place-items-center pt-0 bg-no-repeat rmmsection to-the-edge full-width-bound bg-blueTriangle mb-mobileVGap lg:py-halfDesktopVGap">
+		class="@notempty($sectionClasses){{$sectionClasses}}@endnotempty flex relative justify-center items-center place-items-center pt-0 bg-no-repeat rmmsection to-the-edge full-width-bound bg-blueTriangle mb-halfMobileVGap lg:py-halfDesktopVGap">
 	<div class="flex justify-center items-center pt-4 lg:pt-12 inner__wrapper">
 		<div class="grid gap-x-6 justify-between items-center w-full lg:grid-cols-2">
 			<div class="col1">
 				<div class="promoCard">
-					<div class="py-8 mb-6 bg-no-repeat bg-cover lg:mb-0 image hasBlueBlackOverlay"
+					<div class="lg:py-8 py-8 mb-6 bg-no-repeat bg-cover lg:mb-0 image hasBlueBlackOverlay"
 					     @notempty($leftPromoImage)style='background-image:url("{{$leftPromoImage['url']}}")'@endnotempty>
-						<div class="flex flex-col justify-center items-center py-6 px-4 lg:py-0 lg:px-0 content text-siteWhite">
+						<div class="flex flex-col justify-center items-center px-4 lg:py-0 lg:px-0 content text-siteWhite">
 							@notempty($leftPromoIcon)
 							<div class="imageWrapper icon lg:mb-4 mb-2 " data-aos="fade-up">
 								<img src="{{$leftPromoIcon['url']}}" alt="{{$leftPromoIconALT}}"
@@ -46,9 +46,9 @@
 
 			<div class="col2">
 
-				<div class="py-8 mb-6 bg-no-repeat bg-cover lg:mb-0 image hasBlueBlackOverlay"
+				<div class="lg:py-8 py-8 mb-6 bg-no-repeat bg-cover lg:mb-0 image hasBlueBlackOverlay"
 				     @notempty($rightPromoImage)style='background-image:url("{{$rightPromoImage['url']}}")'@endnotempty>
-					<div class="flex flex-col justify-center items-center py-6 px-4 lg:py-0 lg:px-0 content text-siteWhite">
+					<div class="flex flex-col justify-center items-center px-4 lg:py-0 lg:px-0 content text-siteWhite">
 						@notempty($rightPromoIcon)
 						<div class="imageWrapper icon lg:mb-4 mb-2" data-aos="fade-up">
 							<img src="{{$rightPromoIcon['url']}}" alt="{{$rightPromoIconALT}}"
