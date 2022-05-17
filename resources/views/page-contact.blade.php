@@ -9,7 +9,7 @@
     @while (have_posts())
         <div class="mb-6">
         @php(the_post())
-        @php(the_content())
+        @php(the_content())`
         </div>
     @endwhile
         <div class="contactSection mt-4 grid gap-8 lg:mt-0 lg:grid-cols-2">

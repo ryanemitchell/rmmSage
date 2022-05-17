@@ -43,7 +43,7 @@
 						<nav class="flex justify-items-center text-base text-siteBlack">
 							<a href="{{$subService1Link}}" class="hasDivider text-siteBlack hover:noShiftBoldPrimary" title="{{$subService1Title}}">{{$subService1Title}}</a>
 							<a href="{{$subService2Link}}" class="hasDivider text-siteBlack hover:noShiftBoldPrimary" title="{{$subService2Title}}">{{$subService2Title}}</a>
-							<a href="{{$subService3Link}}" class="hasDivider text-siteBlack hover:noShiftBoldPrimary" title="{{$subService1Title}}">{{$subService3Title}}</a>
+							<a href="{{$subService3Link}}" class="hasDivider text-siteBlack hover:noShiftBoldPrimary lg:after:hidden" title="{{$subService1Title}}">{{$subService3Title}}</a>
 						</nav>
 					</div>
 

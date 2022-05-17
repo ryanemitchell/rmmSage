@@ -9,7 +9,7 @@ const rmmButtons = plugin(({ addComponents, theme }) => {
             display: 'inline-flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: theme("spacing.buttonHeight"),
+            height: '40px',
             minWidth: theme("spacing.buttonMinWidth"),
             backgroundColor: theme("colors.siteBlack"),
             backgroundImage: 'none',
@@ -19,6 +19,9 @@ const rmmButtons = plugin(({ addComponents, theme }) => {
             fontWeight: 'bold',
             paddingLeft: theme("spacing.buttonHPadding"),
             paddingRight: theme("spacing.buttonHPadding"),
+            '@screen lg' : {
+                height: theme("spacing.buttonHeight"),
+            },
             '&:hover': {
                 backgroundColor: theme("colors.primary"),
                 backgroundImage: 'none',

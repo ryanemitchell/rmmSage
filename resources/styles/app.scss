@@ -256,3 +256,11 @@
 
   margin-bottom: 24px;
 }
+
+.wp-block-navigation-link a {
+  color: theme("colors.primary") !important;
+
+  &:hover {
+    color: theme("colors.secondary") !important;
+  }
+}

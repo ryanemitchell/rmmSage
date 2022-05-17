@@ -17,7 +17,7 @@ use function Roots\bundle;
 
 
 
-add_filter('acf/init', function () {
+add_filter('    acf/init', function () {
 	if (get_field('rmm_visual_debug', 'option')) :
 		add_filter('body_class', function ($classes) {
 			return array_merge($classes, array( 'rmmVisualDebug' ));

@@ -3,9 +3,14 @@ const plugin = require('tailwindcss/plugin')
 
 const rmmTypography = plugin(({ addBase, theme }) => {
     addBase({
+        'body,html,main': {
+            'color' : theme("colors.siteBlack"),
+            fontWeight: '500',
+        },
         'p': {
             fontSize: '1rem',
             lineHeight: '1.375',
+            fontWeight: '500',
             '@screen lg' : {
                 fontSize: '1rem',
                 lineHeight: '1.375',
@@ -38,8 +43,8 @@ const rmmTypography = plugin(({ addBase, theme }) => {
             fontSize: '20px',
             lineHeight: '24px',
             '@screen lg' : {
-                fontSize: '24px',
-                lineHeight: '28px',
+                fontSize: '20px',
+                lineHeight: '24px',
             },
         },
         /* ==========================================================================

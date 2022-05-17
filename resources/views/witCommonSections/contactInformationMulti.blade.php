@@ -30,7 +30,7 @@
 	@endoptions
 	@endhasoptions
 
-	<div class="grid mb-6 lg:grid-cols-1 lg:gap-8 lg:mb-8 multipleLocationsWrapper">
+	<div class="grid mb-6 lg:grid-cols-2 lg:gap-16 lg:mb-8 multipleLocationsWrapper">
 
 
 {{--		PRIMARY LOCATION--}}

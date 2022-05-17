@@ -11,7 +11,7 @@
 			@include('fieldPartials.pageHeaderBookNowOnDark')
 		</div>
 
-		<div class="inline mb-2 ml-2 lg:block lg:order-1 lg:mb-2 lg:ml-0 children:font-[24px]">
+		<div class="inline mb-2 ml-2 lg:block lg:order-1 lg:mb-4 lg:ml-0 children:font-[24px]">
 			@include('fieldPartials.pageHeaderCallNowOnDark')
 		</div>
 	</div>

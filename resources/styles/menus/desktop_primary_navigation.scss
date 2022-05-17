@@ -1,6 +1,6 @@
 ul#primary-desktop-menu {
   display: flex;
-  margin-top: 14px;
+  //margin-top: 14px;
 
   > li {
     position: relative;
@@ -87,7 +87,7 @@ ul#primary-desktop-menu {
     a {
       margin: 0 !important;
       padding: 8px 26px 8px 16px !important;
-      font-weight: 400 !important;
+      font-weight: 500;
       color: theme("colors.white") !important;
       text-transform: none !important;
       text-align: left !important;
@@ -95,6 +95,7 @@ ul#primary-desktop-menu {
       &:hover {
         color: theme("colors.secondaryOnDark") !important;
         padding-right: 15px !important;
+        font-weight: bold;
       }
     }
 
@@ -133,15 +134,19 @@ ul#primary-desktop-menu {
   ul li.current_page_item {
     > a {
       color: theme("colors.grey") !important;
-      font-weight: bold !important;
+      font-weight: bold;
     }
   }
 
   @at-root {
     .stuck-header {
       ul#primary-desktop-menu {
-        li a {
+        > li > a {
           color: theme("colors.black");
+
+          &:hover {
+            color: theme("colors.primary") !important;
+          }
         }
 
         .current_page_parent > a {
@@ -152,6 +157,14 @@ ul#primary-desktop-menu {
           border-left: 1px solid theme("colors.grey");
           border-right: 1px solid theme("colors.grey");
           border-bottom: 2px solid theme("colors.grey");
+
+          li > a {
+            //color: theme("colors.black");
+
+            &:hover {
+              color: theme("colors.secondaryOnDark") !important;
+            }
+          }
           //border-top: 1px solid theme("colors.grey");
         }
       }

@@ -45,7 +45,7 @@
 
 
 @istrue($showCTA)
-		<div class="cta grandChildren:self-start">
+		<div class="cta grandChildren:self-start lg:mt-6">
 			@include('fieldPartials.bookNow')
 		</div>
 		@endistrue

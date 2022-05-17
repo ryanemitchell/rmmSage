@@ -39,19 +39,19 @@
 				<div class="lg:mt-11 lg:mb-4 lg:ml-20 connect">
 					<h2 class="mb-6 text-center text-white lg:text-left text-mt1 lg:text-dt1">Connect</h2>
 					<div class="mb-6 lg:mb-4 hours">
-						<div class="flex items-start mb-6 lg:mb-4 businessHours">
+						<div class="flex items-start mb-6 lg:mb-4 businessHours 'color' : theme("colors.siteBlack"),">
 							<div>@svg('images/expertAir/icons_clock.svg', 'block mt-2')</div>
-							<div class="ml-2"> @wpautokp($businessHours)</div>
+							<div class="ml-2 "> @wpautokp($businessHours)</div>
 						</div>
 
 						<div class="flex items-start mb-6 lg:mb-4 primaryAddress">
 							<div>@svg('images/expertAir/icons_pin.svg', 'block mt-2')</div>
-							<div class="ml-2 grandChildren:text-white grandChildren:hover:text-white">@include('fieldPartials.businessAddress')</div>
+							<div class="ml-2 grandChildren:text-white grandChildren:hover:text-secondaryOnDark">@include('fieldPartials.businessAddress')</div>
 						</div>
 
 						<div class="flex items-start mb-6 lg:mb-4 secondaryAddress">
 							<div>@svg('images/expertAir/icons_pin.svg', 'block mt-2')</div>
-							<div class="ml-2 grandChildren:text-white grandChildren:hover:text-white"> @include('fieldPartials.businessSecondaryAddress')</div>
+							<div class="ml-2 grandChildren:text-white grandChildren:hover:text-secondaryOnDark"> @include('fieldPartials.businessSecondaryAddress')</div>
 						</div>
 
 					</div>

@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col items-end col2">
+    <div class="flex flex-col items-end col2 lg:mt-2">
 
             <div id="mobile-menu-toggle" class="p-0 bg-none border-none lg:hidden menu-toggle filter" aria-controls="primary-menu"
               aria-expanded="false">
@@ -32,7 +32,7 @@
             </div>
 
 
-      <div class="flex hidden justify-end lg:block topCtaWrapper"> <!-- Start of .topCta -->
+      <div class="flex hidden justify-end lg:block topCtaWrapper lg:mb-2"> <!-- Start of .topCta -->
           <a href="tel:{{$primaryPhoneNumber}}" class="hidden mb-4 lg:inline callNow group text-[20px]">
               <span class="font-bold text-white font-display group-hover:text-secondaryOnDark">Call Now</span>&nbsp;<span class="font-bold text-secondaryOnDark">{{$primaryPhoneNumberDisplay}}</span>
           </a>
@@ -52,7 +52,7 @@
           {!! wp_nav_menu([
 		'theme_location' => 'primary_desktop_navigation',
 		'menu_id' => 'primary-desktop-menu',
-		'menu_class' => 'menu p-0 m-0',
+		'menu_class' => 'menu p-0 mt-0',
 		'container' => 'none',
 	]) !!}
         @endif

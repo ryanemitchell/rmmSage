@@ -1,7 +1,7 @@
 <div class="mb-12 guarantees guaranteesCarousel">
 
 	<div class="carousel onDark"
-	     data-flickity='{ "freeScroll": true, "prevNextButtons": false, "fade": true, "initialIndex": 1 }'>
+	     data-flickity='{ "freeScroll": true, "prevNextButtons": false, "fade": true, "initialIndex": 0 }'>
 		@notempty($guarantees)
 		@foreach($guarantees as $guarantee)
 			<div class="flex flex-col justify-center items-center w-full carousel-cell h-[200px]">

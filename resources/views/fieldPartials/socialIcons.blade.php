@@ -5,7 +5,7 @@
   @options('field_social_media_social_links')
 
   <a href="@sub('site_URL')" target="_blank" class="social-icon-link" title="@sub('site_name')" >
-    <div class="social-icon social-icon-@sub('site_name') h-[32px] w-[32px]">
+    <div class="social-icon social-icon-@sub('site_name') h-[36px] w-[36px]">
     </div>
 
   </a>
