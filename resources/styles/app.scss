@@ -264,3 +264,11 @@
     color: theme("colors.secondary") !important;
   }
 }
+
+
+.rmmSectionSplitPhotoContent .page-maintenance-plan img {
+  @include respond(mobile) {
+      max-width: 90vw;
+  }
+
+}
