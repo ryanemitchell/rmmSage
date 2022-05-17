@@ -52,7 +52,7 @@ add_filter('nav_menu_css_class', 'add_additional_class', 1, 3);
 
 function new_nav_menu_items($items, $args) {
 	if( $args->theme_location == 'not_found_navigation' ){
-		$homelink = '<li id="back-link" class="py-5 px-10 w-full font-bold duration-500 cursor-pointer menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-64 transition-[background] font-display" data-tw-selected="1651068561221"><a href="http://sb-expert-air.local/" data-tw-selected="1651068559346" class="">Back to Previous Page</a></li>';
+		$homelink = '<li id="back-link" class="lg:py-5 px-10 w-full font-bold duration-500 cursor-pointer menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-64 transition-[background] font-display" ><a href="http://sb-expert-air.local/" class="">Back to Previous Page</a></li>';
 		$items = $homelink . $items;
 	}
 	return $items;
