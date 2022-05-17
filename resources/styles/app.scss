@@ -85,6 +85,15 @@
   --desktop-h1: 43px; // medium red
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+}
+
 @layer base {
   svg {
     display: inline;
@@ -265,10 +274,9 @@
   }
 }
 
-
 .rmmSectionSplitPhotoContent .page-maintenance-plan img {
   @include respond(mobile) {
-      max-width: 90vw;
+    max-width: 90vw;
   }
 }
 

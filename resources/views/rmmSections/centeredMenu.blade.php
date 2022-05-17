@@ -8,11 +8,11 @@
 <section  class="centeredMenu bg-siteBlack to-the-edge bg-contain my-halfMobileVGap to-the-edge lg:mt-desktopVGap lg:mb-halfDesktopVGap shadow-common flex justify-center items-center relative place-items-center lr:rounded-common mobile-full-width bg-watermark-x bg-no-repeat">
 	<div class="w-full bg-no-repeat bg-contain bgImageHolder bg-hero-pattern bg-[-2rem_center] rounded-common lg:bg-[1rem_center]">
 	<div class="flex justify-center items-center place-items-center text-white inner__wrapper ">
-		<div class="flex flex-col place-items-center content lg:my-[60px] my-8">
+		<div class="flex flex-col place-items-center content lg:my-[60px] my-4">
 
 			{{--== Header ==--}}
 		@notempty($header)
-			<h2 class="mb-6 lg:mb-6 header text-mh2 lg:text-h2 text-siteWhite">
+			<h2 class="mb-4 lg:mb-6 header text-mh2 lg:text-h2 text-siteWhite">
 				{{$header}}
 			</h2>
 		@endnotempty

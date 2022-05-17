@@ -23,7 +23,7 @@
 								@if ($loop->iteration == 4)
 									</ul>   {{--close the first list--}}
 
-									<ul class="grid hidden grid-cols-1 lg:grid lg:grid-cols-2 listItems hiddenList">
+									<ul class="grid hidden grid-cols-1 lg:grid lg:grid-cols-2 listItems hiddenList list-none">
 								@endif
 							@endif
 
