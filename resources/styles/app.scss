@@ -265,10 +265,21 @@
   }
 }
 
-
 .rmmSectionSplitPhotoContent .page-maintenance-plan img {
   @include respond(mobile) {
-      max-width: 90vw;
+    max-width: 90vw;
   }
+}
 
+.page-template-page-maintenance-plan {
+  .rmmSectionSplitPhotoContent {
+    .page-maintenance-plans {
+      img {
+        @include respond(mobile) {
+          width: 90vw;
+          max-width: 90vw;
+        }
+      }
+    }
+  }
 }

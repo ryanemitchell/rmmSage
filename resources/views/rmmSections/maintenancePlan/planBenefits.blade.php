@@ -10,7 +10,7 @@
 
 			@notempty($benefits)
 
-			<ul class="grid grid-cols-1 lg:grid-cols-2 listItems list-marker-none">
+			<ul class="grid grid-cols-1 lg:grid-cols-2 listItems list-marker-none list-none">
 
 		 @foreach($benefits as $item)
 
