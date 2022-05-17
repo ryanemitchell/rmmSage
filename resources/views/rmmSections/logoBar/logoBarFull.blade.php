@@ -1,7 +1,7 @@
 <div class="mt-8 mb-12 lg:my-8 logoBar logoBarFull">
 
 	<div class="lg:flex lg:justify-between carousel disableOnDesktop"
-	     data-flickity='{ "watchCSS": true, "freeScroll": true, "prevNextButtons": false, "fade": true }'>
+	     data-flickity='{ "watchCSS": true, "freeScroll": false, "prevNextButtons": false, "fade": true }'>
 		@notempty($logos)
 		@foreach($logos as $logo)
 			<div class="flex justify-center w-full lg:w-auto lg:h-28 carousel-cell h-[115px]" data-aos="fade-up">
