@@ -43,6 +43,14 @@ class RMMSectionCenteredContent extends Partial
                     'value' => 'On',],
             ])
 
+	        ->addTrueFalse('showSection', [
+		        'label' => 'Show this section?',
+		        'default_value' => 1,
+		        'ui' => 1,
+		        'ui_on_text' => 'Yes',
+		        'ui_off_text' => 'No',
+	        ])
+
 	        ->addText('header', [
 		        'label' => 'Header',
 	        ])

@@ -1,3 +1,4 @@
+@notempty($showSection)
 <section class="rmmsection to-the-edge my-halfMobileVGap lg:to-the-edge lg:mt-desktopVGap lg:mb-halfDesktopVGap flex justify-center items-center relative place-items-center">
 	<div class="flex justify-center items-center inner__wrapper bg-siteGrey shadow-common rounded-common ">
 		<div class="content py-4 lg:py-6">
@@ -39,3 +40,4 @@
 		</div> {{-- END content--}}
 	</div> {{--  END inner__wrapper--}}
 </section>
+@endnotempty

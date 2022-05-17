@@ -6,7 +6,7 @@
 			<div class="flex flex-col justify-center items-center content" data-aos="fade-right">
 				<img src="{{$imageAsset}}/expertAir/icons_google_stars.png" alt="Google Reviews" class="mb-4 image" loading="lazy" height="45px" width="326px">
 
-				<h2 class="text-center text-white lg:mb-8 max-w-[250px]">{{$header}}</h2>
+				<h2 class="text-center text-white lg:mb-8 max-w-[250px] lg:text-[32px]">{{$header}}</h2>
 				<div class="hidden mb-4 lg:block cta grandChildren:self-start">
 					<a href="/about-us/reviews" class="mb-2 btn btn-white-onDark">Read Reviews</a>
 				</div>

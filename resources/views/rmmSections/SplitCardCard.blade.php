@@ -26,7 +26,7 @@
 							<h2 class="mb-4 text-center lg:mb-4 text-siteWhite" data-aos="fade-up">{{$leftPromoHeader}}</h2>
 							@endnotempty
 							@notempty($leftPromoContent)
-							<div class="mb-4 text-center lg:mb-4 lg:max-w-[400px]" data-aos="fade-up">
+							<div class="mb-4 text-center lg:mb-4 lg:max-w-[400px] font-display lg:text-[24px]" data-aos="fade-up">
 								@wpautokp($leftPromoContent)
 							</div>
 							@endnotempty

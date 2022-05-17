@@ -11,7 +11,7 @@
 
 	<div class="flex lg:flex-col lg:items-center" data-aos="zoom-in-up"
 	   data-aos-duration="1000"   data-aos-easing="linear"   >
-		<div class="inline mb-6 lg:block lg:mb-6">
+		<div class="inline mb-6 lg:block lg:mb-6 lg:grandChildren:text-[24px]">
 			@include('fieldPartials.callNowOnDark')
 		</div>
 

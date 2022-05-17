@@ -49,7 +49,9 @@ class CenteredContent extends Composer
 //	        field_page_template_services_sectioncenteredcontent_group_sectioncontent_list_with_options_list_items_listitem_name
 
             /*** phpcs:disable */
-            'header'    => ( new RmmSageFunctions() )->rmmGetFields( $fieldGroupName . $sectionName )['sectionContent']['header'],
+			'showSection'    => ( new RmmSageFunctions() )->rmmGetTrueFalseField( $fieldGroupName . $sectionName )['sectionContent']['showSection'],
+
+			'header'    => ( new RmmSageFunctions() )->rmmGetFields( $fieldGroupName . $sectionName )['sectionContent']['header'],
             'content'    => ( new RmmSageFunctions() )->rmmGetFields( $fieldGroupName . $sectionName )['sectionContent']['content'],
 
             'listItems'    => ( new RmmSageFunctions() )->rmmGetFields( $fieldGroupName . $sectionName )['sectionContent']['list_with_options']['list_items'],

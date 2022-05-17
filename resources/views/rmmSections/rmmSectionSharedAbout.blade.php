@@ -69,7 +69,7 @@
             </div>
             <div class="mb-0 w-11/12 lg:pl-14 lg:mb-0 lg:w-1/2 col2">
                 <div class="tagline text-secondary text-[1.5rem]">{{$tagline}}</div>
-                <h2 class="max-w-xs lg:mb-4 lg:max-w-fit lg:text-mt1">{{$header}}</h2>
+                <h2 class="max-w-xs lg:mb-4 lg:max-w-fit lg:text-[32px]">{{$header}}</h2>
                 <div class="mb-2 lg:mb-4 lg:max-w-[480px]">
                     @wpautokp($sharedaboutsection['content'])
                 </div>

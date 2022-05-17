@@ -16,7 +16,7 @@
 						@endnotempty
 
 						@notempty($header)
-						<h2 class="mb-4 text-white lg:mb-4">{{$header}}</h2>
+						<h2 class="mb-4 text-white lg:mb-4 lg:text-[32px]">{{$header}}</h2>
 						@endnotempty
 
 						@notempty($links)

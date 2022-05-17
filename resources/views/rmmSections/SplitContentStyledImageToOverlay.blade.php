@@ -9,7 +9,7 @@
 				     data-aos="fade-right">
 					@svg('images/expertAir/icons_24h.svg', 'icon lg:mb-4 mb-2')
 					@notempty($header)
-					<h2 class="mb-4 lg:mb-4 text-siteWhite">{{$header}}</h2>
+					<h2 class="mb-4 lg:mb-4 text-siteWhite lg:text-[32px]">{{$header}}</h2>
 					@endnotempty
 
 					@notempty($content)
