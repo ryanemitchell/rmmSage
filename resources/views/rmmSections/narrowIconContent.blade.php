@@ -6,7 +6,7 @@
 * Author: @ryanemitchell
 ==========================================================================--}}
 {{--@dump($topGroupFields)--}}
-<section class="justify-center items-center narrowIconContentflex rmmsection narrow-width my-halfMobileVGap lg:to-the-edge lg:my-halfDesktopVGap lg:bg-grey lg:w-[800px] " data-aos="zoom-out">
+<section class="justify-center items-center narrowIconContentflex rmmsection narrow-width my-halfMobileVGap lg:to-the-edge lg:my-halfDesktopVGap lg:bg-grey lg:w-[800px] lg:mt-0" data-aos="zoom-out">
 	<div class="flex justify-center items-center inner__wrapper lg:siteShadowedBox">
 		<div class="flex place-items-center content lg:w-[585px] lg:py-desktopVGap">
 

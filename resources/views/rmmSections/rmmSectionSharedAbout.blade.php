@@ -5,7 +5,7 @@
 * Reference: NA
 * Author: @ryanemitchell
 ==========================================================================--}}
-<section class="flex relative justify-center items-center place-items-center bg-no-repeat rmmsection to-the-edge full-width-bound bg-blueTriangle pt-mobileVGap lg:mb-mobileVGap lg:pt-desktopVGap">
+<section class="flex relative justify-center items-center place-items-center bg-no-repeat rmmsection to-the-edge full-width-bound bg-blueTriangle pt-mobileVGap lg:mb-mobileVGap lg:p-desktopVGap">
     <div class="flex justify-center items-center pt-4 lg:pt-12 inner__wrapper">
         <div class="flex flex-col justify-between items-center w-full lg:flex-row content">
             <div class="mb-6 w-11/12 lg:mb-0 lg:w-1/2 col1 flex justify-center <?php echo 'page' . $post->post_name;?>">
