@@ -33,7 +33,7 @@
 
         @notempty($image)
         <div class="order-1 lg:order-2 content-edge__wrapper bg-siteBlack">
-            <img src="{{$image['url']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image image lg:clipLeftArrow w-full lg:w-auto" loading="lazy" height="" width="" data-aos="fade-left">
+            <img src="{{$image['url']}}" alt="{{$imageALT}}" title="{{$imageTitle}}"class="image image lg:clipLeftArrow w-full lg:w-auto" loading="auto" height="" width="" data-aos="fade-left">
 
 
 
