@@ -1,8 +1,8 @@
-<header class="sticky top-0 px-4 w-full bg-transparent transition-all lg:px-6 lg:px-40 main-header z-[200] duration-2000 lg:h[100px]">
+<header class="top-0 px-4 w-full bg-transparent transition-all lg:px-6 lg:px-40 main-header z-[200] duration-2000 lg:h[100px] fixed">
 
 <div class="flex justify-between items-center text-white inner__wrapper ">
     <div class="lg:hidden">
-      <a href="#" class=""> @svg('images/expertAir/icons_phone_white.svg', 'phoneIcon')</a>
+      <a href="tel:{{$primaryPhoneNumber}}" class=""> @svg('images/expertAir/icons_phone_white.svg', 'phoneIcon')</a>
     </div>
 
 
