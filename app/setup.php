@@ -237,6 +237,10 @@ if (file_exists(get_template_directory() . '/app/lib/RmmOffersFunctions.php')) {
 	require_once(get_template_directory() . '/app/lib/RmmOffersFunctions.php');
 }
 
+if (file_exists(get_template_directory() . '/app/lib/mediaLibraryShowFileSize.php')) {
+	require_once(get_template_directory() . '/app/lib/mediaLibraryShowFileSize.php');
+}
+
 
 
 
