@@ -4,20 +4,19 @@
 			<h2 class="text-center text-white">{{$offer->title}}</h2>
 			<div class="subtitle text-white">{{$offer->subTitle}}</div>
 		</div><!-- End of .header -->
-		<div class="flex flex-col items-center content text-white"><!-- Start of .content -->
+		<div class="flex flex-col items-center content text-white mb-4"><!-- Start of .content -->
 			<span> @wpautokp($offer->cta)</span>
 		</div><!-- End of .content -->
 		<div class="flex flex-col items-center footer"><!-- Start of .footer -->
 			@notempty($offer->disclaimer)
-			<div class="disclaimer text-white text-center">
+			<div class="disclaimer text-white text-center text-xs">
 				{{$offer->disclaimer}}
 			</div>
 			@endnotempty
 
 			@notempty($offer->expirationText )
-			<div class="expirationText text-white text-center">
-				{{$offer->expirationText}}: {{$offer->expirationDisplay}}
-				{{$offer->expiration}}
+			<div class="expirationText text-white text-center text-xs">
+				{{$offer->expirationText}} {{$offer->expirationDisplay}}
 			</div>
 			@endnotempty
 		</div><!-- End of .footer -->

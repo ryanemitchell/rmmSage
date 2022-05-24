@@ -74,7 +74,7 @@
                     @wpautokp($sharedaboutsection['content'])
                 </div>
                 <div class="cta grandChildren:self-start">
-                    <a href="/about-us" class="lg:mb-2 btn">Learn More</a>
+                    <a href="/about-us" class="lg:mb-2 btn mb-2">Learn More</a>
                 </div>
 
 

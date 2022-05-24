@@ -28,9 +28,9 @@
 		</div>
 
 		@notempty($image)
-		<div class="hidden order-1 lg:block lg:order-2 content-edge__wrapper bg-siteBlack">
+		<div class="hidden order-1 lg:block lg:order-2 content-edge__wrapper">
 			<img src="{{$image['url']}}" alt="{{$imageALT}}" title="{{$imageTitle}}" class="image lg:clipLeftArrow"
-			     loading="auto" height="{{$image['height']}}px" width="{{$image['width']}}px" data-aos="fade-left">
+			     loading="auto" height="{{$image['height']}}px" width="{{$image['width']}}px">
 		</div>
 		@endnotempty
 

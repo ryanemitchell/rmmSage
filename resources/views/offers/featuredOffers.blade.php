@@ -9,7 +9,7 @@
 			<h2 class="text-center text-white">{{$offer->title}}</h2>
 			<div class="subtitle text-white">{{$offer->subTitle}}</div>
 		</div><!-- End of .header -->
-		<div class="flex flex-col items-center content text-white"><!-- Start of .content -->
+		<div class="flex flex-col items-center content text-white  mb-4"><!-- Start of .content -->
 			<span> @wpautokp($offer->cta)</span>
 		</div><!-- End of .content -->
 		<div class="flex flex-col items-center footer"><!-- Start of .footer -->
@@ -21,7 +21,7 @@
 
 			@notempty($offer->expirationText )
 			<div class="expirationText text-white">
-				{{$offer->expirationText}} :   {{$offer->expirationDisplay}} :  {{$offer->expiration}}
+				{{$offer->expirationText}} {{$offer->expirationDisplay}}
 			</div>
 			@endnotempty
 		</div><!-- End of .footer -->

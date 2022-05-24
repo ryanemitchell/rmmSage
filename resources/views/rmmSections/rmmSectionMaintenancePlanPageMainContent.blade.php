@@ -62,15 +62,17 @@
 				</div>
 				@endnotempty
 
+				@notempty($downloadFile)
+				<a href="{{$downloadFile}}" class="btn btn-grad" target="_blank">Download PDF</a>
+				@endnotempty
+
+
 				@notempty($bottomShowCTA)
 				<div class="mb-4 cta grandChildren:self-start">
 					@include('fieldPartials.maintenancePlanCallNow')
 				</div>
 				@endnotempty
 
-				@notempty($downloadFile)
-				<a href="{{$downloadFile}}" class="btn btn-grad">Download PDF</a>
-				@endnotempty
 
 			</div>
 		</div>
