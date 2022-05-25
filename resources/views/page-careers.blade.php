@@ -6,6 +6,10 @@
 
 
 @section('content')
+
+@include('rmmSections.rmmSectionSplitPhotoContent')
+
+
     <section
         class="contactSection rmmsection mobile-to-the-edge my-halfMobileVGap flex items-center justify-center bg-white lg:my-halfDesktopVGap">
         <div class="inner__wrapper flex items-center justify-center">

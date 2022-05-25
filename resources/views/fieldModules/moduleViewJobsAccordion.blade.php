@@ -6,7 +6,7 @@
 @endphp
 
 {{-- Set var for allowing Multiple Accordiona--}}
-@hasfield('field_jobs_accordion_showmultiple')
+@hasfield('field_page_template_careers_showmultiple')
 @php $allowMultiple = 'true' @endphp
 
 @else
@@ -14,7 +14,7 @@
 
     @endfield
 
-    @hasfield('field_jobs_accordion_openfirst')
+    @hasfield('field_page_template_careers_openfirst')
     @php $openfirst = '0' @endphp
 
     @else
@@ -38,9 +38,9 @@
                 display: block;
             }
         </style>
-        @hasfields('field_jobs_accordion_accordion')
+        @hasfields('field_page_template_careers_accordion')
         <div class="{{ $moduleID }} accordion-container-{{ $moduleID }} accordion-container">
-            @fields('field_jobs_accordion_accordion')
+            @fields('field_page_template_careers_accordion')
 
             <div class="rmmAccordion ac bg-grey">
                 <h2 class="ac-header">

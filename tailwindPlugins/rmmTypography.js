@@ -59,8 +59,9 @@ const rmmTypography = plugin(({ addBase, theme }) => {
 
         'main ul': {
             listStyle: 'disc',
-            listStylePosition: 'inside',
+            listStylePosition: 'outside',
             paddingLeft: '1rem',
+            marginLeft: '1rem',
         },
 
         'main ul li::marker': {
