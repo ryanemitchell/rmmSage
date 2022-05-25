@@ -10,7 +10,7 @@
 
 			@notempty($benefits)
 
-			<ul class="grid grid-cols-1 lg:grid-cols-2 listItems list-marker-none list-none">
+			<ul class="grid grid-cols-1 lg:grid-cols-2 listItems list-marker-none list-none lg:w-full">
 
 		 @foreach($benefits as $item)
 
@@ -23,7 +23,7 @@
 								@if ($loop->iteration == 4)
 									</ul>   {{--close the first list--}}
 
-									<ul class="grid hidden grid-cols-1 lg:grid lg:grid-cols-2 listItems hiddenList list-none">
+									<ul class="grid hidden grid-cols-1 lg:grid lg:grid-cols-2 listItems hiddenList list-none lg:w-full">
 								@endif
 							@endif
 
