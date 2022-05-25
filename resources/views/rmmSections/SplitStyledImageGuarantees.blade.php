@@ -3,7 +3,8 @@
 
 		<div class="content-edge__wrapper bg-siteBlack">
 {{--			<img src="{{$imageAsset}}/expertAir/tech1_guarantees.jpg" alt="Expert Air Truck" class="image clipDownArrow lg:clipRightArrow" loading="lazy" height="484px" width="auto">--}}
-			<img src="https://unsplash.it/480/480?random" alt="photo" class="image clipDownArrow lg:clipRightArrow" loading="auto" data-aos="fade-right">
+			<img src="{{$imageAsset}}expertAir/tech1_guarantees.jpg" alt="photo" class="image clipDownArrow lg:clipRightArrow w-[100vw] lg:w-auto mb-4 lg:mb-0" loading="auto" data-aos="fade-right">
+
 		</div>
 
 
