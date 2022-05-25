@@ -16,9 +16,8 @@
 
 		<div class="flex justify-center items-center lg:w-1/2 col2 mb">
 			<div class="flex flex-col justify-center items-center content" data-aos="fade-left">
-				<div class="reviewsWrapper">
-					<img src="https://unsplash.it/350/222?random" alt="photo" class="mb-4 lg:mb-0 image" loading="auto" height="222px" width="350px">
-					{{$reviewsShortcode}}
+				<div class="reviewsWrapper lg:w-[400px]">
+					@shortcode($reviewsShortcode)
 				</div>
 
 				<div class="mb-4 lg:hidden cta grandChildren:self-start">
