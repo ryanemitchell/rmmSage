@@ -1,7 +1,7 @@
 <div class="flex justify-center items-center inner__wrapper">
 <div class="flex flex-col items-center pl-4 mt-6 lg:pl-0 lg:mt-6 content">
 	@notempty($pageTitle)
-	<h2 class="mb-6 text-white lg:text-center font-display max-w-[400px] lg:text-dxl lg:mb-[12px] lg:max-w-[800px] pageTitle">
+	<h2 class="mb-6 text-white text-center font-display max-w-[400px] lg:text-dxl lg:mb-[12px] lg:max-w-[800px] pageTitle">
 		{{$pageTitle}}
 	</h2>
 	@endnotempty

@@ -1,4 +1,4 @@
-<section class="flex relative justify-center items-center place-items-center bg-center bg-no-repeat bg-cover bg-siteBlack rmmsection page-header full-width-bound bg-home-hero-mobile mt-[-91px] pt-[91px] lg:bg-home-hero">
+<section class="flex relative justify-center items-center place-items-center bg-center bg-no-repeat bg-cover bg-siteBlack rmmsection page-header full-width-bound bg-home-hero-mobile mt-[-91px] pt-[120px] lg:pt-[171px] lg:bg-home-hero ">
 {{--	<div class="flex justify-center items-center text-white inner__wrapper">--}}
 
 		@if (is_front_page())
