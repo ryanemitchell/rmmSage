@@ -7,23 +7,32 @@
 
 @section('content')
     {{-- Intro Content --}}
-    <section
-        class="rmmsection bg-hulk-800 to-the-edge mobile-to-the-edge lg:to-the-edge relative flex place-items-center items-center justify-center lg:my-halfDesktopVGap">
 
-        <div class="inner__wrapper flex items-center justify-center">
-            <div class="content flex w-full flex-col items-center justify-center lg:flex-row">
-                <div class="lg:px-o mb-6 px-4 lg:mb-0">
-                    <div class="tagline text-center text-[1.5rem] text-secondary">24/7 Emergency Services</div>
-                    <h1 class="text-center lg:mb-4 lg:text-mt1">Air Conditioning Spring TX</h1>
-                    <div class="mb-2 text-center lg:mb-4 lg:max-w-[480px]">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat..</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+     @while (have_posts())
+     @php(the_post())
+     @includeFirst(['partials.content-page', 'partials.content'])
+     @endwhile
+
+
+
+
+{{--    <section--}}
+{{--        class="rmmsection bg-hulk-800 to-the-edge mobile-to-the-edge lg:to-the-edge relative flex place-items-center items-center justify-center lg:my-halfDesktopVGap">--}}
+
+{{--        <div class="inner__wrapper flex items-center justify-center">--}}
+{{--            <div class="content flex w-full flex-col items-center justify-center lg:flex-row">--}}
+{{--                <div class="lg:px-o mb-6 px-4 lg:mb-0">--}}
+{{--                    <div class="tagline text-center text-[1.5rem] text-secondary">24/7 Emergency Services</div>--}}
+{{--                    <h1 class="text-center lg:mb-4 lg:text-mt1">Air Conditioning Spring TX</h1>--}}
+{{--                    <div class="mb-2 text-center lg:mb-4 lg:max-w-[480px]">--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut--}}
+{{--                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco--}}
+{{--                            laboris nisi ut aliquip ex ea commodo consequat..</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
 
     {{-- @dump($featuredOffers) --}}
@@ -60,9 +69,7 @@
     @include('rmmSections.rmmSectionSharedAbout')
 
 
-    @while (have_posts())
-        @php(the_post())
-    @endwhile
+
 @endsection
 
 
