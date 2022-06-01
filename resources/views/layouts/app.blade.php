@@ -11,7 +11,7 @@
   </main>
 
   @hasSection('sidebar')
-    <aside class="sidebar grow lg:ml-desktopVGap lg:w-[370px] lg:grow-0">
+    <aside class="sidebar grow lg:ml-desktopVGap lg:w-[436px] lg:grow-0">
       @yield('sidebar')
     </aside>
   @endif

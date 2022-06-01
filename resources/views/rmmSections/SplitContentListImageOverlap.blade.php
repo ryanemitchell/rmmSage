@@ -5,7 +5,7 @@
 * Reference: NA
 * Author: @ryanemitchell
 ==========================================================================--}}
-<section class="@notempty($sectionClasses){{$sectionClasses }}@endnotempty flex relative justify-center items-center place-items-center bg-no-repeat rmmsection to-the-edge full-width-bound pt-mobileVGap lg:py-halfDesktopVGap">
+<section class="@notempty($sectionClasses){{$sectionClasses }}@endnotempty flex relative justify-center items-center place-items-center bg-no-repeat rmmsection to-the-edge full-width-bound pt-mobileVGap lg:pb-halfDesktopVGap">
 	<div class="flex justify-center items-center pt-4 lg:pt-12 inner__wrapper">
 		<div class="mx-auto w-full wrap">
 			<div class="flex flex-col lg:block">

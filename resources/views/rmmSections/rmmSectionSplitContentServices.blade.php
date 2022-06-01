@@ -8,7 +8,7 @@
 {{--@dump($sectionFields)--}}
 {{--@dump($sectionClasses)--}}
 {{--@dump($testing)--}}
-<section class="@notempty($sectionClasses){{$sectionClasses}} @endnotempty  rmmsection  flex relative justify-center items-center place-items-center  to-the-edge rmmsection full-width-bound bg-blueTriangle  bg-no-repeat pt-mobileVGap lg:pt-desktopVGap mb-mobileVGap">
+<section class="@notempty($sectionClasses){{$sectionClasses}} @endnotempty  rmmsection  flex relative justify-center items-center place-items-center  to-the-edge rmmsection full-width-bound bg-blueTriangle  bg-no-repeat pt-mobileVGap lg:py-desktopVGap mb-mobileVGap">
 	<div class="flex justify-center items-center pt-4 lg:pt-12 inner__wrapper">
 		<div class="flex flex-col justify-between items-center w-full lg:flex-row content">
 			<div class="mb-6 w-11/12 lg:mb-0 lg:w-1/2 col1">
