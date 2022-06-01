@@ -262,6 +262,7 @@ body {
   gap: 1rem;
   @include respond(desktop) {
     grid-template-columns: 25% 25% 25% 25%;
+    gap: 2rem;
   }
 
   margin-bottom: 24px;
