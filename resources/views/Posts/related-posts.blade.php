@@ -1,3 +1,4 @@
+@notempty($relatedPosts)
 <section  class="centeredMenu to-the-edge bg-contain my-halfMobileVGap to-the-edge lg:my-halfDesktopVGap  flex justify-center items-center relative place-items-center mobile-full-width">
 		<div class="flex justify-center items-center place-items-center inner__wrapper ">
 			<div class="flex flex-col place-items-center content">
@@ -24,3 +25,4 @@
 
 
 </section>
+@endnotempty
