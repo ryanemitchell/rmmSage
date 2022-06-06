@@ -1,6 +1,6 @@
 <div class="offer bg-siteBlack shadow-common rounded-common">
 	@notempty($offer->image)
-	<div class="h-14 lg:h-[200px] w-full rounded-common bg-no-repeat bg-cover" style="background-image: url('{{$offer->image}}');"></div>
+	<div class="h-14 lg:h-[260px] w-full rounded-common bg-no-repeat bg-cover" style="background-image: url('{{$offer->image}}');"></div>
 {{--	<img src="{{$offer->image}}" alt="photo" class="image" loading="auto" height="400px" width="400px">--}}
 	@endnotempty
 	<div class="p-4 p-8 bg-siteBlack lg:h-[200px]">

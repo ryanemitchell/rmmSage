@@ -74,6 +74,12 @@ class RmmOffersFunctions
                     $subTitle = null;
                 endif;
 
+	            if (!empty(get_field('offer_content', $offer))) :
+		            $content = get_field('offer_content', $offer);
+	            else :
+		            $content = null;
+	            endif;
+
                 if (!empty(get_field('offer_image', $offer))) :
                     $image = get_field('offer_image', $offer);
                 elseif (!empty(get_field('offer_image', 'options'))) :
@@ -162,6 +168,7 @@ class RmmOffersFunctions
                 return (object)[
                     'title' => $title,
                     'subTitle' => $subTitle,
+                    'content' => $content,
                     'image' => $image,
                     'cta' => $cta,
                     'disclaimer' => $disclaimer,
