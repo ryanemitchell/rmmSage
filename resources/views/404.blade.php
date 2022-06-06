@@ -3,7 +3,7 @@
 @section('content')
     {{-- @include('partials.page-header') --}}
 
-    @if (!have_posts())
+
         <div class="mt-4 flex flex-col items-center lg:mt-0">
             <h1 class="mb-3 text-primary">404: Page Not Found</h1>
             <p class="mb-3 text-center">Sorry, we can’t find the page you’re looking for. Questions? Give us a call!</p>
@@ -23,7 +23,7 @@
 ]) !!}
             </div>
         @endif {{-- end not_found_navigation --}}
-    @endif
+
 
     <script>
         var element = document.getElementById('back-link');
