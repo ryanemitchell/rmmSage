@@ -88,7 +88,7 @@ class ServiceNavBox extends Composer
 		} elseif (! empty( ( new RmmSageFunctions() )->rmmGetFields( 'field_page_template_services_sectioncenteredmenu_group', wp_get_post_parent_id() )['sectionContent']['header'])) {
 			return ( ( new RmmSageFunctions() )->rmmGetFields( 'field_page_template_services_sectioncenteredmenu_group', wp_get_post_parent_id() )['sectionContent']['header']);
 		} else {
-			return ['false'];
+			return '';
 		}
 	}
 
