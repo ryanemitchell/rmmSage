@@ -29,7 +29,7 @@ class ComboDisplayToggles extends Partial
                 ],
                 'choices' => [
                     'on' => 'Show',
-                    'parent' => 'Content from Parent Page',
+//                    'parent' => 'Content from Parent Page',
                     'Off' => 'Off',
                 ],
                 'allow_null' => 0,
