@@ -13,6 +13,8 @@
 			@include('sections.pageHeaders.blogCategoryPageHeader')
 		@elseif (is_single())
 			@include('sections.pageHeaders.blogPostPageHeader')
+		@elseif (is_page(27))
+		@include('sections.pageHeaders.financePageHeader')
 		@else
 			@include('sections.pageHeaders.defaultPageHeader')
 		@endif
