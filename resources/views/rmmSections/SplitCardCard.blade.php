@@ -6,7 +6,7 @@
 * Author: @ryanemitchell
 ==========================================================================--}}
 <section
-		class="@notempty($sectionClasses){{$sectionClasses}}@endnotempty flex relative justify-center items-center place-items-center pt-0 bg-no-repeat rmmsection to-the-edge full-width-bound bg-blueTriangle mb-halfMobileVGap lg:py-halfDesktopVGap">
+		class="@notempty($sectionClasses){{$sectionClasses}}@endnotempty flex relative justify-center items-center place-items-center pt-0 bg-no-repeat rmmsection to-the-edge full-width-bound mb-halfMobileVGap lg:pb-halfDesktopVGap">
 	<div class="flex justify-center items-center pt-4 lg:pt-12 inner__wrapper">
 		<div class="grid gap-x-6 justify-between items-center w-full lg:grid-cols-2">
 			<div class="col1">
