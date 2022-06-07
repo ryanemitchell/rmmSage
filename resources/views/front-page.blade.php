@@ -6,15 +6,14 @@
     {{-- Content and Services --}}
     @include('rmmSections.rmmSectionSplitContentServices')
 
-
-    {{-- Locations --}}
-    @include('rmmSections.SplitContentListImageOverlap')
+    {{-- PromoBxes --}}
+    @include('rmmSections.SplitCardCard')
 
     {{-- Guarantees --}}
     @include('rmmSections.SplitStyledImageGuarantees')
 
-    {{-- PromoBxes --}}
-    @include('rmmSections.SplitCardCard')
+    {{-- Locations --}}
+    @include('rmmSections.SplitContentListImageOverlap')
 
     {{-- Reviews --}}
     @include('rmmSections.rmmSectionSharedReviews')
