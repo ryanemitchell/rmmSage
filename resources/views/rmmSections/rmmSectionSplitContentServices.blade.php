@@ -16,7 +16,7 @@
 				<div class="tagline text-secondary text-[1.5rem]">{{$tagline}}</div>
 				@endnotempty
 				@notempty($header)
-				<h1 class="max-w-xs lg:mb-2 lg:max-w-xs mx">{{$header}}</h1>
+				<h1 class="max-w-xs lg:mb-2 lg:max-w-[480px] mx"><?php echo $header ?></h1>
 				@endnotempty
 
 				@notempty($content)
