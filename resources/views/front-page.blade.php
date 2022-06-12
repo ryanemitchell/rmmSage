@@ -19,7 +19,7 @@
     @include('rmmSections.rmmSectionSharedReviews')
 
     {{-- LogoBAr --}}
-    @include('rmmSections.logoBar.logoBarFull')
+{{--    @include('rmmSections.logoBar.logoBarFull')--}}
 
     {{-- Emergency Services --}}
     @include('rmmSections.SplitContentStyledImageToOverlay')

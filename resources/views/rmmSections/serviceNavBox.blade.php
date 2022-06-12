@@ -12,7 +12,7 @@
 
 
 		@if($linksItems)
-		<nav class="grid grid-cols-2 gap-y-2 gap-x-4 justify-between items-center mb-4 lg:mb-6 locationsNav" data-tw-selected="1651538726585">
+		<nav class="grid grid-cols-2 gap-y-2 gap-x-4 lg:gap-x-12 justify-between items-center mb-4 lg:mb-6 locationsNav" data-tw-selected="1651538726585">
 
 			@foreach($linksItems as $item)
 				@notempty($item['linkURL'])
@@ -47,7 +47,7 @@
 
 
 @istrue($showCTA)
-		<div class="cta grandChildren:self-start lg:mt-6">
+		<div class="cta grandChildren:self-start">
 			@include('fieldPartials.bookNow')
 		</div>
 		@endistrue

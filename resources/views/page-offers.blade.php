@@ -53,7 +53,7 @@
 
     <div class="allOffers">
         {{-- <h2 class="">All Offers</h2> --}}
-        <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 auto-rows-fr">
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:auto-rows-fr">
             <!-- Start of .grid grid-cols-2 -->
             @foreach ($allExceptFeatured as $offer)
                 @include('offers.allOffers')

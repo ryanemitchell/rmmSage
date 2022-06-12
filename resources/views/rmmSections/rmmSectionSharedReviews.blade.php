@@ -16,7 +16,7 @@
 
 		<div class="flex justify-center items-center lg:w-1/2 col2 mb">
 			<div class="flex flex-col justify-center items-center content" data-aos="fade-left">
-				<div class="reviewsWrapper lg:w-[400px]">
+				<div class="reviewsWrapper lg:w-[400px] w-[90vw]">
 					@shortcode($reviewsShortcode)
 				</div>
 
