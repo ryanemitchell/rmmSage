@@ -21,6 +21,6 @@
   "devDependencies": {
     "@roots/bud": "6.11.0",
     "@roots/bud-tailwindcss": "6.11.0",
-    "@roots/sage": "6.11.0"
+    "@roots/sage": "6.13.1"
   }
 }
